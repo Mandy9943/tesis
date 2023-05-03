@@ -1,13 +1,3 @@
-%% Template:     Template LaTeX
-%% Documento:    Archivo de estilos simple numerados + url (doi, arxivId) [es]
-%% Versión:      1.4.1 (18/04/2022)
-%% Codificación: UTF-8
-%%
-%% Autor: Pablo Pizarro R.
-%%        pablo@ppizarror.com
-%%
-%% Manual template: [https://latex.ppizarror.com]
-%% Licencia MIT:    [https://opensource.org/licenses/MIT]
 
 ENTRY {
     address

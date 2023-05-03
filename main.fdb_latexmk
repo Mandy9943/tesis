@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1683095732 "d:/School/tesis/latex_template/Template-Tesis-master/main.tex" "main.pdf" "main" 1683095736 0
+["pdflatex"] 1683096737 "d:/School/tesis/latex_template/Template-Tesis-master/main.tex" "main.pdf" "main" 1683096743 0
   "C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1683020332 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/User/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1683015250 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/User/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs5.tfm" 1683015251 684 3a51bd4fd9600428d5264cf25f04bb9a ""
@@ -246,13 +246,13 @@
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/xurl/xurl.sty" 1641737540 4675 e4b8c405820368c2dfb03526e16d725a ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1650051284 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "C:/Users/User/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1650051284 20785 71a3d72ab517959a6979c27e6176bec1 ""
-  "d:/School/tesis/latex_template/Template-Tesis-master/main.tex" 1683034939 6050 ec0651adb90081e22d90754165026c79 ""
+  "d:/School/tesis/latex_template/Template-Tesis-master/main.tex" 1683096736 6050 ec0651adb90081e22d90754165026c79 ""
   "img/departamentos/cujae.png" 1683024236 73568 dcbe437f7222139c04b42a58243dd95e ""
-  "main.aux" 1683095736 31657 18dac58615157c0b0ecac8febdcd770b "pdflatex"
-  "main.tex" 1683034939 6050 ec0651adb90081e22d90754165026c79 ""
-  "main.toc" 1683095736 4173 9a8c109c97770490b3cc8221179b3f48 "pdflatex"
+  "main.aux" 1683096742 31657 18dac58615157c0b0ecac8febdcd770b "pdflatex"
+  "main.tex" 1683096736 6050 ec0651adb90081e22d90754165026c79 ""
+  "main.toc" 1683096742 4173 9a8c109c97770490b3cc8221179b3f48 "pdflatex"
   "template.tex" 1683034939 343137 d4473e5e81643b788c9faf04c8c5efa8 ""
-  "template_config.tex" 1682796127 21583 be85930a9470c64d4cb166177ae4ffda ""
+  "template_config.tex" 1683096556 21281 7ee22963d6fed10f635278c77bcb25c5 ""
   "tesis/estado_del_arte/1estado_del_arte.tex" 1683090747 1151 4c13890c516860ef337096baac6d0a93 ""
   "tesis/estado_del_arte/descripcion_proceso/1descripcion_proceso.tex" 1683091899 690 0873cb5952ba202a970c2ed24a405bae ""
   "tesis/estado_del_arte/descripcion_proceso/purificacion/1purificacion.tex" 1683095051 1159 d4f8536e21ea1b463d213ce9c1dffaf3 ""
