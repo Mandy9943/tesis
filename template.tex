@@ -4503,6 +4503,8 @@
 	\end{abstractenv}
 }
 
+
+
 % Crea una sección de dedicatoria
 \newenvironment{dedicatory}{%
 	\clearpage%
@@ -4528,7 +4530,7 @@
 	\ifthenelse{\equal{\GLOBALtwoside}{true}}{%
 		\coretriggeronpage{\emptypagespredocformat}{}%
 	}{}%
-	\chapter*{\nameagradec}%
+	\section*{\nameagradec}%
 	\ifthenelse{\equal{\addagradectobookmarks}{true}}{%
 		\phantomsection%
 		\pdfbookmark{\nameagradec}{acknowledgments}}{%
