@@ -30,7 +30,7 @@ __MACOSX/
 *.pyc
 
 # Ignora el main.pdf
-main.pdf
+# main.pdf
 
 # Ignora tesis.pdf
 tesis.pdf
