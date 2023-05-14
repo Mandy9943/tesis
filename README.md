@@ -1,4 +1,3 @@
-<!-- Hasme un readme.md para mi tesis en latex -->
 
 # Trabajo de Diploma para optar por el título académico de Ingeniero en Automática
 ## Optimización de purificación de agua en industria farmacéutica AICA usando EDI

@@ -1,0 +1,58 @@
+\subsection{Variador de velocidad}
+
+El variador utilizado en la planta es del fabricante Danfoss, del modelo
+VLT® HVAC Basic Drive (ver Figura 2.5). Este tipo de convertidores cuenta con
+factores de energía avanzada, así como sistemas de mantenimiento y de control
+de motor. El convertidor VLT® HVAC Basic Drive cuenta con un enorme número
+de funciones desarrolladas para satisfacer las diversas necesidades. Es la
+elección perfecta para bombas, ventiladores y compresores en edificios modernos equipados con soluciones cada vez más sofisticadas. Presenta
+funcionalidad de E/S dedicada para sensores, así como el control E/S
+descentralizado mediante comunicación serie. \\ 
+
+\subsubsection*{Principio de funcionamiento}
+
+El equipo se alimenta con un voltaje de corriente alterna (CA). Lo primero
+que hace es convertir la CA en CD (corriente directa). El voltaje es filtrado por un
+banco de capacitores internos, con el fin de suavizar el valor rectificado y reducir
+la emisión de variaciones de señal. Posteriormente, en la etapa de inversión, la
+cual está compuesta por transistores (IGBT), que encienden y apagan en
+determinada secuencia (enviando pulsos) para generar una forma de onda
+cuadrada de voltaje de CD a una frecuencia constante, y su valor promedio tiene
+la forma de onda senoidal de la frecuencia que se aplica al motor.\\
+
+\insertimageboxed[\label{fig:variador_velocidad}]{instrumentacion/variador_velocidad}{scale=0.5}{0}{Variador de velocidad Danfoss}
+
+
+\renewcommand{\arraystretch}{2}
+\begin{table}[H]
+    \centering
+    \caption{Datos técnicos del variador de velocidad Danfoss.}
+    \label{table:variador_velocidad}
+    \begin{tabular}{| L{5cm} | L{5cm} |}
+        \hline
+        \textbf{Fabricante} & DANFOSS  \\
+        \hline
+        \textbf{Modelo} & VLT® HVAC Basic Drive FC 101  \\
+        \hline
+        \textbf{Alimentación} & 3 × 200-240 V CA  \\
+        \hline
+        \textbf{Frecuencia entrada} & 50/60 Hz  \\
+        \hline
+        \textbf{Frecuencia salida} & 0-400 Hz  \\
+        \hline
+        \textbf{Potencia} & 0.25-11.5 kW  \\
+        \hline
+        \textbf{Factor de potencia} & ≥0,9 nominal con carga nominal  \\
+        \hline
+        \textbf{Entradas} & 4 digitales, 2 analógicas  \\
+        \hline
+        \textbf{Máx. longitud de cables motor, apantallados} & 25m  \\
+        \hline
+        \textbf{Máx. longitud de cables motor, no apantallados} & 50m  \\
+        \hline
+        \textbf{Temperatura ambiente} & Máx. 50° C  \\
+        \hline
+        \textbf{Grado de protección} & IP20  \\
+        \hline
+    \end{tabular}
+\end{table}

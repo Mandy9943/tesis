@@ -120,6 +120,9 @@ Este logro no es solo mío, sino de todos los que me han acompañado en este via
 % CONFIGURACIONES FINALES
 \templateFinalcfg
 
+
+
+
 % ======================= INICIO DEL DOCUMENTO =======================
 % INTRODUCCION
 \input{tesis/introduccion/1introduccion.tex} % Ejemplo, se puede borrar
@@ -127,13 +130,8 @@ Este logro no es solo mío, sino de todos los que me han acompañado en este via
 % ESTADO DEL ARTE
 \input{tesis/estado_del_arte/1estado_del_arte.tex}
 
-% \input{example} % Ejemplo, se puede borrar
 
-\chapter{Análisis de la instrumentación actual}
-\section{Instrumentación en el sistema de ósmosis inversa}
-\section{Análisis de las señales y parámetros de control}
-\section{Evaluación del rendimiento y limitaciones de la instrumentación actual}
-
+\input{tesis/instrumentacion_actual/analisis_de_instrumentacion.tex}
 
 \chapter{Propuesta de integración del EDI y nueva instrumentación}
 \section{Selección y justificación del EDI}
@@ -155,10 +153,13 @@ Este logro no es solo mío, sino de todos los que me han acompañado en este via
 \section*{Síntesis de los resultados y discusión}
 \section*{Conclusiones generales}
 \section*{Recomendaciones para la implementación y futuras investigaciones}
+\cite{bluegoldSistemaElectrodesionizacionEDI2021}
 
-\chapter{Referencias bibliográficas}
+\bibliography{zot_bibli.bib}
 \chapter{Anexos}
 
+
+\input{example} % Ejemplo, se puede borrar
 
 % FIN DEL DOCUMENTO
 \end{document}
