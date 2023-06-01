@@ -1,0 +1,187 @@
+\section{Propuesta de instrumentación}
+
+La ingeniería de procesos, y especialmente el tratamiento de agua mediante ósmosis inversa, requiere una cuidadosa selección de equipos y dispositivos de control, también conocidos como instrumentación. En esta sección, daremos un paso hacia adelante desde el análisis de la instrumentación actual, para abordar nuestra propuesta de mejoramiento: la implementación de un electrodeionizador (EDI) y la instrumentación requerida para su correcta operación.\\
+
+La instrumentación adecuada es crucial para el buen funcionamiento de cualquier proceso industrial, ya que nos permite monitorizar y controlar de forma precisa las variables críticas de operación. En el caso de la ósmosis inversa y, más concretamente, del EDI, esta importancia se acentúa, dado que el rendimiento y la eficiencia del sistema dependen en gran medida de la capacidad de regular las condiciones de trabajo.\\
+
+En las siguientes subsecciones, primero justificaremos por qué el EDI ha sido seleccionado como la mejor opción para mejorar el proceso de tratamiento de agua existente. Posteriormente, describiremos la instrumentación necesaria para implementar y operar de manera efectiva este dispositivo, siempre desde una perspectiva de control.\\
+
+
+\subsection{Contexto de la Planta Actual}
+
+La planta de tratamiento de agua existente, en funcionamiento durante años, 
+ha demostrado ser un recurso crucial en el suministro de agua pura (PW). 
+Sin embargo, recientemente, se han observado ciertas inestabilidades en el 
+proceso de tratamiento, lo que ha dificultado el logro constante de los parámetros 
+de calidad requeridos durante la producción de agua.\\
+
+Es importante mencionar que estas inestabilidades no desacreditan mucho la eficacia 
+del sistema existente. Sin embargo, podrían ser indicativos de la necesidad 
+de mejoras o adaptaciones para hacer frente a los cambios en las condiciones 
+del agua de entrada o a los requisitos de calidad cada vez más exigentes.\\
+
+Además, uno de los desafíos que ha surgido es la capacidad de la 
+planta para producir agua de la calidad necesaria para cumplir con la demanda. 
+La planta tiene la capacidad de producir una cantidad considerable de agua, 
+sin embargo, una porción de esta producción no alcanza los parámetros de 
+calidad requeridos. Esta agua de menor calidad debe ser desechada o 
+recirculada para un nuevo tratamiento, lo que resulta en un suministro 
+efectivo de agua de calidad inferior a la demanda.\\
+
+\subsection{Tecnologías Alternativas y sus Limitaciones}
+
+En la búsqueda de la mejora continua y optimización de la planta de tratamiento de agua, 
+es importante considerar las diversas tecnologías alternativas disponibles. 
+Sin embargo, cada tecnología tiene sus propias limitaciones, algunas de las 
+cuales pueden no adaptarse a las necesidades y condiciones específicas de nuestra planta. 
+Las siguientes son algunas de las tecnologías que se han evaluado:
+
+\begin{enumerate}
+    \item \textbf{Reforzamiento de la Ósmosis Inversa (RO):}  Nuestra planta ya cuenta con 
+    un sistema de ósmosis inversa de dos etapas que cumple con las necesidades 
+    básicas de la planta. Sin embargo, incluso con un sistema RO de dos etapas, 
+    todavía existen limitaciones, especialmente en términos de la eliminación de 
+    ciertos iones y pequeñas moléculas. Los sistemas RO también son susceptibles a 
+    la acumulación de sarro y biofilm, lo que puede afectar el rendimiento y 
+    la vida útil de la membrana.
+    
+    \item \textbf{Destilación:}  Aunque la destilación puede ofrecer altos niveles de 
+    purificación, la energía requerida para este proceso es considerable, 
+    lo que resulta en costos operativos más altos. Además, la destilación 
+    no elimina eficientemente algunos contaminantes volátiles que pueden s
+    er arrastrados con el vapor.
+
+    \item \textbf{Desionización (DI): } Los sistemas de DI pueden ser eficientes para 
+    la eliminación de iones de agua, pero su capacidad para eliminar 
+    partículas no iónicas, gases disueltos y microorganismos es limitada. 
+    Además, los cartuchos de DI requieren un reemplazo frecuente, lo que 
+    implica costos adicionales de operación y mantenimiento.
+
+    \item \textbf{Filtración de Carbón Activado:}  Esta tecnología es efectiva para la 
+    eliminación de cloro y ciertos otros contaminantes, pero su eficacia es 
+    limitada cuando se trata de la eliminación de sales disueltas y 
+    algunos contaminantes orgánicos.
+
+\end{enumerate}
+
+Teniendo en cuenta las limitaciones y desafíos presentes en estas tecnologías alternativas, y 
+dadas las necesidades específicas de nuestra planta de tratamiento de agua, es evidente que se 
+necesita una solución más eficaz y sostenible. En este contexto, la Electrodeionización (EDI) 
+emerge como una solución potencialmente superior, debido a su capacidad para superar muchas de las 
+limitaciones de las tecnologías mencionadas anteriormente.
+
+\subsection{La Electrodeionización}
+
+La Electrodeionización (EDI) es una tecnología innovadora que combina dos procesos 
+fundamentales de purificación de agua: la desionización mediante intercambio iónico y 
+la electrodialisis. La sinergia de estos métodos resulta en un sistema eficiente y 
+sustentable capaz de producir agua ultrapura de manera continua y sin la necesidad 
+de regenerar químicos.\\
+
+En términos generales, la EDI utiliza una corriente eléctrica para mover los iones a 
+través de membranas semipermeables, eliminándolos del agua. Este proceso se realiza 
+en un entorno controlado en el que los iones son capturados por resinas de intercambio 
+iónico, siendo luego extraídos mediante la corriente eléctrica.\\
+
+La elección de la EDI como una adición al sistema actual de Ósmosis Inversa de Doble 
+Etapa se justifica en gran medida por su capacidad para superar las limitaciones de 
+otras tecnologías y proporcionar un rendimiento superior en términos de calidad del 
+agua, eficiencia y sostenibilidad.\\
+
+Cabe mencionar que este resumen brinda una visión general y concisa del funcionamiento y 
+las ventajas de la EDI. Sin embargo, para un entendimiento más profundo y detallado del 
+principio de funcionamiento de la EDI, sus componentes, así como los beneficios y 
+desafíos asociados, se remite al lector al Capítulo \ref{cap:fundamentosEDI} donde se proporciona un 
+análisis exhaustivo de esta tecnología.\\
+
+\subsection{El Electrodeionizador}
+
+El electrodeionizador seleccionado para la implementación en la planta de tratamiento de agua es el modelo LMX30-X-3 fabricado por Ionpure. Este equipo desempeña un papel crucial en el proceso de purificación del agua, ya que permite la eliminación de iones y moléculas no deseadas a través de un proceso de electrodeionización. A continuación se muestra la figura del Electrodeionizador seleccionado (Figura \ref{fig:edi_model}). Las especificaciones técnicas de este modelo se presentan en la Tabla \ref{table:edi_specs}.
+
+\insertimageboxed[\label{fig:edi_model}]{instrumentacion/edi}{scale=0.8}{0}{Modelo LMX30-X-3 de Ionpure.}
+
+
+La fuente de alimentación del Electrodeionizador, vital para su funcionamiento correcto, es el modelo PTM06 de STIL MAS. Esta fuente de alimentación proporciona la energía eléctrica necesaria para el funcionamiento del Electrodeionizador, permitiendo la ionización de las moléculas y facilitando su eliminación. La figura de la Fuente de alimentación seleccionada se muestra a continuación (Figura \ref{fig:edi_power}). Sus especificaciones se muestran en la Tabla \ref{table:power_supply_specs}.
+
+
+\insertimageboxed[\label{fig:edi_power}]{instrumentacion/edi_power}{scale=0.8}{0}{Modelo PTM06 de STIL MAS.}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Especificaciones técnicas del Electrodeionizador LMX30-X-3 de Ionpure.}
+    \label{table:edi_specs}
+    \begin{tabular}{| L{6cm} | L{6cm} |}
+        \hline
+        \textbf{Fabricante} & IONPURE  \\
+        \hline
+        \textbf{Modelo} & LMX30-X-3 \\
+        \hline
+        \textbf{Tensión nominal} & 0-600V DC \\
+        \hline
+        \textbf{Corriente nominal} & 0-6 A \\
+        \hline
+        \textbf{Fuente de agua de alimentación} & Agua pretratada en ósmosis inversa \\
+        \hline
+        \textbf{Flujo de producto} & 3300 l/h \\
+        \hline
+        \textbf{Flujo de concentrado} & 180 l/h \\
+        \hline
+        \textbf{Conexión de los flujos de alimentación y producto} & 1” \\
+        \hline
+        \textbf{Conexión de los flujos rechazo y concentrado} & ½” \\
+        \hline
+        \textbf{Temperatura ambiente de operación} & ≤ 45°C \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Especificaciones técnicas de la fuente de alimentación PTM06 de STIL MAS.}
+    \label{table:power_supply_specs}
+    \begin{tabular}{| L{6cm} | L{6cm} |}
+        \hline
+        \textbf{Fabricante} & STIL MAS  \\
+        \hline
+        \textbf{Modelo} & PTM06 \\
+        \hline
+        \textbf{Voltaje de entrada} & 200-480 VAC (±5\%) - 50/60Hz \\
+        \hline
+        \textbf{Corriente de entrada} & 1-20 A \\
+        \hline
+        \textbf{Voltaje de salida} & 30-400 VDC \\
+        \hline
+        \textbf{Entradas de control} & 2 x 4-20 mA + contactos de inicio/parada \\
+        \hline
+        \textbf{Salidas de control} & 2 x 4-20 mA + contacto para establecer condiciones iniciales \\
+        \hline
+        \textbf{Potencia} & 6KVA \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+
+\subsection{Válvulas y Sensores para el EDI}
+
+La implementación del electrodeionizador (EDI) en la planta farmacéutica de AICA requiere una serie de válvulas y sensores para garantizar un control riguroso del proceso. Tras un detallado análisis de la instrumentación existente en la planta de tratamiento de agua, se decidió que los sensores y válvulas actuales cumplen a cabalidad con los requerimientos del sistema de EDI. Estos dispositivos han demostrado su eficacia en las operaciones de la planta y el personal tiene experiencia en su uso y mantenimiento. Por ello, no se consideró necesario incorporar nuevos modelos de sensores o válvulas en la implementación del EDI.
+
+A continuación, se resumen los principales elementos de instrumentación que serán utilizados en el sistema de EDI, la explicación detallada de cada uno de estos se encuentra en capítulos anteriores:
+\begin{itemize}
+    \item \textbf{Sensores de Conductividad:} Como el sensor de conductividad presentado en la sección \ref{sec:sesor_conductividad}, estos dispositivos permiten monitorizar la calidad del agua de salida del EDI en tiempo real.
+
+    \item \textbf{Sensores de Temperatura:} Los sensores de temperatura son necesarios para asegurar que el proceso se lleva a cabo en las condiciones de temperatura óptimas, ver sección \ref{sec:sensor_temperatura}.
+
+    \item \textbf{Transmisores de Flujo y Presión:} Los transmisores de flujo y presión, como se describen en las secciones \ref{sec:sensor_flujo} y \ref{sec:sensor_presion}, permiten monitorizar y controlar el flujo de agua y las condiciones de presión dentro del sistema de EDI.
+
+    \item \textbf{Indicadores de Flujo y Manómetros:} Los indicadores de flujo y los manómetros proporcionan una visualización inmediata de las condiciones del sistema, lo que facilita su operación y mantenimiento, ver secciones \ref{sec:indicador_flujo} y \ref{sec:indicador_manometro}.
+
+    \item \textbf{Válvulas de Control ON/OFF , Válvulas de Retención y Válvulas comunes:} Estas válvulas, referenciadas en las secciones \ref{sec:valvula_OnOff} , \ref{sec:valvula_retencion} y \ref{sec:valvula_multi}, son fundamentales para controlar el flujo de agua dentro del sistema de EDI.
+\end{itemize}
+
+En la siguiente sección, se presentará un esquema general de la configuración del EDI, en el que se identificarán las ubicaciones de las válvulas y sensores en el sistema.
+
+
+
+\subsection{Esquema General de la Configuración del EDI e Instrumentación Asociada}
