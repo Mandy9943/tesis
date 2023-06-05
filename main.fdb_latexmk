@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1685958417 "d:/School/tesis/tesis_oficial/latex/main.tex" "main.pdf" "main" 1685958422 0
+["pdflatex"] 1685960415 "d:/School/tesis/tesis_oficial/latex/main.tex" "main.pdf" "main" 1685960422 0
   "C:/Users/User/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1685699455 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/User/AppData/Local/MiKTeX/fonts/pk/ljfour/public/wasy/dpi720/wasy10.pk" 1685344079 18436 3a972d28cd2fbde2dd91f2857b5e672e ""
   "C:/Users/User/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1683015250 688 37338d6ab346c2f1466b29e195316aa4 ""
@@ -263,11 +263,11 @@
   "img/instrumentacion/sensor_transmisor_presion.png" 1685310272 35581 e16e9d6dfc65095a8477d3f947860a45 ""
   "img/instrumentacion/transmisor_conductividad.png" 1685311718 43650 b0f1f079649d14af04fe8be3950dbf34 ""
   "img/instrumentacion/transmisor_pH.png" 1685312187 28159 e01b6c1ea7ebd6281775915ef9883c5e ""
-  "main.aux" 1685958422 85491 9f9c729e52fd90f83511d86d10197de2 "pdflatex"
-  "main.lof" 1685958422 2291 4c2ad7a920272060c618d922adb8f5bb "pdflatex"
-  "main.lot" 1685958422 3253 34c4d595af5d6b368ebb9388f2d93440 "pdflatex"
+  "main.aux" 1685960421 85491 f5da2d24ef87ad12fa4f040d19b52503 "pdflatex"
+  "main.lof" 1685960422 2291 4c2ad7a920272060c618d922adb8f5bb "pdflatex"
+  "main.lot" 1685960422 3253 34c4d595af5d6b368ebb9388f2d93440 "pdflatex"
   "main.tex" 1685949907 6931 664d607e7a705876957f761bdfe23a45 ""
-  "main.toc" 1685958422 11303 f3046758c37aeac00b603b2fbd220c68 "pdflatex"
+  "main.toc" 1685960422 11303 f3046758c37aeac00b603b2fbd220c68 "pdflatex"
   "template.tex" 1685185030 343141 afc9af5eecdeb0b91ea4c7cd30daa639 ""
   "template_config.tex" 1685654363 21589 bef692f07f8318021adb69e6c7b47ee7 ""
   "tesis/EDI/fundamentos_edi.tex" 1685555407 13641 f46035e20c02c179601f27e7668ac1f4 ""
@@ -322,7 +322,7 @@
   "tesis/introduccion/objeto_estudio.tex" 1685836649 214 a238ccdcf2273bf7827c8b8d8b3e1ab3 ""
   "tesis/introduccion/problema_a_resolver.tex" 1683194977 317 999d5aecb281cb8f2c7d5f134a1f7dec ""
   "tesis/introduccion/situacion_problema.tex" 1683194977 310 08b8246d580e3ce650351c43f67abc5a ""
-  "tesis/propuesta/propuesta.tex" 1685958409 13689 6e5bd6294693cb211391f8aac7ec0a25 ""
+  "tesis/propuesta/propuesta.tex" 1685960408 13460 51bc47b6b9345bef3f91c4e662d38036 ""
   (generated)
   "main.aux"
   "main.lof"
