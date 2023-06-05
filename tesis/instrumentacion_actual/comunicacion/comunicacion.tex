@@ -1,0 +1,57 @@
+\section{Cominicación de la planta}
+\subsection{Protocolos de Comunicación en los distintos niveles}
+
+Para entender completamente la operación de la planta de bulbos de AICA, es esencial entender los protocolos de comunicación en uso y cómo facilitan la eficiencia de la planta. La comunicación en un ambiente industrial como este no es una cuestión trivial, ya que cada nivel de la pirámide de automatización requiere protocolos específicos para garantizar la correcta transmisión de información.\\
+\begin{enumerate}
+    \item \textbf{Nivel de campo:} En este nivel, los dispositivos de campo
+          como los transmisores de presión y los actuadores de válvulas se
+          comunican con los PLCs. Los protocolos de comunicación en este nivel
+          deben ser capaces de manejar grandes cantidades de datos y deben
+          ser robustos para resistir las interferencias electromagnéticas.
+
+    \item \textbf{Nivel de control:} En este nivel, los PLCs se comunican entre
+          sí y con los sistemas de supervisión. Los protocolos de comunicación en
+          este nivel deben ser capaces de manejar grandes cantidades de datos y
+          deben ser capaces de manejar las demandas de tiempo real de los PLCs y
+          las demandas de alto rendimiento de los sistemas de supervisión.
+
+          Además, en este nivel, Profibus PA (Process Automation) puede ser
+          utilizado para dispositivos que necesitan alimentación eléctrica y
+          transmisión de datos a través del mismo cable, tales como transmisores
+          de campo en áreas peligrosas.
+
+
+    \item \textbf{Nivel de supervisión:} En este nivel, los sistemas de
+          supervisión se comunican con los sistemas de información de gestión
+          de la planta. Los protocolos de comunicación en este nivel deben ser
+          capaces de manejar grandes cantidades de datos y deben ser capaces de
+          manejar las demandas de alto rendimiento de los sistemas de supervisión.
+
+          Profinet permite la transmisión de grandes cantidades de datos a altas
+          velocidades a través de la infraestructura Ethernet existente. Además,
+          Profinet soporta la comunicación en tiempo real y es capaz de manejar
+          tanto las demandas de alto rendimiento de los sistemas de supervisión
+          como las demandas de tiempo real de los PLCs.
+
+\end{enumerate}
+
+
+\subsection{Topología de la Red}
+
+La arquitectura de red en la planta de bulbos de AICA es una representación vital de cómo los diferentes dispositivos y sistemas se interconectan y comunican entre sí. Esta arquitectura de red se basa en una topología de bus, que es un arreglo común para las redes Profibus.\\
+
+\subsubsection{Diseño de la Topología de Bus}
+
+
+En la topología de bus, todos los nodos (dispositivos de campo, controladores y sistemas de supervisión) están conectados a un solo cable de transmisión, denominado bus. Este bus actúa como una línea de comunicación compartida en la que los mensajes pueden viajar desde un extremo a otro. A este cable principal se le pueden conectar múltiples dispositivos a través de conexiones en derivación. En este diseño, los datos de cada dispositivo se transmiten directamente a través del bus principal, siendo recibidos por todos los nodos de la red. Sin embargo, sólo el nodo con la dirección correspondiente a la de los datos transmitidos, los procesará.\\
+
+\subsubsection{Ventajas y Desafíos de la Topología de Bus}
+
+
+Una de las principales ventajas de la topología de bus es su simplicidad. Con un único cable, es posible conectar un gran número de dispositivos. Además, la incorporación o eliminación de dispositivos en la red es sencilla y no interrumpe la comunicación de los demás dispositivos conectados al bus. Asimismo, esta topología es rentable, ya que requiere menos cableado en comparación con otras topologías de red.\\
+
+A pesar de sus ventajas, la topología de bus también presenta algunos desafíos. El más significativo es que si el cable del bus principal se daña o falla, toda la red se ve afectada, lo que puede interrumpir la comunicación entre los dispositivos y los sistemas de control y supervisión.\\
+
+\subsubsection{Robustez y Fiabilidad de la Topología de Bus en Profibus}
+
+La topología de bus en Profibus es especialmente robusta y fiable. Profibus utiliza un método de transmisión llamado RS-485, que es resistente a las interferencias electromagnéticas y permite la transmisión de datos a largas distancias. Además, Profibus utiliza un protocolo de acceso al medio conocido como "Token Passing", que regula la transmisión de datos en la red para evitar colisiones de datos y garantizar una comunicación eficiente y confiable entre los dispositivos.\\
