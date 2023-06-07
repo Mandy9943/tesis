@@ -10,7 +10,6 @@
 *.lol
 *.bbl
 *.blg
-*(busy)*
 *._**
 
 # Releases

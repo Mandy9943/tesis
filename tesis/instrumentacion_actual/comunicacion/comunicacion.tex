@@ -1,57 +1,55 @@
-\section{Cominicación de la planta}
+\section{Comunicación de la planta}
+
 \subsection{Protocolos de Comunicación en los distintos niveles}
 
-Para entender completamente la operación de la planta de bulbos de AICA, es esencial entender los protocolos de comunicación en uso y cómo facilitan la eficiencia de la planta. La comunicación en un ambiente industrial como este no es una cuestión trivial, ya que cada nivel de la pirámide de automatización requiere protocolos específicos para garantizar la correcta transmisión de información.\\
-\begin{enumerate}
-    \item \textbf{Nivel de campo:} En este nivel, los dispositivos de campo
-          como los transmisores de presión y los actuadores de válvulas se
-          comunican con los PLCs. Los protocolos de comunicación en este nivel
-          deben ser capaces de manejar grandes cantidades de datos y deben
-          ser robustos para resistir las interferencias electromagnéticas.
+Para entender completamente la operación de la planta de bulbos de AICA, es esencial entender los protocolos de comunicación
+en uso y cómo facilitan la eficiencia de la planta. La comunicación en un ambiente industrial como este no es una cuestión
+trivial, ya que cada nivel de la pirámide de automatización requiere protocolos específicos para garantizar la correcta
+transmisión de información.
 
-    \item \textbf{Nivel de control:} En este nivel, los PLCs se comunican entre
-          sí y con los sistemas de supervisión. Los protocolos de comunicación en
-          este nivel deben ser capaces de manejar grandes cantidades de datos y
-          deben ser capaces de manejar las demandas de tiempo real de los PLCs y
-          las demandas de alto rendimiento de los sistemas de supervisión.
+\begin{itemize}
+      \item \textbf{Nivel de dispositivos de campo:} Este nivel comprende los dispositivos de campo, incluyendo sensores y
+            actuadores. Estos dispositivos son responsables de adquirir datos a través de señales de campo de tipo intensidad
+            (4-20 mA) o tensión (0-10, 24V DC), y ejecutar acciones físicas dentro del sistema. Se comunican con módulos de
+            periferia descentralizada, como el ET200S de Siemens, y módulos eléctricos como el CPX de Festo a través de Profibus DP.
 
-          Además, en este nivel, Profibus PA (Process Automation) puede ser
-          utilizado para dispositivos que necesitan alimentación eléctrica y
-          transmisión de datos a través del mismo cable, tales como transmisores
-          de campo en áreas peligrosas.
+            Profibus DP es un protocolo de comunicación industrial eficiente y rentable que proporciona altas velocidades
+            de transmisión de datos. Los módulos de periferia descentralizada ET 200S y los módulos eléctricos CPX de Festo
+            actúan como esclavos en la configuración Profibus. Reciben las señales de los dispositivos de campo y las
+            procesan para su posterior transmisión.
 
 
-    \item \textbf{Nivel de supervisión:} En este nivel, los sistemas de
-          supervisión se comunican con los sistemas de información de gestión
-          de la planta. Los protocolos de comunicación en este nivel deben ser
-          capaces de manejar grandes cantidades de datos y deben ser capaces de
-          manejar las demandas de alto rendimiento de los sistemas de supervisión.
+      \item \textbf{Nivel de control:} En el siguiente nivel de la jerarquía, los módulos de periferia descentralizada
+            ET 200s y los módulos eléctricos CPX de Festo se comunican con un PLC maestro. Los módulos transmiten la
+            información recolectada de los dispositivos de campo al PLC maestro a través de Profibus DP, lo que facilita
+            un intercambio de datos rápido y eficiente.
 
-          Profinet permite la transmisión de grandes cantidades de datos a altas
-          velocidades a través de la infraestructura Ethernet existente. Además,
-          Profinet soporta la comunicación en tiempo real y es capaz de manejar
-          tanto las demandas de alto rendimiento de los sistemas de supervisión
-          como las demandas de tiempo real de los PLCs.
+            El PLC maestro procesa estos datos, tomando decisiones que influirán en el desarrollo del proceso. La
+            configuración concebida para esta red de comunicación garantiza una comunicación eficiente entre el
+            PLC maestro y los módulos que se le subordinan.
 
-\end{enumerate}
+      \item \textbf{Nivel de supervisión:} En el nivel más alto de la jerarquía de control, encontramos el
+            sistema SCADA (Supervisory Control And Data Acquisition). Este sistema se encarga de supervisar y
+            controlar todo el proceso, recopilando información del PLC maestro. Para facilitar esta comunicación,
+            se utiliza el protocolo OPC (OLE for Process Control).
 
+            OPC es un estándar de comunicación en la industria de la automatización que permite la interacción
+            fluida entre los sistemas SCADA y los PLC. Este protocolo, basado en la tecnología Microsoft OLE/COM,
+            permite que el sistema SCADA reciba datos en tiempo real del PLC maestro, proporcionando una visión
+            integral del proceso para su supervisión y control.
+
+
+\end{itemize}
 
 \subsection{Topología de la Red}
 
-La arquitectura de red en la planta de bulbos de AICA es una representación vital de cómo los diferentes dispositivos y sistemas se interconectan y comunican entre sí. Esta arquitectura de red se basa en una topología de bus, que es un arreglo común para las redes Profibus.\\
+En el contexto de la planta de ósmosis, la topología de bus es particularmente apropiada por varios motivos. En una topología de bus, todos los dispositivos están conectados a una línea de comunicación común, o "bus". Esto incluye tanto a los módulos de periferia descentralizada ET 200S y el módulo eléctrico CPX de Festo en el nivel de los dispositivos de campo, como al PLC maestro en el nivel de control.\\
 
-\subsubsection{Diseño de la Topología de Bus}
+Uno de los principales motivos para elegir una topología de bus es su sencillez y coste eficiente. Como sólo se necesita un único bus de comunicación, se minimiza el cableado necesario, lo que reduce tanto el coste como la complejidad de la instalación. Además, esta topología permite una fácil expansión de la red, ya que añadir nuevos dispositivos simplemente implica conectarlos al bus existente.\\
 
+Otra ventaja de la topología de bus es su compatibilidad con los protocolos de comunicación utilizados en la planta de ósmosis ya que
+son perfectamente compatibles. Esto asegura una comunicación eficiente y sin problemas en toda la planta.\\
 
-En la topología de bus, todos los nodos (dispositivos de campo, controladores y sistemas de supervisión) están conectados a un solo cable de transmisión, denominado bus. Este bus actúa como una línea de comunicación compartida en la que los mensajes pueden viajar desde un extremo a otro. A este cable principal se le pueden conectar múltiples dispositivos a través de conexiones en derivación. En este diseño, los datos de cada dispositivo se transmiten directamente a través del bus principal, siendo recibidos por todos los nodos de la red. Sin embargo, sólo el nodo con la dirección correspondiente a la de los datos transmitidos, los procesará.\\
+Por último, aunque la topología de bus puede ser susceptible a fallos, en el caso de que se produzca un fallo en el bus de comunicación, esto puede mitigarse mediante el uso de técnicas de redundancia y tolerancia a fallos. En el caso de la planta de ósmosis, esto podría implicar tener un bus de comunicación de respaldo que pueda entrar en funcionamiento en caso de que se produzca un fallo en el bus principal.\\
 
-\subsubsection{Ventajas y Desafíos de la Topología de Bus}
-
-
-Una de las principales ventajas de la topología de bus es su simplicidad. Con un único cable, es posible conectar un gran número de dispositivos. Además, la incorporación o eliminación de dispositivos en la red es sencilla y no interrumpe la comunicación de los demás dispositivos conectados al bus. Asimismo, esta topología es rentable, ya que requiere menos cableado en comparación con otras topologías de red.\\
-
-A pesar de sus ventajas, la topología de bus también presenta algunos desafíos. El más significativo es que si el cable del bus principal se daña o falla, toda la red se ve afectada, lo que puede interrumpir la comunicación entre los dispositivos y los sistemas de control y supervisión.\\
-
-\subsubsection{Robustez y Fiabilidad de la Topología de Bus en Profibus}
-
-La topología de bus en Profibus es especialmente robusta y fiable. Profibus utiliza un método de transmisión llamado RS-485, que es resistente a las interferencias electromagnéticas y permite la transmisión de datos a largas distancias. Además, Profibus utiliza un protocolo de acceso al medio conocido como "Token Passing", que regula la transmisión de datos en la red para evitar colisiones de datos y garantizar una comunicación eficiente y confiable entre los dispositivos.\\
+Por lo tanto, en el contexto de la planta de ósmosis, la topología de bus proporciona una solución de red eficiente, escalable y compatible con los protocolos de comunicación utilizados. Esto asegura una operación efectiva de la planta y permite una fácil expansión y adaptación en el futuro.\\

@@ -1,16 +1,107 @@
 \subsection{Equipos de control}
 
-En el vasto y complejo universo de la ingeniería de procesos, los equipos de 
-control son los actores silenciosos que juegan un papel crucial en el funcionamiento eficiente y 
-efectivo de cualquier sistema de tratamiento. Desde mantener condiciones óptimas hasta permitir ajustes precisos y 
-oportunos, estos equipos son la columna vertebral de cualquier proceso industrial, incluyendo el tratamiento de agua 
+En el vasto y complejo universo de la ingeniería de procesos, los equipos de
+control son los actores silenciosos que juegan un papel crucial en el funcionamiento eficiente y
+efectivo de cualquier sistema de tratamiento. Desde mantener condiciones óptimas hasta permitir ajustes precisos y
+oportunos, estos equipos son la columna vertebral de cualquier proceso industrial, incluyendo el tratamiento de agua
 mediante ósmosis inversa.\\
 
 En esta sección, centraremos nuestro análisis en los distintos equipos de control presentes en nuestro subsistema.
- Examinaremos detenidamente equipos como las bombas y válvulas que conforman 
-la instrumentación de este sistema, estudiando su funcionamiento, características y 
-ubicación en el proceso. Al hacerlo, esperamos proporcionar una visión clara y completa de la instrumentación 
+Examinaremos detenidamente equipos como los transmisores, las bombas y válvulas que conforman
+la instrumentación de este sistema, estudiando su funcionamiento, características y
+ubicación en el proceso. Al hacerlo, esperamos proporcionar una visión clara y completa de la instrumentación
 actual del sistema y destacar su importancia en el mantenimiento de un proceso de ósmosis inversa seguro y eficaz.\\
+
+
+
+
+
+\subsubsection{Transmisores de Conductividad } \label{sec:transmisor_conductividad}
+
+Los transmisores de conductividad son elementos vitales en diversos procesos industriales, incluyendo la ósmosis inversa. Aunque estos dispositivos no miden directamente la conductividad, desempeñan un papel esencial en la interpretación y transmisión de las mediciones de conductividad realizadas por un sensor.\\
+
+El modelo CLM223-CD8110 de Endress+Hauser, es un equipo que, además de convertir y transmitir la señal de conductividad, también presenta
+una funcionalidad de alarma para valores altos de conductividad o errores del sistema. Además, este transmisor puede proporcionar una señal
+de temperatura, lo que aumenta su utilidad en el control de procesos.\\
+
+En el sistema de ósmosis inversa en estudio, los transmisores de conductividad como el CLM223-CD8110 se sitúan a continuación
+de los sensores de conductividad, que usualmente se encuentran en el permeado a la salida de cada etapa de la ósmosis. De este modo, el
+transmisor juega un papel esencial en la monitorización y control de la pureza del agua.\\
+
+Aquí se detallan las características específicas del transmisor de conductividad CLM223-CD8110:\\
+
+\insertimageboxed[\label{fig:transmisor_conductividad}]{instrumentacion/transmisor_conductividad}{scale=1.1}{0}{Características del transmisor CLM223-CD8110}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Características del transmisor CLM223-CD8110.}
+    \label{table:transmisor_conductividad}
+    \begin{tabular}{| L{5cm} | L{5cm} |}
+
+        \hline
+        \textbf{Modelo}     & CLM223-CD8110                                    \\
+        \hline
+        \textbf{Rango}      & 0 a 20µS/cm                                      \\
+        \hline
+        \textbf{Salida}     & 2 x 4 a 20 mA (conductividad y temperatura)      \\
+        \hline
+        \textbf{Alarmas}    & 2 relés x alta conductividad + error del sistema \\
+        \hline
+        \textbf{Voltaje}    & 24 V ac/dc                                       \\
+        \hline
+        \textbf{Opciones}   & transmisor de temperatura                        \\
+        \hline
+        \textbf{Fabricante} & Endress+Hauser                                   \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+
+\subsubsection{Transmisores de pH y REDOX } \label{sec:transmisor_ph_redox}
+
+Los transmisores de pH y REDOX son instrumentos clave en el análisis y control de procesos químicos e industriales, especialmente en sistemas como el tratamiento de agua por ósmosis inversa. Proporcionan mediciones precisas y fiables de dos parámetros críticos: el pH, que es una medida de la acidez o alcalinidad de una solución, y el potencial de reducción-oxidación (REDOX), que indica la capacidad de una solución para ganar o perder electrones.\\
+
+En el sistema de ósmosis inversa en estudio, el modelo CPM 223-MR8010 Memosens de Endress+Hauser se utiliza para transmitir datos de pH y REDOX
+desde las ubicaciones de medición hasta los sistemas de control o monitorización. Estos dispositivos se encuentran después de los analizadores de Redox,
+que están ubicado después del filtro de 10 micras, y después de los sensores de pH, que están ubicados luego del filtro de 5 micras. Esta ubicación
+es esencial para controlar y ajustar el proceso de ósmosis inversa en función de las condiciones del agua.\\
+
+Las características específicas del modelo CPM 223-MR8010 Memosens de Endress+Hauser son las siguientes:\\
+
+\insertimageboxed[\label{fig:transmisor_pH}]{instrumentacion/transmisor_pH}{scale=1.1}{0}{Características del transmisor de pHy Redox CPM 223-MR8010}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Características del Transmisor de pH y REDOX.}
+    \label{table:transmisor_pH}
+    \begin{tabular}{| L{5cm} | L{5cm} |}
+
+        \hline
+        \textbf{Modelo}                & CPM 223-MR8010 Memosens                          \\
+        \hline
+
+        \textbf{Diseño}                & Transmisor de pH/ORP en caja de panel (96x96 mm) \\
+        \hline
+        \textbf{Alarmas}               & 2 relay + error de sistema                       \\
+        \hline
+        \textbf{Dimensiones}           & 96 mm x 96 mm x 146 mm (profundidad de montaje)  \\
+        \hline
+        \textbf{Protección de ingreso} & IP65                                             \\
+        \hline
+        \textbf{Entrada}               & Transmisor de un solo canal                      \\
+        \hline
+        \textbf{Salida / comunicación} & 0/4-20 mA, Hart, Profibus                        \\
+        \hline
+
+        \textbf{Fabricante}            & Endress+Hauser                                   \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
 
 \subsubsection{Bombas de Alta Presión}
 
@@ -22,10 +113,10 @@ El funcionamiento de las bombas centrífugas se basa en la conversión de la ene
 
 Estas bombas están ubicadas antes de cada etapa de la ósmosis, donde su tarea es generar la presión necesaria para forzar el paso del agua a través de la membrana semi-permeable del sistema de ósmosis inversa.\\
 
+
+\insertimageboxed[\label{fig:bomba_centrifuga}]{instrumentacion/bomba_centrifuga}{scale=0.9}{0}{Bombas centrífuga CRN10-7}
+
 A continuación, se presenta una tabla con las características técnicas más relevantes de las bombas de alta presión CRN10-7:\\
-
-\insertimageboxed[\label{fig:bomba_centrifuga}]{instrumentacion/bomba_centrifuga}{scale=1.1}{0}{Bombas centrífuga CRN10-7}
-
 
 \begin{table}[H]
     \centering
@@ -33,39 +124,39 @@ A continuación, se presenta una tabla con las características técnicas más r
     \label{table:bomba_centrifuga}
     \begin{tabular}{| L{6cm} | L{6cm} |}
         \hline
-        \textbf{Modelo} & CRN10-7  \\
+        \textbf{Modelo}                 & CRN10-7                            \\
         \hline
-        \textbf{Tipo} & Centrífuga vertical multietapa  \\
+        \textbf{Tipo}                   & Centrífuga vertical multietapa     \\
         \hline
-        \textbf{Material} & AISI 316  \\
+        \textbf{Material}               & AISI 316                           \\
         \hline
-        \textbf{Sello} & HUUE (Carburo de Tungsteno / EPDM)  \\
+        \textbf{Sello}                  & HUUE (Carburo de Tungsteno / EPDM) \\
         \hline
-        \textbf{Medio} & Agua ablandada  \\
+        \textbf{Medio}                  & Agua ablandada                     \\
         \hline
-        \textbf{Temperatura de trabajo} & 20°C  \\
+        \textbf{Temperatura de trabajo} & 20°C                               \\
         \hline
-        \textbf{Caudal} & 8000 lt/h  \\
+        \textbf{Caudal}                 & 8000 l/h                           \\
         \hline
-        \textbf{Presión de descarga} & 10 bar  \\
+        \textbf{Presión de descarga}    & 10 bar                             \\
         \hline
-        \textbf{Diámetro del impulsor} & n.a  \\
+        \textbf{Diámetro del impulsor}  & n.a                                \\
         \hline
-        \textbf{Puerto de entrada} & 2" Tri-Clamp  \\
+        \textbf{Puerto de entrada}      & 2" Tri-Clamp                       \\
         \hline
-        \textbf{Puerto de salida} & 2" Tri-Clamp  \\
+        \textbf{Puerto de salida}       & 2" Tri-Clamp                       \\
         \hline
-        \textbf{Suministro eléctrico} & 3 x 380V 60 Hz  \\
+        \textbf{Suministro eléctrico}   & 3 x 380V 60 Hz                     \\
         \hline
-        \textbf{Potencia} & 5,5 kW  \\
+        \textbf{Potencia}               & 5,5 kW                             \\
         \hline
-        \textbf{Amperios} & 10,8  \\
+        \textbf{Amperios}               & 10,8                               \\
         \hline
-        \textbf{RPM} & 3600  \\
+        \textbf{RPM}                    & 3600                               \\
         \hline
-        \textbf{Opciones} & Base de acero inoxidable  \\
+        \textbf{Opciones}               & Base de acero inoxidable           \\
         \hline
-        \textbf{Fabricante} & GRUNDFOS  \\
+        \textbf{Fabricante}             & GRUNDFOS                           \\
         \hline
     \end{tabular}
 \end{table}
@@ -74,23 +165,23 @@ A continuación, se presenta una tabla con las características técnicas más r
 
 \subsubsection{Bombas Dosificadoras}
 
-Las bombas dosificadoras son las encargadas de administrar con precisión pequeñas 
- cantidades de químicos para alterar las características del agua. Estos químicos incluyen 
- agentes como el NaOH y Na2S2O5, que respectivamente alteran el pH y reducen el oxígeno disuelto en el agua.\\
+Las bombas dosificadoras son las encargadas de administrar con precisión pequeñas
+cantidades de químicos para alterar las características del agua. Estos químicos incluyen
+agentes como el NaOH y Na$_2$S$_2$O$_5$, que respectivamente alteran el pH y reducen el oxígeno disuelto en el agua.\\
 
-En nuestro sistema, se utilizan dos bombas dosificadoras específicas de la marca PROMINENT: 
-los modelos GALA G/L G1005 NPB 200UA 103000 figura \ref{fig:bomba_dosificadora} y G/L 1601 NPB 220UA 103 000 figura \ref{fig:bomba_dosificadora2} . Ambos modelos 
-son reconocidos por su precisión y fiabilidad, y utilizan la tecnología de diafragma 
+En nuestro sistema, se utilizan bombas dosificadoras de la marca PROMINENT, modelo GALA G/L G1005 NPB 200UA 103000
+figura \ref{fig:bomba_dosificadora}. Este modelo
+es reconocido por su precisión y fiabilidad, y utilizan la tecnología de diafragma
 solenoide para garantizar una dosificación exacta.\\
 
 El principio de funcionamiento de estas bombas se basa en la acción de un solenoide que atrae y repele un diafragma, creando un movimiento oscilante. Este movimiento provoca la succión del medio (el químico a dosificar) durante la fase de retracción del diafragma y su posterior expulsión durante la fase de compresión.\\
 
-La bomba GALA G/L G1005 NPB 200UA 103000 se encuentra en el sistema de dosificación bomba-tanque de NaOH, mientras que la bomba G/L 1601 NPB 220UA 103 000 se utiliza en el sistema de dosificación bomba-tanque de Na2S2O5.\\
+Las bombas GALA G/L G1005 NPB 200UA 103000 se encuentra en el sistema de dosificación bomba-tanque de NaOH, así como en el sistema de dosificación bomba-tanque de Na$_2$S$_2$O$_5$.\\
 
-A continuación, se presentan las características técnicas de cada una de estas bombas dosificadoras:\\
 
 \insertimageboxed[\label{fig:bomba_dosificadora}]{instrumentacion/bomba_dosificadora}{scale=0.8}{0}{Bomba dosificadora G1005}
 
+A continuación, se presentan las características técnicas estas bombas dosificadoras:\\
 
 \begin{table}[H]
     \centering
@@ -98,53 +189,22 @@ A continuación, se presentan las características técnicas de cada una de esta
     \label{table:bomba_dosificadora}
     \begin{tabular}{| L{6cm} | L{6cm} |}
         \hline
-        \textbf{Modelo} & GALA G/L G1005 NPB 200UA 103000  \\
+        \textbf{Modelo}        & GALA G/L G1005 NPB 200UA 103000 \\
         \hline
-        \textbf{Material} & Plexiglás \\
+        \textbf{Material}      & Plexiglás                       \\
         \hline
-        \textbf{Caudal} & 4,4 lt @ 10 bar \\
+        \textbf{Caudal}        & 4,4 l a 10 bar                  \\
         \hline
-        \textbf{Voltaje} & 100-230 V / 50-60 Hz \\
+        \textbf{Voltaje}       & 100-230 V / 50-60 Hz            \\
         \hline
-        \textbf{Protección IP} & 65 \\
+        \textbf{Protección IP} & 65                              \\
         \hline
-        \textbf{Potencia} & 12W \\
+        \textbf{Potencia}      & 12W                             \\
         \hline
-        \textbf{Fabricante} & PROMINENT \\
-        \hline
-    \end{tabular}
-\end{table}
-
-\insertimageboxed[\label{fig:bomba_dosificadora2}]{instrumentacion/bomba_dosificadora}{scale=0.8}{0}{Bomba dosificadora G/L 1601}
-
-
-\begin{table}[H]
-    \centering
-    \caption{Características de la bomba dosificadora G/L 1601.}
-    \label{table:bomba_dosificadora2}
-    \begin{tabular}{| L{6cm} | L{6cm} |}
-        \hline
-        \textbf{Modelo} & G/L 1601 NPB 220UA  \\
-        \hline
-        \textbf{Tipo} & Diafragma de solenoide \\
-        \hline
-        \textbf{Medio} & Solución acuosa de Na2S2O5 \\
-        \hline
-        \textbf{Materiales} & Cabeza de dosificación: Acrílico, elemento de succión / presión: PVC, sellos: FPM-B, bolas: cerámica \\
-        \hline
-        \textbf{Caudal} & 1,1 lt/h \\
-        \hline
-        \textbf{Presión de descarga} & 16 bar \\
-        \hline
-        \textbf{Suministro eléctrico} & 100-230 V / 50-60 Hz \\
-        \hline
-        \textbf{Potencia} & 12 W \\
-        \hline
-        \textbf{Fabricante} & PROMINENT \\
+        \textbf{Fabricante}    & PROMINENT                       \\
         \hline
     \end{tabular}
 \end{table}
-
 
 \subsubsection{Válvulas de Retención} \label{sec:valvula_retencion}
 
@@ -156,121 +216,148 @@ El principio de funcionamiento de las válvulas de retención es relativamente s
 
 Para nuestro sistema, empleamos el modelo de válvula de retención Art. 048 VRTCV2 de RATTI. Este modelo está construido con un cuerpo de acero inoxidable AISI 316L, lo que garantiza su resistencia a la corrosión, y tiene una junta de PTFE.\\
 
-Válvula de Retención 048 VRTCV2\\
+\insertimageboxed[\label{fig:valvula_retencion}]{instrumentacion/valvula_retencion}{scale=0.8}{0}{Válvula de Retención 048 VRTCV2}
+
 
 \begin{table}[H]
     \centering
-    \caption{Características del cuerpo.}
-    \label{table:cuerpo}
-    \begin{tabular}{| L{6cm} | L{6cm} |}
-        \hline
-        \textbf{Material del cuerpo} & AISI 316L \\
-        \hline
-        \textbf{Junta} & PTFE \\
-        \hline
-        \textbf{Diámetro} & 1½" \\
-        \hline
-        \textbf{Conexiones} & Abrazadera (clamp) \\
-        \hline
-        \textbf{Resorte} & Estándar \\
-        \hline
-        \textbf{Fabricante} & RATTI \\
-        \hline
-    \end{tabular}
-\end{table}
-
-
-\subsubsection{Válvulas Multiusos} \label{sec:valvula_multi}
-
-Las válvulas multiusos son componentes esenciales en cualquier sistema de tratamiento de agua. Actúan como puntos de control, permitiendo o impidiendo el paso de fluidos a través de las tuberías. La capacidad de controlar el flujo de agua y otros líquidos es crucial para el funcionamiento seguro y eficiente de todo el sistema. Son llamadas "multiusos" porque se utilizan en una variedad de aplicaciones dentro del sistema, dependiendo de las necesidades del proceso en particular.\\
-
-En nuestro sistema de ósmosis inversa, las válvulas multiusos se encuentran en varios puntos críticos. Una ubicación importante es en las tuberías de concentrado de la ósmosis, en la línea que va al drenaje o que retorna al tanque de almacenamiento de agua de pretratamiento. Además, se utilizan en la línea de bypass que se encuentra después de la bomba de lavado químico. Estas ubicaciones no son exhaustivas, y es posible encontrar estas válvulas en otros puntos del sistema donde se requiera controlar el flujo de fluido.\\
-
-El principio de funcionamiento de las válvulas multiusos es simple pero efectivo. Cuando la válvula está abierta, permite el flujo de fluido; cuando está cerrada, detiene el flujo.\\
-
-Utilizamos el modelo J4M1G00 de RATTI para nuestras válvulas multiusos. Esta válvula está fabricada con acero inoxidable AISI 316L para una resistencia óptima a la corrosión y durabilidad a largo plazo. Tiene un diámetro de 1" - ¾" y se conecta mediante una conexión Tri-Clamp.\\
-
-\begin{table}[H]
-    \centering
-    \caption{Características del cuerpo.}
-    \label{table:valvula_multiusos}
-    \begin{tabular}{| L{6cm} | L{6cm} |}
-        \hline
-        \textbf{Material del cuerpo} & AISI 316 L \\
-        \hline
-        \textbf{Diámetro} & 1" - ¾" \\
-        \hline
-        \textbf{Conexiones} & Tri-Clamp \\
-        \hline
-        \textbf{Fabricante} & OMAL \\
-        \hline
-    \end{tabular}
-\end{table}
-
-\subsubsection{Válvulas de Control ON/OFF} \label{sec:valvula_OnOff}
-
-En cualquier proceso industrial, las válvulas de control ON/OFF son elementos críticos para la gestión y regulación del flujo de fluidos. Su importancia radica en su habilidad para controlar de manera precisa y eficiente el flujo a través de las tuberías, permitiendo un total paso del fluido o su completa interrupción, según las demandas del sistema.\\
-
-Un ejemplo específico de este tipo de válvulas es el modelo S386FPLY004Y05 de la reconocida empresa OMAL. Esta válvula cuenta con un cuerpo de hierro fundido revestido con EPOXY y EPDM, lo que la hace resistente y duradera. La característica más notable de esta válvula es su actuador neumático de retorno por resorte que, junto con su conjunto de accesorios, garantiza un funcionamiento fiable y una integración eficiente con el sistema de control del proceso.\\
-
-La planta de ósmosis inversa que analizamos está equipada con numerosas válvulas de control ON/OFF, distribuidas estratégicamente en diferentes puntos del sistema. Son componentes indispensables que aseguran la correcta operación del proceso, y debido a su importancia, están presentes en gran cantidad en todas las áreas de la planta. Algunos lugares estratégicos donde podemos encontrar este tipo de válvulas puede ser la línea que precede a la bomba de alta presión y en la línea de concentrado de la primera etapa de ósmosis que retorna al tanque de pretratamiento.\\
-
-Válvula de Control ON/OFF S386FPLY004Y05\\
-
-\begin{table}[H]
-    \centering
-    \caption{Características del cuerpo.}
-    \label{table:valvula_on_off}
-    \begin{tabular}{| L{6cm} | L{6cm} |}
-        \hline
-        \textbf{Material del cuerpo} & Hierro fundido con revestimiento de EPOXY \\
-        \hline
-        \textbf{Revestimiento} & EPDM \\
-        \hline
-        \textbf{Vástago y disco} & Acero inoxidable AISI 316 \\
-        \hline
-        \textbf{Estilo del cuerpo} & "LUG" roscado para brida EN1092-1 \\
-        \hline
-        \textbf{Tamaño} & DN40 \\
-        \hline
-        \textbf{Actuador} & Neumático de retorno por resorte N.O. tipo SR30 y tornillos de regulación \\
-        \hline
-        \textbf{Accesorios} & Indicador de posición del eje KI02PP10, regulador de flujo de aire comprimido KAPR00101, filtro de aire de bronce 9490S001 \\
-        \hline
-        \textbf{Fabricante} & OMAL \\
-        \hline
-    \end{tabular}
-\end{table}
-
-\subsubsection{Válvulas de Retención de Presión de Inyección}
-
-Las válvulas de retención de presión de inyección juegan un papel importante en el sistema de dosificación, especialmente en procesos industriales que requieren una precisión en la dosificación de ciertos productos químicos. Estas válvulas mantienen una presión constante de salida, evitando fluctuaciones y garantizando una dosificación precisa y estable.\\
-
-En nuestra planta de ósmosis inversa, estas válvulas son vitales en la dosificación precisa de sustancias químicas como NaOH y Na2S2O5. Son componentes esenciales para asegurar la eficacia de las operaciones de dosificación y se encuentran estratégicamente ubicadas en las líneas de dosificación correspondientes. Sin embargo, su presencia no se limita a estas áreas, y se podrían encontrar en otras partes del sistema donde se necesite una dosificación precisa.\\
-
-El modelo MFV-DK de PROMINENT, una empresa reconocida por la fabricación de componentes de alta calidad, es una de las válvulas utilizadas en nuestro sistema. Con un cuerpo de PVDF y un diafragma de PTFE, esta válvula es capaz de mantener una presión de alivio de hasta 16 bar, lo que asegura su capacidad para trabajar bajo condiciones exigentes.\\
-
-Válvula de Retención de Presión de Inyección MFV-DK\\
-
-\begin{table}[H]
-    \centering
-    \caption{Características del tipo MFV-DK, PVDF.}
+    \caption{Características de la Válvula de Retención 048 VRTCV2.}
     \label{table:valvula_retencion}
     \begin{tabular}{| L{6cm} | L{6cm} |}
         \hline
-        \textbf{Tipo} & MFV-DK, PVDF \\
+        \textbf{Material del cuerpo} & AISI 316L          \\
         \hline
-        \textbf{Tamaño} & 1 \\
+        \textbf{Junta}               & PTFE               \\
         \hline
-        \textbf{Presión de alivio} & 16 bar \\
+        \textbf{Diámetro}            & 1½"                \\
         \hline
-        \textbf{Conector} & 6-12 mm \\
+        \textbf{Conexiones}          & Abrazadera (clamp) \\
         \hline
-        \textbf{Conector de bypass} & 6/4 mm \\
+        \textbf{Resorte}             & Estándar           \\
         \hline
-        \textbf{Materiales} & Cuerpo de PVDF, diafragma de PTFE, sello de FPM \\
+        \textbf{Fabricante}          & RATTI              \\
         \hline
-        \textbf{Fabricante} & PROMINENT \\
+    \end{tabular}
+\end{table}
+
+
+\subsubsection{Válvulas de operación} \label{sec:valvula_multi}
+
+Las válvulas de operación son componentes esenciales en cualquier sistema de tratamiento de agua. Actúan como puntos de control, permitiendo o impidiendo el paso de fluidos a través de las tuberías. La capacidad de controlar el flujo de agua y otros líquidos es crucial para el funcionamiento seguro y eficiente de todo el sistema.\\
+
+La válvula neumática de accionamiento manual ARES con dispositivo de bloqueo juega un papel crucial en el funcionamiento de la planta. Este componente de alta resistencia facilita la gestión precisa del flujo de diferentes medios operativos en las líneas de proceso. El versátil diseño de la válvula permite su instalación en una variedad de configuraciones, contribuyendo a la eficiencia y al control efectivo del sistema.\\
+
+En particular, la válvula puede estar situada en la tubería de desagüe del concentrado después de la primera etapa de ósmosis inversa. Esta ubicación es estratégica, ya que permite el control del flujo de desechos y contribuye al funcionamiento óptimo del proceso de purificación. Además, otra posible ubicación para la válvula es la tubería de retorno del concentrado después de la segunda etapa de ósmosis inversa, donde su presencia asegura un manejo adecuado del concentrado y evita posibles problemas de contrapresión.\\
+
+El principio de operación de la válvula neumática ARES se basa en el control manual de la presión del aire. Esta característica permite un ajuste sutil y personalizado de la válvula para permitir el paso de los medios operativos a diferentes presiones, lo que garantiza un control eficiente y preciso del flujo de fluidos a través de la planta.\\
+
+
+\insertimageboxed[\label{fig:valvula_operacion}]{instrumentacion/valvula_operacion}{scale=0.8}{0}{Válvula neumática de accionamiento manual ARES}
+
+\begin{table}[H]
+    \centering
+    \caption{Características de la válvula de accionamiento manual.}
+    \label{table:valvula_operacion}
+    \begin{tabular}{| L{6cm} | L{6cm} |}
+        \hline
+        \textbf{Material del cuerpo}           & A351-CF8M (316 S.S.)                                 \\
+        \hline
+        \textbf{Conexiones}                    & Consultar plano de códigos                           \\
+        \hline
+        \textbf{Posibilidad de montaje}        & En todas las posiciones: vertical, plana o inclinada \\
+        \hline
+        \textbf{Rango disponible}              & De DN 10 a DN 50                                     \\
+        \hline
+        \textbf{Configuración 2014/34/EU ATEX} & A solicitud en el momento del pedido                 \\
+        \hline
+        \textbf{Presión}                       & De 0 a 25 bar                                        \\
+        \hline
+        \textbf{Temperatura}                   & De –10°C a 180°C                                     \\
+        \hline
+        \textbf{Viscosidad máxima}             & 600 cst (mm$^2$ / s)                                 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+\subsubsection{Válvulas de Control} \label{sec:valvula_OnOff}
+
+En cualquier proceso industrial, las válvulas de control son elementos críticos para la gestión y regulación del flujo de fluidos.
+Su importancia radica en su habilidad para controlar de manera precisa y eficiente el flujo a través de las tuberías, permitiendo un
+total paso del fluido o su completa interrupción, según las demandas del sistema.\\
+
+El siguiente componente que se analizará es la válvula de asiento en ángulo ARES con conexiones especiales. Esta pieza juega un papel vital en el control y dirección del flujo de fluidos a lo largo del sistema. Gracias a su diseño robusto y capacidades de alta resistencia, es una parte indispensable de la operación total de la planta.\\
+
+La válvula puede encontrarse estratégicamente ubicada en la línea que precede a la bomba de alta presión. Esta ubicación es vital ya que la válvula de asiento en ángulo facilita el control de flujo preciso necesario antes de que el fluido entre en la bomba de alta presión, lo que permite que la bomba funcione a una eficiencia óptima. Otra ubicación crítica para la válvula es en la línea de concentrado que retorna del tanque de pretratamiento después de la primera etapa de ósmosis inversa. Aquí, la válvula permite controlar eficientemente el flujo de fluido concentrado, evitando posibles problemas de contrapresión.\\
+
+La válvula ARES opera bajo el principio de control de fluido, donde el fluido de control puede ser aire comprimido, lubricado o seco, gas o medios neutros. Esta característica ofrece un gran nivel de control y precisión en la gestión del flujo de fluidos en diversas condiciones de operación.\\
+
+\insertimageboxed[\label{fig:valvula_on_off}]{instrumentacion/valvula_on_off}{scale=0.8}{0}{Válvula de asiento en ángulo ARES con conexiones especiales}
+
+\begin{table}[H]
+    \centering
+    \caption{Características de la válvula de asiento en ángulo ARES con conexiones especiales.}
+    \label{table:ares_angle_valve}
+    \begin{tabular}{| L{6cm} | L{6cm} |}
+        \hline
+        \textbf{Material del cuerpo}    & AISI 316 L                                                                                                                                                       \\
+
+        \hline
+        \textbf{Posibilidad de montaje} & En todas las posiciones: vertical, plana o inclinada                                                                                                             \\
+        \hline
+        \textbf{Rango disponible}       & De DN 15 a DN 50 en las versiones de doble efecto, retorno por resorte N.C. desde arriba y debajo del enchufe, retorno por resorte N.O. desde debajo del enchufe \\
+        \hline
+        \textbf{Medios operativos}      & Aire, agua, alcohol, petróleo, soluciones salinas, vapor, etc. (siempre que sean compatibles con AISI 316L o PTFE)                                               \\
+        \hline
+        \textbf{Presión}                & De 0 a 16 bar                                                                                                                                                    \\
+        \hline
+        \textbf{Temperatura}            & De –10°C a 180°C                                                                                                                                                 \\
+        \hline
+        \textbf{Viscosidad máxima}      & 600 cst (mm2/s)                                                                                                                                                  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+\subsubsection{Válvulas de contrapresión}
+
+Las válvulas de contrapresión juegan un papel importante en el sistema de dosificación, especialmente en procesos industriales
+que requieren una precisión en la dosificación de ciertos productos químicos. Estas válvulas mantienen una presión constante
+de salida, evitando fluctuaciones y garantizando una dosificación precisa y estable.\\
+
+En nuestra planta de ósmosis inversa, estas válvulas son vitales en la dosificación precisa de sustancias químicas como
+NaOH y Na$_2$S$_2$O$_5$. Son componentes esenciales para asegurar la eficacia de las operaciones de dosificación y
+se encuentran estratégicamente ubicadas en las líneas de dosificación correspondientes. Sin embargo, su presencia
+no se limita a estas áreas, y se podrían encontrar en otras partes del sistema donde se necesite una dosificación
+precisa.\\
+
+El tipo MFV-DK de PROMINENT, una empresa reconocida por la fabricación de componentes de alta
+calidad, es una de las válvulas utilizadas en nuestro sistema. Con un cuerpo de PVDF y un diafragma
+de PTFE, esta válvula es capaz de mantener una presión de alivio de hasta 16 bar, lo que asegura su
+capacidad para trabajar bajo condiciones exigentes.\\
+
+\insertimageboxed[\label{fig:valvula_retencion_presion}]{instrumentacion/valvula_retencio_presion}{scale=0.8}{0}{Válvula de contrapresión}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Características de la válvula de contrapresión.}
+    \label{table:valvula_retencion_presion}
+    \begin{tabular}{| L{6cm} | L{6cm} |}
+        \hline
+        \textbf{Tipo}               & MFV-DK, PVDF                                    \\
+        \hline
+        \textbf{Tamaño}             & 1                                               \\
+        \hline
+        \textbf{Presión de alivio}  & 16 bar                                          \\
+        \hline
+        \textbf{Conector}           & 6-12 mm                                         \\
+        \hline
+        \textbf{Conector de bypass} & 6/4 mm                                          \\
+        \hline
+        \textbf{Materiales}         & Cuerpo de PVDF, diafragma de PTFE, sello de FPM \\
+        \hline
+        \textbf{Fabricante}         & PROMINENT                                       \\
         \hline
     \end{tabular}
 \end{table}

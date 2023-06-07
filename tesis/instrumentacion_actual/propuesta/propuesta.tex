@@ -1,6 +1,6 @@
 \section{Propuesta de instrumentación}
 
-La ingeniería de procesos, y especialmente el tratamiento de agua mediante ósmosis inversa, requiere una cuidadosa selección de equipos y dispositivos de control, también conocidos como instrumentación. En esta sección, daremos un paso hacia adelante desde el análisis de la instrumentación actual, para abordar nuestra propuesta de mejoramiento: la implementación de un electrodeionizador (EDI) y la instrumentación requerida para su correcta operación.\\
+La ingeniería de procesos, y especialmente el tratamiento de agua mediante ósmosis inversa, requiere una cuidadosa selección de equipos y dispositivos de control, también conocidos como instrumentación. En esta sección, daremos un paso hacia adelante desde el análisis de la instrumentación actual, para abordar nuestra propuesta de mejoramiento: la implementación de un electrodesionizador (EDI) y la instrumentación requerida para su correcta operación.\\
 
 La instrumentación adecuada es crucial para el buen funcionamiento de cualquier proceso industrial, ya que nos permite monitorizar y controlar de forma precisa las variables críticas de operación. En el caso de la ósmosis inversa y, más concretamente, del EDI, esta importancia se acentúa, dado que el rendimiento y la eficiencia del sistema dependen en gran medida de la capacidad de regular las condiciones de trabajo.\\
 
@@ -48,8 +48,7 @@ Las siguientes son algunas de las tecnologías que se han evaluado:
     \item \textbf{Destilación:}  Aunque la destilación puede ofrecer altos niveles de
           purificación, la energía requerida para este proceso es considerable,
           lo que resulta en costos operativos más altos. Además, la destilación
-          no elimina eficientemente algunos contaminantes volátiles que pueden s
-          er arrastrados con el vapor.
+          no elimina eficientemente algunos contaminantes volátiles que pueden ser arrastrados con el vapor.
 
     \item \textbf{Desionización (DI): } Los sistemas de DI pueden ser eficientes para
           la eliminación de iones de agua, pero su capacidad para eliminar
@@ -66,15 +65,15 @@ Las siguientes son algunas de las tecnologías que se han evaluado:
 
 Teniendo en cuenta las limitaciones y desafíos presentes en estas tecnologías alternativas, y
 dadas las necesidades específicas de nuestra planta de tratamiento de agua, es evidente que se
-necesita una solución más eficaz y sostenible. En este contexto, la Electrodeionización (EDI)
+necesita una solución más eficaz y sostenible. En este contexto, la Electrodesionización (EDI)
 emerge como una solución potencialmente superior, debido a su capacidad para superar muchas de las
 limitaciones de las tecnologías mencionadas anteriormente.
 
-\subsection{La Electrodeionización}
+\subsection{La Electrodesionización}
 
-La Electrodeionización (EDI) es una tecnología innovadora que combina dos procesos
+La Electrodesionización (EDI) es una tecnología innovadora que combina dos procesos
 fundamentales de purificación de agua: la desionización mediante intercambio iónico y
-la electrodialisis. La sinergia de estos métodos resulta en un sistema eficiente y
+la electrodiálisis. La sinergia de estos métodos resulta en un sistema eficiente y
 sustentable capaz de producir agua ultrapura de manera continua y sin la necesidad
 de regenerar químicos.\\
 
@@ -94,14 +93,14 @@ principio de funcionamiento de la EDI, sus componentes, así como los beneficios
 desafíos asociados, se remite al lector al Capítulo \ref{cap:fundamentosEDI} donde se proporciona un
 análisis exhaustivo de esta tecnología.\\
 
-\subsection{El Electrodeionizador}
+\subsection{El Electrodesionizador}
 
-El electrodeionizador seleccionado para la implementación en la planta de tratamiento de agua es el modelo LMX30-X-3 fabricado por Ionpure. Este equipo desempeña un papel crucial en el proceso de purificación del agua, ya que permite la eliminación de iones y moléculas no deseadas a través de un proceso de electrodeionización. A continuación se muestra la figura del Electrodeionizador seleccionado (Figura \ref{fig:edi_model}). Las especificaciones técnicas de este modelo se presentan en la Tabla \ref{table:edi_specs}.
+El electrodesionizador seleccionado para la implementación en la planta de tratamiento de agua es el modelo LMX30-X-3 fabricado por Ionpure. Este equipo desempeña un papel crucial en el proceso de purificación del agua, ya que permite la eliminación de iones y moléculas no deseadas a través de un proceso de electrodesionización. A continuación se muestra la figura del Electrodesionizador seleccionado (Figura \ref{fig:edi_model}). Las especificaciones técnicas de este modelo se presentan en la Tabla \ref{table:edi_specs}.
 
 \insertimageboxed[\label{fig:edi_model}]{instrumentacion/edi}{scale=0.8}{0}{Modelo LMX30-X-3 de Ionpure.}
 
 
-La fuente de alimentación del Electrodeionizador, vital para su funcionamiento correcto, es el modelo PTM06 de STIL MAS. Esta fuente de alimentación proporciona la energía eléctrica necesaria para el funcionamiento del Electrodeionizador, permitiendo la ionización de las moléculas y facilitando su eliminación. La figura de la Fuente de alimentación seleccionada se muestra a continuación (Figura \ref{fig:edi_power}). Sus especificaciones se muestran en la Tabla \ref{table:power_supply_specs}.
+La fuente de alimentación del Electrodesionizador, vital para su funcionamiento correcto, es el modelo PTM06 de STIL MAS. Esta fuente de alimentación proporciona la energía eléctrica necesaria para el funcionamiento del Electrodesionizador, permitiendo la ionización de las moléculas y facilitando su eliminación. La figura de la Fuente de alimentación seleccionada se muestra a continuación (Figura \ref{fig:edi_power}). Sus especificaciones se muestran en la Tabla \ref{table:power_supply_specs}.
 
 
 \insertimageboxed[\label{fig:edi_power}]{instrumentacion/edi_power}{scale=0.8}{0}{Modelo PTM06 de STIL MAS.}
@@ -109,7 +108,7 @@ La fuente de alimentación del Electrodeionizador, vital para su funcionamiento 
 
 \begin{table}[H]
     \centering
-    \caption{Especificaciones técnicas del Electrodeionizador LMX30-X-3 de Ionpure.}
+    \caption{Especificaciones técnicas del Electrodesionizador LMX30-X-3 de Ionpure.}
     \label{table:edi_specs}
     \begin{tabular}{| L{6cm} | L{6cm} |}
         \hline
@@ -165,7 +164,7 @@ La fuente de alimentación del Electrodeionizador, vital para su funcionamiento 
 
 \subsection{Válvulas y Sensores para el EDI}
 
-La implementación del electrodeionizador (EDI) en la planta farmacéutica de AICA requiere una serie de válvulas y sensores para garantizar un control riguroso del proceso. Tras un detallado análisis de la instrumentación existente en la planta de tratamiento de agua, se decidió que los sensores y válvulas actuales cumplen a cabalidad con los requerimientos del sistema de EDI. Estos dispositivos han demostrado su eficacia en las operaciones de la planta y el personal tiene experiencia en su uso y mantenimiento. Por ello, no se consideró necesario incorporar nuevos modelos de sensores o válvulas en la implementación del EDI.
+La implementación del electrodesionizador (EDI) en la planta farmacéutica de AICA requiere una serie de válvulas y sensores para garantizar un control riguroso del proceso. Tras un detallado análisis de la instrumentación existente en la planta de tratamiento de agua, se decidió que los sensores y válvulas actuales cumplen a cabalidad con los requerimientos del sistema de EDI. Estos dispositivos han demostrado su eficacia en las operaciones de la planta y el personal tiene experiencia en su uso y mantenimiento. Por ello, no se consideró necesario incorporar nuevos modelos de sensores o válvulas en la implementación del EDI.
 
 A continuación, se resumen los principales elementos de instrumentación que serán utilizados en el sistema de EDI, la explicación detallada de cada uno de estos se encuentra en capítulos anteriores:
 \begin{itemize}
@@ -177,7 +176,7 @@ A continuación, se resumen los principales elementos de instrumentación que se
 
     \item \textbf{Indicadores de Flujo y Manómetros:} Los indicadores de flujo y los manómetros proporcionan una visualización inmediata de las condiciones del sistema, lo que facilita su operación y mantenimiento, ver secciones \ref{sec:indicador_flujo} y \ref{sec:indicador_manometro}.
 
-    \item \textbf{Válvulas de Control ON/OFF , Válvulas de Retención y Válvulas comunes:} Estas válvulas, referenciadas en las secciones \ref{sec:valvula_OnOff} , \ref{sec:valvula_retencion} y \ref{sec:valvula_multi}, son fundamentales para controlar el flujo de agua dentro del sistema de EDI.
+    \item \textbf{Válvulas de Retención y Válvulas de operación:} Estas válvulas, referenciadas en las secciones \ref{sec:valvula_OnOff} , \ref{sec:valvula_retencion} y \ref{sec:valvula_multi}, son fundamentales para controlar el flujo de agua dentro del sistema de EDI.
 \end{itemize}
 
 En la siguiente sección, se presentará un esquema general de la configuración del EDI, en el que se identificarán las ubicaciones de las válvulas y sensores en el sistema.
@@ -185,3 +184,20 @@ En la siguiente sección, se presentará un esquema general de la configuración
 
 
 \subsection{Esquema General de la Configuración del EDI e Instrumentación Asociada}
+
+El sistema de Electrodesionización (EDI) implementado se compone de un único módulo de EDI.
+Esta configuración se basa en la capacidad de la segunda etapa de la ósmosis inversa, que
+produce 3000 litros por hora, mientras que el módulo EDI puede procesar hasta 3300 litros por hora,
+lo cual cumple con las necesidades de la planta. En un escenario donde el flujo requerido exceda la
+capacidad del módulo de EDI, se implementarían múltiples unidades en paralelo.\\
+
+El agua proveniente de la segunda etapa de ósmosis inversa se divide en dos flujos en el módulo de
+EDI. Un flujo minoritario de agua se dirige hacia las celdas de agua a desechar, mientras que el flujo principal entra al EDI para su purificación.\\
+
+En la línea principal de entrada al EDI, se instala una válvula manual y un indicador de presión. La válvula manual permite un control preciso sobre el flujo de agua al EDI, mientras que el indicador de presión proporciona una monitorización continua de la presión del agua en esta etapa.\\
+
+El agua purificada que sale del módulo de EDI pasa a través de una serie de sensores e instrumentos. Se encuentra un sensor de conductividad con su correspondiente transmisor, un sensor de presión y un sensor de flujo. Estos dispositivos proporcionan información en tiempo real sobre la calidad del agua (conductividad), la presión a la salida del módulo de EDI y el flujo de agua, respectivamente. Además, se coloca una válvula de retención en la salida del EDI para evitar el flujo inverso del agua, manteniendo así la integridad del proceso de purificación.\\
+
+En la línea de desecho del EDI, se colocan un indicador de presión y una válvula de retención. Este flujo de agua desechada es devuelto al tanque de pretratamiento, lo cual promueve la eficiencia del sistema y la conservación de agua. El indicador de presión permite el monitoreo de la presión en esta línea de desecho, asegurando que el funcionamiento del sistema sea óptimo.\\
+
+Además, es crucial destacar la incorporación de la fuente de alimentación para el EDI, que se conecta directamente al módulo. Esta fuente de alimentación permite ajustar la corriente suministrada a los electrodos del EDI, garantizando así un control exacto sobre el proceso de Electrodesionización.\\

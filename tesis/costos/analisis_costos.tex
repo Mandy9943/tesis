@@ -1,14 +1,29 @@
 \chapter{Análisis de costos y beneficios}
-En el presente capítulo, se abordará el análisis financiero del proyecto, desde su inicio hasta su conclusión. Este análisis incluirá tres componentes clave: el coste de la investigación, el precio de los servicios científicos y técnicos, y los beneficios de la investigación, así como el impacto económico de la implementación de los resultados. Este análisis es fundamental para evaluar tanto la calidad como la relevancia del proyecto para la empresa farmacéutica AICA, donde se llevará a cabo la implementación del sistema de Electrodeionización (EDI).\\
+En el presente capítulo, se abordará el análisis financiero del proyecto, desde su inicio hasta su conclusión.
+Este análisis incluirá tres componentes clave: el coste de la investigación, el precio de los servicios
+científicos y técnicos, y los beneficios de la investigación, así como el impacto económico de la
+implementación de los resultados. Este análisis es fundamental para evaluar tanto la calidad como la
+relevancia del proyecto para la empresa farmacéutica AICA, donde se llevará a cabo la implementación
+del sistema de Electrodesionización (EDI).\\
 
-El análisis del coste contempla los gastos derivados de la utilización de la tecnología necesaria, los costes de adquisición de los equipos, componentes de instalación y materiales utilizados directamente, así como los salarios del personal técnico involucrado en el proyecto. Por otro lado, el análisis de los beneficios resulta esencial, ya que permite tener control sobre el gasto incurrido, proporcionando elementos de juicio de carácter económico y otorgando una visión más amplia de las tareas relacionadas con la implementación de esta tecnología, minimizando de esta manera el desperdicio de recursos en instrumentación o materia prima innecesaria para la realización del proyecto.\\
+El análisis del coste contempla los gastos derivados de la utilización de la tecnología necesaria,
+los costes de adquisición de los equipos, componentes de instalación y materiales utilizados directamente,
+así como los salarios del personal técnico involucrado en el proyecto. Por otro lado, el análisis de los
+beneficios resulta esencial, ya que permite tener control sobre el gasto incurrido, proporcionando elementos
+de juicio de carácter económico y otorgando una visión más amplia de las tareas relacionadas con la
+implementación de esta tecnología, minimizando de esta manera el desperdicio de recursos en instrumentación
+o materia prima innecesaria para la realización del proyecto.\\
 
-El objetivo de este análisis económico es proveer una visión detallada y objetiva de los costes asociados con la implementación de un sistema de EDI en la industria farmacéutica AICA, permitiendo de este modo una planificación y gestión eficiente de los recursos disponibles.\\
+El objetivo de este análisis económico es proveer una visión detallada y objetiva de los costes asociados con
+la implementación de un sistema de EDI en la industria farmacéutica AICA, permitiendo de este modo una
+planificación y gestión eficiente de los recursos disponibles.\\
 
 
-\section{Costo}
+\section{Costo del proyecto}
 
-La estimación del costo se lleva a cabo al inicio del proyecto y se considera una aproximación del costo real, que se determinará al finalizar el proyecto. Este costo puede calcularse a través de la suma del costo directo e indirecto, tal como se muestra en la ecuación (\ref{eq:cost_total}). \\
+La estimación del costo se lleva a cabo al inicio del proyecto y se considera una aproximación del costo
+real, que se determinará al finalizar el proyecto. Este costo puede calcularse a través de la suma del
+costo directo e indirecto, tal como se muestra en la ecuación (\ref{eq:cost_total}). \\
 
 \begin{equation}
     \label{eq:cost_total}
@@ -16,13 +31,15 @@ La estimación del costo se lleva a cabo al inicio del proyecto y se considera u
 \end{equation}
 
 Donde: \\
-CT representa el costo total. \\
+CT representa el costo total del proyecto. \\
 CD hace referencia al costo directo. \\
 CI denota el costo indirecto.
 
 \subsection{Costo indirecto}
 
-El costo indirecto abarca gastos tales como el consumo de electricidad, gastos administrativos, entre otros. Este valor se estima multiplicando un coeficiente de gasto, en este caso 0.84, por el salario básico de la investigación, tal como se muestra en la ecuación (\ref{eq:cost_indirect}). \\
+El costo indirecto abarca gastos tales como el consumo de electricidad, gastos administrativos, entre otros.
+Este valor se estima multiplicando un coeficiente de gasto, en este caso 0.84, por el salario básico de la
+investigación, tal como se muestra en la ecuación (\ref{eq:cost_indirect}). \\
 
 \begin{equation}
     \label{eq:cost_indirect}
@@ -31,7 +48,10 @@ El costo indirecto abarca gastos tales como el consumo de electricidad, gastos a
 
 \subsection{Costo directo}
 
-El costo directo engloba todos los gastos económicos necesarios para la realización del proyecto. Se calcula como la suma del Salario Básico (SB), el Salario Complementario (SC), el Seguro Social (SS), los Medios o Materiales Directos (MD), los Pesajes (DP) y Otros Gastos (OG), como se puede observar con más detalle en la ecuación (\ref{eq:cost_direct}). \\
+El costo directo engloba todos los gastos económicos necesarios para la realización del proyecto. Se
+calcula como la suma del Salario Básico (SB), el Salario Complementario (SC), el Seguro Social (SS), los
+Medios Directos (MD), las Dientas y los Pesajes (DP), y Otros Gastos (OG), como se puede observar con más
+detalle en la ecuación (\ref{eq:cost_direct}). \\
 
 \begin{equation}
     \label{eq:cost_direct}
@@ -40,117 +60,112 @@ El costo directo engloba todos los gastos económicos necesarios para la realiza
 
 \subsection{Salario básico}
 
-En la ecuación (\ref{eq:salary_basic}) se tiene en cuenta el salario básico que se les paga a los estudiantes por el tiempo trabajado en el proyecto. Incluye los salarios básicos de todos los participantes en la elaboración de la propuesta del proyecto. \\
+SB (salario básico): Consiste en el salario que se paga por el tiempo trabajado, es decir, no se incluye seguridad social ni vacaciones. Incluye los salarios básicos de todos los participantes del proyecto.
+
 
 \begin{equation}
-    \label{eq:salary_basic}
-    SB_n = SB_mensual * Cantidad_de_meses
+    \label{eq:sal_basico}
+    SB = \sum_{i = 0}^{n} (Ai * Bi)
 \end{equation}
+
+donde:
+
+𝐴𝑖: días dedicados a la investigación del proyecto.
+
+B𝑖: salario diario del participante 𝑖 (salario mensual / 24)
+
+𝑛: número total de participantes del proyecto.\\
+
+El salario por hora de los participantes está dado por la relación existente del salario
+básico de cada uno entre la cantidad de días dedicados a actividades laborales,
+multiplicado por la cantidad de horas. Teniendo en cuenta que en un mes existen 24
+días laborables como promedio y que al día la jornada de trabajo es de 8 horas se
+puede plantear que:\\
+
+B1 = 4954 / (24*8) = 25.80 CUP/Hrs
+
+B2 = 9730.5 / (24*8) = 50.68 CUP/Hrs
+
+B3 = 400 / (24*8) = 2.08 CUP/Hrs\\
+
+En la Tabla \ref{table:participantes_proyecto} se muestra una relación de las personas que participan en la realización de este proyecto. \\
+
+
+\begin{table}[H]
+    \caption{Participantes en el proyecto}
+    \label{table:participantes_proyecto}
+
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Nombres y apellidos}  & \textbf{SB (CUP)} & \textbf{𝐴𝑖 (Hrs)} & \textbf{B𝑖 (CUP/Hrs)} & \textbf{Ai*Bi} \\
+        \hline
+        Ing. Amanda Martí Coll        & 4900              & 120               & 25.80                 & 3096           \\
+        Ing. Rosaine Ayala            & 6500              & 120               & 25.80                 & 3096           \\
+        Armando Cesar Martin Calderón & 4900              & 600               & 25.80                 & 3096           \\
+
+        \hline
+    \end{tabular}
+\end{table}
+
+
+Se emplearon 5 meses de trabajo comprendidos entre enero y mayo. Considerando que los tutores le dedicaron a la actividad, cada día laborable, 1 hora de trabajo como promedio, entonces se puede afirmar que fueron asignadas a la investigación 120 horas por cada uno de ellos.
+El estudiante le dedicó cada día laborable como 5 horas como promedio, a la investigación, es decir, un total de 600 horas.
+Según la ecuación (\ref{eq:sal_basico}):\\
+
+\begin{equation}
+    \label{eq:salary_basico_total}
+    SB = 120 * 25.80 + 120 * 50.68 + 600 * 2.08 = 10425.6 CUP
+\end{equation}
+
 
 \subsection{Salario complementario}
 
-El salario complementario (SC) es el 9.09\% del salario básico, destinado para el pago de las vacaciones. Se puede calcular con la siguiente ecuación:
+El salario complementario (SC) es el 9.09\% del salario básico, destinado para el pago de las
+vacaciones. Se puede calcular con la siguiente ecuación:
 
 \begin{equation}
     \label{eq:salary_complementary}
     SC = SB * 0.0909
 \end{equation}
+\begin{equation}
+    \label{eq:salary_complementary_total}
+    SC=0.0909*10425.60=947.69 CUP
+\end{equation}
 
 \subsection{Seguro Social}
 
-El seguro social (SS) equivale al 5\% del salario básico más el salario complementario, y se calcula de la siguiente forma:
+El seguro social (SS) equivale al 5\% del salario básico más el salario complementario, y se
+calcula de la siguiente forma:
 
 \begin{equation}
     \label{eq:social_security}
     SS = 0.05 * (SB + SC)
 \end{equation}
+\begin{equation}
+    \label{eq:social_security_total}
+    SS=0.05*(10425.60+947.69)=1137.33 CUP
+\end{equation}
 
 \subsection{Medios Directos}
 
-Los medios directos (MD) incluyen los costos de todos los equipos, componentes de instalación y materiales utilizados directamente en la investigación.
-
-\subsection{Dietas y Pasajes}
-
-Las dietas y pasajes (DP) representan los gastos ocasionados por dietas y pasajes.
-
-\subsection{Otros Gastos}
-
-Los otros gastos (OG) incluyen el costo de utilización de equipamiento. Se considera el gasto por concepto de tiempo de máquina, que tiene un valor de \$10.00 la hora.
-
-\subsection{Participantes en el proyecto}
-
-Los participantes en el proyecto son el estudiante Armando Martin Calderón, el Dr. Adrián Rodríguez Ramos y el Ing. Gerardo Reyes Piñera. Para los cálculos relacionados con la obtención del salario básico se considera que el tiempo dedicado al proyecto de manera general son meses, de los cuales solo son laborables 24 días del mes, según la legislación cubana vigente, la cual concibe que la jornada laboral es de ocho horas diarias.
-
-\subsection{Cálculos de salario básico}
-
-\subsubsection{Tutor 1}
-
-Para el primer tutor, se tienen los siguientes cálculos:
-
-\begin{align}
-    \label{eq:tutor1_salary}
-    \text{Salario mensual}          & = \$7260MN                                                        \\
-    \text{Salario diario}           & = \$7260MN / 24 = \$302.5MN                                       \\
-    \text{Salario por hora laboral} & = \$302.5MN / 8 = \$37.81MN                                       \\
-    \text{Salario básico total}     & = \$37.81MN * 50 \text{ horas dedicadas al proyecto} = \$1890.5MN
-\end{align}
-
-\subsubsection{Tutor 2}
-
-Para el segundo tutor, se tienen los siguientes cálculos:
-
-\begin{align}
-    \label{eq:tutor2_salary}
-    \text{Salario mensual}          & = \$6500MN                                                      \\
-    \text{Salario diario}           & = \$6500MN / 24 = \$270.8MN                                     \\
-    \text{Salario por hora laboral} & = \$270.8MN / 8 = \$33.85MN                                     \\
-    \text{Salario básico total}     & = \$33.85 * 50 \text{ horas dedicadas al proyecto} = \$1692.5MN
-\end{align}
-
-\subsubsection{Estudiante}
-
-Para el estudiante, se tienen los siguientes cálculos:
-
-\begin{align}
-    \label{eq:student_salary}
-    \text{Salario mensual}      & = \$1000MN,                                                     \\
-    \text{Salario diario}       & = \$1000MN / 24= \$41.7MN,                                      \\
-    \text{Salario básico total} & = 41.17 MN * 100 \text{ días dedicados al proyecto} = \$4117MN,
-\end{align}
-
-\begin{align}
-    \label{eq:additional_calculations}
-    \text{Salario básico total}   & = SBT1 + SBT2 + SBE,                            \\
-                                  & = \$1890.5MN + \$1692.5MN+ \$4117MN,            \\
-                                  & = \$7700MN,                                     \\
-    \text{Salario complementario} & = SB * 0.0909,                                  \\
-                                  & = \$7700MN * 0.0909,                            \\
-                                  & = \$699.93MN,                                   \\
-    \text{Seguridad social}       & = 0.05 * (SB + SC),                             \\
-                                  & = 0.05 * (\$7700MN + \$699.93MN),               \\
-                                  & = \$419.99MN,                                   \\
-    \text{Dietas y Pasajes}       & = DP,                                           \\
-                                  & = \$400MN (\$10.00MN ) + \$1200MN (\$10.00MN ), \\
-                                  & = \$1600MN.
-\end{align}
+Los medios directos (MD) incluyen los costos de todos los equipos, componentes de instalación y
+materiales utilizados directamente en la investigación.
 
 
-\subsection{Materiales directos}
-
-Para llevar a cabo el proyecto será necesario hacer algunos gastos imprescindibles. En la Tabla 4.1 se muestran los precios de los elementos que deben adquirirse:
+Para llevar a cabo el proyecto será necesario hacer algunos gastos imprescindibles. En la Tabla 4.1
+se muestran los precios de los elementos que deben adquirirse:
 
 \begin{table}[h]
     \caption{Listado de precios de los dispositivos e instrumentos necesarios para la elaboración del proyecto}
     \begin{tabular}{|c|c|c|c|}
         \hline
-        Dispositivo/instrumento/otros      & Cantidad & Precio por unidad & Precio total  \\
+        Dispositivo/instrumento/otros      & Cantidad & Precio por unidad & Precio total \\
         \hline
-        Electrodeionizador                 & 1        & 10379.4€          & 10379.4€      \\
-        Sensor transmisor de temperatura   & 1        & 175.10€           & 175.10€       \\
-        Sensor transmisor de flujo         & 1        & 1732.00€          & 1732.00€      \\
-        Sensor transmisor de conductividad & 1        & 661.25€           & 661.25€       \\
-        Sensor transmisor de presión       & 2        & 691.85€           & 1393.7€       \\
-        Licencia TIA Portal V16            & 1        & \$217694.5 MN     & \$217694.5 MN \\
+        Electrodesionizador                & 1        & 10379.4€          & 10379.4€     \\
+        Sensor transmisor de temperatura   & 1        & 175.10€           & 175.10€      \\
+        Sensor transmisor de flujo         & 1        & 1732.00€          & 1732.00€     \\
+        Sensor transmisor de conductividad & 1        & 661.25€           & 661.25€      \\
+        Sensor transmisor de presión       & 2        & 691.85€           & 1393.7€      \\
         \hline
     \end{tabular}
 \end{table}
@@ -161,13 +176,25 @@ El total de gastos en materiales directos es:
     MD = 15753.15€ + \$217694.5 MN
 \end{equation}
 
-\subsection{Otros gastos}
+\subsection{Dietas y Pasajes}
 
-Se incluye el gasto por consumo de energía eléctrica, durante las horas de tiempo de máquina empleadas en la elaboración del proyecto. Para un total de 450 horas resulta ser:
+Las dietas y pasajes (DP) representan los gastos ocasionados por dietas y pasajes.
+
+\subsection{Otros Gastos}
+
+Los otros gastos (OG) incluyen el costo de utilización de equipamiento. Se considera el gasto por
+concepto de tiempo de máquina, que tiene un valor de \$10.00 la hora.
+
+Se incluye el gasto por consumo de energía eléctrica, durante las horas de tiempo de máquina empleadas
+en la elaboración del proyecto. Para un total de 450 horas resulta ser:
 
 \begin{equation}
     OG = 450 \text{ horas } * \$10MN = \$4500.00MN
 \end{equation}
+
+
+
+
 
 \subsection{Cálculo del Costo Directo}
 
@@ -177,7 +204,10 @@ Se incluye el gasto por consumo de energía eléctrica, durante las horas de tie
 
 \subsection{Costos indirectos}
 
-El término Costos Indirectos (CI) se refiere a los gastos de electricidad consumida, gastos de administración, instalaciones, etc., en el proceso de investigación. Este se estima aplicando un coeficiente de gastos al salario básico de la investigación. El coeficiente de gastos para un Departamento Docente es 0.84 y para una UCT (Unidad de Ciencia y Técnica) es 1.4063.
+El término Costos Indirectos (CI) se refiere a los gastos de electricidad consumida, gastos de administración,
+instalaciones, etc., en el proceso de investigación. Este se estima aplicando un coeficiente de gastos al
+salario básico de la investigación. El coeficiente de gastos para un Departamento Docente es 0.84 y para una
+UCT (Unidad de Ciencia y Técnica) es 1.4063.
 
 \begin{equation}
     CI = 0.84 * SB = \$6468 MN
@@ -199,7 +229,10 @@ El precio se determina mediante la expresión:
     P = CT + 0.1 * CT
 \end{equation}
 
-Donde: $CT$ representa el costo total de todos los elementos de la red y control de conductividad, $0.1*CT$ representa los salarios pagados a especialistas, técnicos, y el resto del personal involucrado en el diseño, montaje y puesta en marcha del sistema, el costo de impuestos aduanales, de combustible para el transporte del personal, y para el cableado.
+Donde: $CT$ representa el costo total de todos los elementos de la red y control de conductividad, $0.1*CT$
+representa los salarios pagados a especialistas, técnicos, y el resto del personal involucrado en el diseño,
+montaje y puesta en marcha del sistema, el costo de impuestos aduanales, de combustible para el transporte del
+personal, y para el cableado.
 
 El costo total es de $CT = \$235032.42MN + 15753.15€$
 
@@ -222,13 +255,26 @@ Luego el costo total del proyecto de tesis es:
 El proyecto es viable teniendo en cuenta los siguientes aspectos:
 
 \begin{itemize}
-    \item \textbf{Medio ambiente:} Este proyecto es respetuoso con el medio ambiente. No hay elementos o procesos que generen contaminación o residuos dañinos. Además, se ha hecho un esfuerzo consciente por minimizar el uso de recursos y maximizar la eficiencia en todas las etapas del proyecto. Se espera que este proyecto tenga un impacto ambiental positivo o neutral en su ejecución a corto y largo plazo.
+    \item \textbf{Medio ambiente:} Este proyecto es respetuoso con el medio ambiente. No hay elementos o procesos
+          que generen contaminación o residuos dañinos. Además, se ha hecho un esfuerzo consciente por minimizar el uso
+          de recursos y maximizar la eficiencia en todas las etapas del proyecto. Se espera que este proyecto tenga un
+          impacto ambiental positivo o neutral en su ejecución a corto y largo plazo.
 
-    \item \textbf{Jurídico:} El proyecto se desarrolla completamente dentro del marco legal existente y cumple con todas las normas y leyes pertinentes. En particular, se han tomado medidas para garantizar que todas las actividades estén en línea con las regulaciones y directrices de la industria farmacéutica. El proyecto también mantiene un compromiso de adherirse a cualquier cambio o actualización futura en la legislación relevante.
+    \item \textbf{Jurídico:} El proyecto se desarrolla completamente dentro del marco legal existente y cumple con
+          todas las normas y leyes pertinentes. En particular, se han tomado medidas para garantizar que todas las
+          actividades estén en línea con las regulaciones y directrices de la industria farmacéutica. El proyecto también
+          mantiene un compromiso de adherirse a cualquier cambio o actualización futura en la legislación relevante.
 
-    \item \textbf{Económico y financiero:} Desde una perspectiva económica, el proyecto es viable. El centro tiene los recursos financieros necesarios para financiar completamente el proyecto. Además, se espera que el proyecto sea rentable y genere un retorno de la inversión a largo plazo. El apoyo intelectual de la institución docente también contribuye a la viabilidad económica del proyecto, ya que proporciona acceso a expertos y recursos académicos.
+    \item \textbf{Económico y financiero:} Desde una perspectiva económica, el proyecto es viable. El centro tiene
+          los recursos financieros necesarios para financiar completamente el proyecto. Además, se espera que el proyecto
+          sea rentable y genere un retorno de la inversión a largo plazo. El apoyo intelectual de la institución docente
+          también contribuye a la viabilidad económica del proyecto, ya que proporciona acceso a expertos y recursos
+          académicos.
 
-    \item \textbf{Técnico:} La entidad dispone de los recursos técnicos necesarios para llevar a cabo el proyecto. Esto incluye la disponibilidad de equipos, tecnología y personal cualificado. El personal tiene las habilidades y la experiencia necesarias para implementar y gestionar el proyecto eficazmente. Además, se disponen de las instalaciones y el equipamiento necesarios para desarrollar todas las etapas del proyecto sin problemas.
+    \item \textbf{Técnico:} La entidad dispone de los recursos técnicos necesarios para llevar a cabo el proyecto.
+          Esto incluye la disponibilidad de equipos, tecnología y personal cualificado. El personal tiene las habilidades
+          y la experiencia necesarias para implementar y gestionar el proyecto eficazmente. Además, se disponen de las
+          instalaciones y el equipamiento necesarios para desarrollar todas las etapas del proyecto sin problemas.
 \end{itemize}
 
 
