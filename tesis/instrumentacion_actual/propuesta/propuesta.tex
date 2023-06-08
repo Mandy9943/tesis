@@ -1,10 +1,10 @@
 \section{Propuesta de instrumentación}
 
-La ingeniería de procesos, y especialmente el tratamiento de agua mediante ósmosis inversa, requiere una cuidadosa selección de equipos y dispositivos de control, también conocidos como instrumentación. En esta sección, daremos un paso hacia adelante desde el análisis de la instrumentación actual, para abordar nuestra propuesta de mejoramiento: la implementación de un electrodesionizador (EDI) y la instrumentación requerida para su correcta operación.\\
+La ingeniería de procesos, y especialmente el tratamiento de agua mediante ósmosis inversa, requiere una cuidadosa selección de equipos y dispositivos de control, también conocidos como instrumentación. En esta sección, daremos un paso hacia adelante desde el análisis de la instrumentación actual, para abordar nuestra propuesta de mejoramiento: la implementación de un electrodesionizador (EDI) y la instrumentación requerida para su correcta operación.
 
-La instrumentación adecuada es crucial para el buen funcionamiento de cualquier proceso industrial, ya que nos permite monitorizar y controlar de forma precisa las variables críticas de operación. En el caso de la ósmosis inversa y, más concretamente, del EDI, esta importancia se acentúa, dado que el rendimiento y la eficiencia del sistema dependen en gran medida de la capacidad de regular las condiciones de trabajo.\\
+La instrumentación adecuada es crucial para el buen funcionamiento de cualquier proceso industrial, ya que nos permite monitorizar y controlar de forma precisa las variables críticas de operación. En el caso de la ósmosis inversa y, más concretamente, del EDI, esta importancia se acentúa, dado que el rendimiento y la eficiencia del sistema dependen en gran medida de la capacidad de regular las condiciones de trabajo.
 
-En las siguientes subsecciones, primero justificaremos por qué el EDI ha sido seleccionado como la mejor opción para mejorar el proceso de tratamiento de agua existente. Posteriormente, describiremos la instrumentación necesaria para implementar y operar de manera efectiva este dispositivo, siempre desde una perspectiva de control.\\
+En las siguientes subsecciones, primero justificaremos por qué el EDI ha sido seleccionado como la mejor opción para mejorar el proceso de tratamiento de agua existente. Posteriormente, describiremos la instrumentación necesaria para implementar y operar de manera efectiva este dispositivo, siempre desde una perspectiva de control.
 
 
 \subsection{Contexto de la Planta Actual}
@@ -13,12 +13,12 @@ La planta de tratamiento de agua existente, en funcionamiento durante años,
 ha demostrado ser un recurso crucial en el suministro de agua pura (PW).
 Sin embargo, recientemente, se han observado ciertas inestabilidades en el
 proceso de tratamiento, lo que ha dificultado el logro constante de los parámetros
-de calidad requeridos durante la producción de agua.\\
+de calidad requeridos durante la producción de agua.
 
 Es importante mencionar que estas inestabilidades no desacreditan mucho la eficacia
 del sistema existente. Sin embargo, podrían ser indicativos de la necesidad
 de mejoras o adaptaciones para hacer frente a los cambios en las condiciones
-del agua de entrada o a los requisitos de calidad cada vez más exigentes.\\
+del agua de entrada o a los requisitos de calidad cada vez más exigentes.
 
 Además, uno de los desafíos que ha surgido es la capacidad de la
 planta para producir agua de la calidad necesaria para cumplir con la demanda.
@@ -26,7 +26,7 @@ La planta tiene la capacidad de producir una cantidad considerable de agua,
 sin embargo, una porción de esta producción no alcanza los parámetros de
 calidad requeridos. Esta agua de menor calidad debe ser desechada o
 recirculada para un nuevo tratamiento, lo que resulta en un suministro
-efectivo de agua de calidad inferior a la demanda.\\
+efectivo de agua de calidad inferior a la demanda.
 
 \subsection{Tecnologías Alternativas y sus Limitaciones}
 
@@ -75,23 +75,23 @@ La Electrodesionización (EDI) es una tecnología innovadora que combina dos pro
 fundamentales de purificación de agua: la desionización mediante intercambio iónico y
 la electrodiálisis. La sinergia de estos métodos resulta en un sistema eficiente y
 sustentable capaz de producir agua ultrapura de manera continua y sin la necesidad
-de regenerar químicos.\\
+de regenerar químicos.
 
 En términos generales, la EDI utiliza una corriente eléctrica para mover los iones a
 través de membranas semipermeables, eliminándolos del agua. Este proceso se realiza
 en un entorno controlado en el que los iones son capturados por resinas de intercambio
-iónico, siendo luego extraídos mediante la corriente eléctrica.\\
+iónico, siendo luego extraídos mediante la corriente eléctrica.
 
 La elección de la EDI como una adición al sistema actual de Ósmosis Inversa de Doble
 Etapa se justifica en gran medida por su capacidad para superar las limitaciones de
 otras tecnologías y proporcionar un rendimiento superior en términos de calidad del
-agua, eficiencia y sostenibilidad.\\
+agua, eficiencia y sostenibilidad.
 
 Cabe mencionar que este resumen brinda una visión general y concisa del funcionamiento y
 las ventajas de la EDI. Sin embargo, para un entendimiento más profundo y detallado del
 principio de funcionamiento de la EDI, sus componentes, así como los beneficios y
 desafíos asociados, se remite al lector al Capítulo \ref{cap:fundamentosEDI} donde se proporciona un
-análisis exhaustivo de esta tecnología.\\
+análisis exhaustivo de esta tecnología.
 
 \subsection{El Electrodesionizador}
 
@@ -189,17 +189,17 @@ El sistema de Electrodesionización (EDI) implementado se compone de un único m
 Esta configuración se basa en la capacidad de la segunda etapa de la ósmosis inversa, que
 produce 3000 litros por hora, mientras que el módulo EDI puede procesar hasta 3300 litros por hora,
 lo cual cumple con las necesidades de la planta. En un escenario donde el flujo requerido exceda la
-capacidad del módulo de EDI, se implementarían múltiples unidades en paralelo.\\
+capacidad del módulo de EDI, se implementarían múltiples unidades en paralelo.
 
 El agua proveniente de la segunda etapa de ósmosis inversa se divide en dos flujos en el módulo de
-EDI. Un flujo minoritario de agua se dirige hacia las celdas de agua a desechar, mientras que el flujo principal entra al EDI para su purificación.\\
+EDI. Un flujo minoritario de agua se dirige hacia las celdas de agua a desechar, mientras que el flujo principal entra al EDI para su purificación.
 
 \insertimageboxed[\label{fig:EDI_pid}]{EDI_P&ID}{scale=0.9}{0}{Esquema P\&ID propuesto para la electrodesionización.}
 
-En la línea principal de entrada al EDI, se instala una válvula manual y un indicador de presión. La válvula manual permite un control preciso sobre el flujo de agua al EDI, mientras que el indicador de presión proporciona una monitorización continua de la presión del agua en esta etapa.\\
+En la línea principal de entrada al EDI, se instala una válvula manual y un indicador de presión. La válvula manual permite un control preciso sobre el flujo de agua al EDI, mientras que el indicador de presión proporciona una monitorización continua de la presión del agua en esta etapa.
 
-El agua purificada que sale del módulo de EDI pasa a través de una serie de sensores e instrumentos. Se encuentra un sensor de conductividad con su correspondiente transmisor, un sensor de presión y un sensor de flujo. Estos dispositivos proporcionan información en tiempo real sobre la calidad del agua (conductividad), la presión a la salida del módulo de EDI y el flujo de agua, respectivamente. Además, se coloca una válvula de retención en la salida del EDI para evitar el flujo inverso del agua, manteniendo así la integridad del proceso de purificación.\\
+El agua purificada que sale del módulo de EDI pasa a través de una serie de sensores e instrumentos. Se encuentra un sensor de conductividad con su correspondiente transmisor, un sensor de presión y un sensor de flujo. Estos dispositivos proporcionan información en tiempo real sobre la calidad del agua (conductividad), la presión a la salida del módulo de EDI y el flujo de agua, respectivamente. Además, se coloca una válvula de retención en la salida del EDI para evitar el flujo inverso del agua, manteniendo así la integridad del proceso de purificación.
 
-En la línea de desecho del EDI, se colocan un indicador de presión y una válvula de retención. Este flujo de agua desechada es devuelto al tanque de pretratamiento, lo cual promueve la eficiencia del sistema y la conservación de agua. El indicador de presión permite el monitoreo de la presión en esta línea de desecho, asegurando que el funcionamiento del sistema sea óptimo.\\
+En la línea de desecho del EDI, se colocan un indicador de presión y una válvula de retención. Este flujo de agua desechada es devuelto al tanque de pretratamiento, lo cual promueve la eficiencia del sistema y la conservación de agua. El indicador de presión permite el monitoreo de la presión en esta línea de desecho, asegurando que el funcionamiento del sistema sea óptimo.
 
-Además, es crucial destacar la incorporación de la fuente de alimentación para el EDI, que se conecta directamente al módulo. Esta fuente de alimentación permite ajustar la corriente suministrada a los electrodos del EDI, garantizando así un control exacto sobre el proceso de Electrodesionización.\\
+Además, es crucial destacar la incorporación de la fuente de alimentación para el EDI, que se conecta directamente al módulo. Esta fuente de alimentación permite ajustar la corriente suministrada a los electrodos del EDI, garantizando así un control exacto sobre el proceso de Electrodesionización.

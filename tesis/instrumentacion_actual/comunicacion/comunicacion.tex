@@ -8,48 +8,48 @@ trivial, ya que cada nivel de la pirámide de automatización requiere protocolo
 transmisión de información.
 
 \begin{itemize}
-      \item \textbf{Nivel de dispositivos de campo:} Este nivel comprende los dispositivos de campo, incluyendo sensores y
-            actuadores. Estos dispositivos son responsables de adquirir datos a través de señales de campo de tipo intensidad
-            (4-20 mA) o tensión (0-10, 24V DC), y ejecutar acciones físicas dentro del sistema. Se comunican con módulos de
-            periferia descentralizada, como el ET200S de Siemens, y módulos eléctricos como el CPX de Festo a través de Profibus DP.
+    \item \textbf{Nivel de dispositivos de campo:} Este nivel comprende los dispositivos de campo, incluyendo sensores y
+          actuadores. Estos dispositivos son responsables de adquirir datos a través de señales de campo de tipo intensidad
+          (4-20 mA) o tensión (0-10, 24V DC), y ejecutar acciones físicas dentro del sistema. Se comunican con módulos de
+          periferia descentralizada, como el ET200S de Siemens, y módulos eléctricos como el CPX de Festo a través de Profibus DP.
 
-            Profibus DP es un protocolo de comunicación industrial eficiente y rentable que proporciona altas velocidades
-            de transmisión de datos. Los módulos de periferia descentralizada ET 200S y los módulos eléctricos CPX de Festo
-            actúan como esclavos en la configuración Profibus. Reciben las señales de los dispositivos de campo y las
-            procesan para su posterior transmisión.
+          Profibus DP es un protocolo de comunicación industrial eficiente y rentable que proporciona altas velocidades
+          de transmisión de datos. Los módulos de periferia descentralizada ET 200S y los módulos eléctricos CPX de Festo
+          actúan como esclavos en la configuración Profibus. Reciben las señales de los dispositivos de campo y las
+          procesan para su posterior transmisión.
 
 
-      \item \textbf{Nivel de control:} En el siguiente nivel de la jerarquía, los módulos de periferia descentralizada
-            ET 200s y los módulos eléctricos CPX de Festo se comunican con un PLC maestro. Los módulos transmiten la
-            información recolectada de los dispositivos de campo al PLC maestro a través de Profibus DP, lo que facilita
-            un intercambio de datos rápido y eficiente.
+    \item \textbf{Nivel de control:} En el siguiente nivel de la jerarquía, los módulos de periferia descentralizada
+          ET 200s y los módulos eléctricos CPX de Festo se comunican con un PLC maestro. Los módulos transmiten la
+          información recolectada de los dispositivos de campo al PLC maestro a través de Profibus DP, lo que facilita
+          un intercambio de datos rápido y eficiente.
 
-            El PLC maestro procesa estos datos, tomando decisiones que influirán en el desarrollo del proceso. La
-            configuración concebida para esta red de comunicación garantiza una comunicación eficiente entre el
-            PLC maestro y los módulos que se le subordinan.
+          El PLC maestro procesa estos datos, tomando decisiones que influirán en el desarrollo del proceso. La
+          configuración concebida para esta red de comunicación garantiza una comunicación eficiente entre el
+          PLC maestro y los módulos que se le subordinan.
 
-      \item \textbf{Nivel de supervisión:} En el nivel más alto de la jerarquía de control, encontramos el
-            sistema SCADA (Supervisory Control And Data Acquisition). Este sistema se encarga de supervisar y
-            controlar todo el proceso, recopilando información del PLC maestro. Para facilitar esta comunicación,
-            se utiliza el protocolo OPC (OLE for Process Control).
+    \item \textbf{Nivel de supervisión:} En el nivel más alto de la jerarquía de control, encontramos el
+          sistema SCADA (Supervisory Control And Data Acquisition). Este sistema se encarga de supervisar y
+          controlar todo el proceso, recopilando información del PLC maestro. Para facilitar esta comunicación,
+          se utiliza el protocolo OPC (OLE for Process Control).
 
-            OPC es un estándar de comunicación en la industria de la automatización que permite la interacción
-            fluida entre los sistemas SCADA y los PLC. Este protocolo, basado en la tecnología Microsoft OLE/COM,
-            permite que el sistema SCADA reciba datos en tiempo real del PLC maestro, proporcionando una visión
-            integral del proceso para su supervisión y control.
+          OPC es un estándar de comunicación en la industria de la automatización que permite la interacción
+          fluida entre los sistemas SCADA y los PLC. Este protocolo, basado en la tecnología Microsoft OLE/COM,
+          permite que el sistema SCADA reciba datos en tiempo real del PLC maestro, proporcionando una visión
+          integral del proceso para su supervisión y control.
 
 
 \end{itemize}
 
 \subsection{Topología de la Red}
 
-En el contexto de la planta de ósmosis, la topología de bus es particularmente apropiada por varios motivos. En una topología de bus, todos los dispositivos están conectados a una línea de comunicación común, o "bus". Esto incluye tanto a los módulos de periferia descentralizada ET 200S y el módulo eléctrico CPX de Festo en el nivel de los dispositivos de campo, como al PLC maestro en el nivel de control.\\
+En el contexto de la planta de ósmosis, la topología de bus es particularmente apropiada por varios motivos. En una topología de bus, todos los dispositivos están conectados a una línea de comunicación común, o "bus". Esto incluye tanto a los módulos de periferia descentralizada ET 200S y el módulo eléctrico CPX de Festo en el nivel de los dispositivos de campo, como al PLC maestro en el nivel de control.
 
-Uno de los principales motivos para elegir una topología de bus es su sencillez y coste eficiente. Como sólo se necesita un único bus de comunicación, se minimiza el cableado necesario, lo que reduce tanto el coste como la complejidad de la instalación. Además, esta topología permite una fácil expansión de la red, ya que añadir nuevos dispositivos simplemente implica conectarlos al bus existente.\\
+Uno de los principales motivos para elegir una topología de bus es su sencillez y coste eficiente. Como sólo se necesita un único bus de comunicación, se minimiza el cableado necesario, lo que reduce tanto el coste como la complejidad de la instalación. Además, esta topología permite una fácil expansión de la red, ya que añadir nuevos dispositivos simplemente implica conectarlos al bus existente.
 
 Otra ventaja de la topología de bus es su compatibilidad con los protocolos de comunicación utilizados en la planta de ósmosis ya que
-son perfectamente compatibles. Esto asegura una comunicación eficiente y sin problemas en toda la planta.\\
+son perfectamente compatibles. Esto asegura una comunicación eficiente y sin problemas en toda la planta.
 
-Por último, aunque la topología de bus puede ser susceptible a fallos, en el caso de que se produzca un fallo en el bus de comunicación, esto puede mitigarse mediante el uso de técnicas de redundancia y tolerancia a fallos. En el caso de la planta de ósmosis, esto podría implicar tener un bus de comunicación de respaldo que pueda entrar en funcionamiento en caso de que se produzca un fallo en el bus principal.\\
+Por último, aunque la topología de bus puede ser susceptible a fallos, en el caso de que se produzca un fallo en el bus de comunicación, esto puede mitigarse mediante el uso de técnicas de redundancia y tolerancia a fallos. En el caso de la planta de ósmosis, esto podría implicar tener un bus de comunicación de respaldo que pueda entrar en funcionamiento en caso de que se produzca un fallo en el bus principal.
 
-Por lo tanto, en el contexto de la planta de ósmosis, la topología de bus proporciona una solución de red eficiente, escalable y compatible con los protocolos de comunicación utilizados. Esto asegura una operación efectiva de la planta y permite una fácil expansión y adaptación en el futuro.\\
+Por lo tanto, en el contexto de la planta de ósmosis, la topología de bus proporciona una solución de red eficiente, escalable y compatible con los protocolos de comunicación utilizados. Esto asegura una operación efectiva de la planta y permite una fácil expansión y adaptación en el futuro.
