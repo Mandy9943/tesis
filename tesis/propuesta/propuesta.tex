@@ -117,9 +117,92 @@ Los Sistemas de Control y Adquisición de Datos (SCADA) se han convertido en una
 
 En el contexto del sistema de purificación de agua de la planta, la implementación de un SCADA proporcionaría una visibilidad en tiempo real del proceso y facilitaría la gestión de alarmas y el control de los componentes clave del sistema, como las membranas de la ósmosis inversa y el dispositivo EDI. Además, un sistema SCADA permitiría el registro de datos, esencial para el análisis de tendencias y la toma de decisiones basada en datos.\\
 
-En la presente sección, se propone una implementación de SCADA para el sistema de purificación de agua. Esta propuesta se centra en proporcionar una interfaz amigable para el usuario y en maximizar el potencial del sistema de control existente. La propuesta también incluye el diseño de las pantallas de visualización y los detalles de cómo los operadores pueden interactuar con el sistema para mantener el proceso funcionando de manera eficiente y segura.\\
+El SCADA propuesto para la optimización de la purificación de agua en la industria farmacéutica AICA se ha desarrollado en el entorno de TIA Portal. Este sistema está diseñado para proporcionar un monitoreo en tiempo real del proceso de ósmosis inversa, además de ofrecer una interfaz de usuario intuitiva e interactiva para los operadores.
 
-\subsection{Implementación de SCADA}
+\insertimageboxed[\label{fig:vistaGeneral}]{vistaGeneral}{scale=0.3}{0}{Vista general del sistema SCADA.}
+
+El SCADA se estructura en varias secciones dedicadas a diferentes aspectos del proceso de purificación de agua. A continuación, se describen detalladamente cada una de estas secciones.
+
+\subsection{Monitoreo del proceso}
+
+El monitoreo en tiempo real del proceso de ósmosis inversa es una función esencial del sistema SCADA propuesto. Esta característica proporciona una comprensión inmediata y detallada del estado del proceso, lo que permite a los operadores tomar decisiones informadas y oportunistas.
+
+\insertimageboxed[\label{fig:monitoreoProceso1}]{monitoreoProceso1}{scale=0.3}{0}{Interfaz de la sección de monitoreo del proceso.}
+
+Como se puede observar en la Figura \ref{fig:monitoreoProceso1}, la interfaz de usuario presenta una representación gráfica del proceso de ósmosis inversa, con indicadores en tiempo real de las principales variables del sistema. Cada componente del sistema es monitoreado y su estado se visualiza claramente, permitiendo a los operadores identificar rápidamente cualquier desviación del rendimiento óptimo.
+
+La sección de monitoreo del proceso es, por lo tanto, una herramienta valiosa para asegurar la eficiencia y efectividad de la planta de purificación de agua.
+
+\subsection{Administración de alarmas}
+
+La administración de alarmas es una funcionalidad crucial en cualquier sistema SCADA, y en este caso, se ha prestado especial atención a su diseño y ejecución. Un sistema de alarmas eficiente permite a los operadores reaccionar rápidamente ante cualquier eventualidad o desviación en el sistema de purificación.
+
+\insertimageboxed[\label{fig:adminAlarmas1}]{adminAlarmas1}{scale=0.3}{0}{Ventana emergente de administración de alarmas.}
+
+En la Figura \ref{fig:adminAlarmas1}, se puede observar la interfaz de la ventana emergente de alarmas. Cuando se activa una alarma, esta ventana aparece automáticamente, presentando las alarmas activas y no acusadas. Cada alarma se muestra con información detallada, incluyendo la hora de activación, la descripción del problema y el componente del sistema afectado.
+
+
+Los operadores pueden acusar las alarmas directamente desde esta ventana emergente. Al acusar una alarma, se reconoce formalmente la situación de alerta y se inicia la resolución del problema.
+
+Además de la ventana emergente, el sistema SCADA propuesto cuenta con un visor de alarmas. Este visor mantiene un registro de las alarmas recientes hasta que su capacidad de buffer es alcanzada.
+
+\insertimageboxed[\label{fig:adminAlarmas3}]{adminAlarmas2}{scale=0.3}{0}{Visor de alarmas con capacidad de buffer.}
+
+La Figura \ref{fig:adminAlarmas3} muestra el visor de alarmas. Todas las alarmas se almacenan en un fichero, permitiendo un seguimiento detallado de los eventos y una revisión histórica de las situaciones de alarma. Esto puede ser útil para el análisis de las tendencias de las alarmas y la identificación de patrones de fallo recurrentes.
+
+\subsection{Análisis de gráficos históricos}
+
+Una de las fortalezas del sistema SCADA propuesto radica en su capacidad para el análisis de gráficos históricos. Esta característica proporciona una visión valiosa de las tendencias y patrones de las variables más importantes del sistema de purificación de agua.
+
+\insertimageboxed[\label{fig:graficosHistoricos1}]{graficosHistoricos1}{scale=0.3}{0}{Interfaz de análisis de gráficos históricos.}
+
+La Figura \ref{fig:graficosHistoricos1} muestra la interfaz del sistema para el análisis de gráficos históricos. Aquí, los operadores pueden seleccionar y visualizar gráficos de diferentes variables clave, permitiéndoles examinar su comportamiento y evolución a lo largo del tiempo. Esto puede ser útil para identificar cambios sutiles en el rendimiento del sistema, detectar tendencias emergentes y realizar diagnósticos predictivos.
+
+Además, los datos históricos de estas variables se almacenan en un fichero, lo que ofrece la posibilidad de realizar análisis retrospectivos de larga duración. Esta capacidad de examinar los datos históricos puede ser invaluable para entender los cambios a largo plazo en el rendimiento del sistema y para tomar decisiones informadas sobre futuras optimizaciones y mejoras.
+
+\subsection{Administración de usuarios}
+
+La administración de usuarios es una característica esencial de cualquier sistema SCADA, proporcionando tanto un medio para controlar el acceso al sistema como una manera de personalizar la experiencia del usuario de acuerdo a su rol y responsabilidades.
+
+\insertimageboxed[\label{fig:adminUsuarios1}]{inicioSesion}{scale=0.3}{0}{Interfaz de inicio de sesión del sistema SCADA.}
+
+Como se muestra en la Figura \ref{fig:adminUsuarios1}, los usuarios deben autenticarse antes de poder interactuar con el sistema. Esto garantiza que solo las personas autorizadas puedan acceder y realizar operaciones en el sistema SCADA. Existen dos grupos de usuarios: los operadores y los administradores, cada uno con diferentes niveles de acceso y control.
+
+\insertimageboxed[\label{fig:adminUsuarios2}]{adminUsuarios}{scale=0.3}{0}{Interfaz de la sección de administración de usuarios.}
+
+La Figura \ref{fig:adminUsuarios2} muestra la interfaz de la sección de administración de usuarios. Aquí, los administradores pueden gestionar los perfiles de usuario, asignar roles y establecer privilegios de acceso. Los administradores tienen acceso total a todas las partes del sistema, mientras que los operadores tienen acceso restringido, limitándose a ciertas funcionalidades de acuerdo a sus responsabilidades.
+
+Este diseño no solo garantiza la seguridad del sistema, sino que también permite una gestión eficiente del personal y una distribución adecuada de las responsabilidades dentro de la planta de purificación de agua.
+
+
+% \subsection{Administración de alarmas}
+
+% El sistema SCADA cuenta con un eficiente sistema de gestión de alarmas. Las alarmas se presentan a los operadores en una ventana emergente que muestra todas las alarmas activas y no acusadas.
+
+% \insertimageboxed[\label{fig:adminAlarmas1}]{adminAlarmas1}{scale=0.3}{0}{Ventana emergente de administración de alarmas.}
+% \insertimageboxed[\label{fig:adminAlarmas2}]{adminAlarmas2}{scale=0.3}{0}{Detalle de una alarma en la ventana emergente.}
+
+% Además, se ha implementado un visor de alarmas que mantiene un registro temporal de las alarmas hasta que su capacidad es alcanzada. Todas las alarmas se almacenan en un fichero para permitir un seguimiento detallado.
+
+% \subsection{Análisis de gráficos históricos}
+
+% La sección de gráficos históricos permite a los operadores y administradores visualizar tendencias y patrones en las variables más importantes del sistema de purificación.
+
+% \insertimageboxed[\label{fig:graficosHistoricos1}]{graficosHistoricos1}{scale=0.3}{0}{Interfaz de análisis de gráficos históricos.}
+
+% \subsection{Administración de usuarios}
+
+% La administración de usuarios en el sistema SCADA permite la configuración de diferentes niveles de acceso, con dos grupos de usuarios definidos: operadores y administradores.
+
+% \insertimageboxed[\label{fig:inicioSesion}]{inicioSesion}{scale=0.3}{0}{Pantalla de inicio de sesión.}
+% \insertimageboxed[\label{fig:adminUsuarios}]{adminUsuarios}{scale=0.3}{0}{Interfaz de la sección de administración de usuarios.}
+
+% El SCADA ha sido diseñado con un enfoque flexible y adaptable para permitir la incorporación de futuras secciones o funcionalidades según las necesidades cambiantes de la planta de purificación.
+
+
+
+
+
 
 % ------------- Sección ----------------
 \section{Instalación del EDI }
@@ -136,8 +219,6 @@ En esta sección, describiremos el proceso de implementación y puesta en marcha
 Además, discutiremos la importancia de la formación del personal que manejará el dispositivo EDI para asegurar una operación segura y eficiente a largo plazo. Este entrenamiento debe incluir el uso del nuevo sistema SCADA propuesto, así como los procedimientos de mantenimiento y resolución de problemas específicos del dispositivo EDI. \\
 
 Finalmente, se abordarán las medidas de seguimiento y evaluación que deben implementarse para garantizar la eficacia y eficiencia del sistema a lo largo del tiempo.\\
-
-\subsection{Proceso de instalación del EDI}
 
 La implementación del sistema de Electrodesionización (EDI) luego de la ósmosis inversa doble requiere una serie de pasos clave para garantizar su correcta instalación y funcionamiento. A continuación, se proporciona un desglose detallado de este proceso:
 

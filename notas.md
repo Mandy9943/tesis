@@ -7,15 +7,14 @@ Hacer los ajustes necesarios en la instrumentación
 
 ----Instrumentación-----
 Agregar sensor de nivel a la instrumentación
-Imágenes de las bombas de dosificación
 Agregar el PLC y los módulos que se utilicen en la instrumentación (usar plc 315)
-Agregar las unidades de ósmosis a la instrumentación (en la pagina 745 esta toda la información de la osmosis)
-Cambiar el tipo de valvulas de retencion
-Cambia el tipo de valvulas de control (poner las seat angle valves de la pagina 1628)
+<!-- Agregar las unidades de ósmosis a la instrumentación (en la pagina 745 esta toda la información de la osmosis) -->
+<!-- Cambiar el tipo de valvulas de retencion
+Cambia el tipo de valvulas de control (poner las seat angle valves de la pagina 1628) -->
 
 
-----Comunicación-----
-Arrglar el protocolo de cominicacion
+<!-- ----Comunicación-----
+Arrglar el protocolo de cominicacion -->
 <!-- Modificar el abstract (no hay hmi) -->
 
 <!-- No entiendo como es posible que se espere un tiempo cuando se realiza la 
