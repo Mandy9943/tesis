@@ -1,40 +1,17 @@
-\section{Comunicación de la planta}
+\section{Comunicación de la Planta}
 
-Para entender completamente la operación de la planta de bulbos de AICA, es esencial entender los protocolos de comunicación
-en uso y cómo facilitan la eficiencia de la planta. La comunicación en un ambiente industrial como este no es una cuestión
-trivial, ya que cada nivel de la pirámide de automatización requiere protocolos específicos para garantizar la correcta
-transmisión de información.
+La red de comunicación en la planta de ósmosis inversa está estratificada en tres niveles de automatización, con un sistema de interconexión que garantiza una rápida y eficiente transmisión de datos entre los distintos elementos de la red. En cada nivel de la jerarquía de automatización, se utiliza un protocolo de comunicación específico que se adapta mejor a las necesidades de ese nivel, tal como se detalla en la Figura \ref{fig:comunicacion}. A continuación, se analizan los protocolos de comunicación empleados en cada nivel.
 
-\begin{itemize}
-      \item \textbf{Nivel de dispositivos de campo:} Este nivel comprende los dispositivos de campo, incluyendo sensores y
-            actuadores. Estos dispositivos son responsables de adquirir datos a través de señales de campo de tipo intensidad
-            (4-20 mA) o tensión (0-10, 24V DC), y ejecutar acciones físicas dentro del sistema. Se comunican con módulos de
-            periferia descentralizada, como el ET200S de Siemens, y módulos eléctricos como el CPX de Festo a través de Profibus DP.
+\subsection*{Nivel de Campo}
 
-            Profibus DP es un protocolo de comunicación industrial eficiente y rentable que proporciona altas velocidades
-            de transmisión de datos. Los módulos de periferia descentralizada ET 200S y los módulos eléctricos CPX de Festo
-            actúan como esclavos en la configuración Profibus. Reciben las señales de los dispositivos de campo y las
-            procesan para su posterior transmisión.
+En el nivel de campo, se encuentran los diversos sensores que recogen datos directamente del proceso. Los sensores generan señales de tipo intensidad (4-20 mA) o tensión (0-10, 24V DC), que son transmitidas a los módulos CPX de Festo y ET 200s de Siemens, a través de un bus de campo. El bus de campo es un sistema de comunicación digital diseñado para la transmisión de datos entre dispositivos de campo y sistemas de control en tiempo real. Esta forma de comunicación permite un intercambio eficiente y robusto de datos entre los dispositivos de campo y los módulos de control.
 
+\subsection*{Nivel de Control}
 
-      \item \textbf{Nivel de control:} En el siguiente nivel de la jerarquía, los módulos de periferia descentralizada
-            ET 200s y los módulos eléctricos CPX de Festo se comunican con un PLC maestro. Los módulos transmiten la
-            información recolectada de los dispositivos de campo al PLC maestro a través de Profibus DP, lo que facilita
-            un intercambio de datos rápido y eficiente.
+En el nivel de control, los módulos CPX de Festo y ET 200s de Siemens reciben las señales de los sensores y las transmiten al autómata programable (PLC) maestro a través del protocolo Profibus DP. Profibus DP es un estándar de comunicación industrial de alta velocidad y bajo retardo, especialmente diseñado para aplicaciones de control de procesos. Gracias a Profibus, el PLC maestro puede comunicarse de manera eficiente con los módulos de periferia descentralizada, permitiendo un control preciso y en tiempo real del proceso.
 
-            El PLC maestro procesa estos datos, tomando decisiones que influirán en el desarrollo del proceso. La
-            configuración concebida para esta red de comunicación garantiza una comunicación eficiente entre el
-            PLC maestro y los módulos que se le subordinan.
+\subsection*{Nivel de Supervisión}
 
-      \item \textbf{Nivel de supervisión:} En el nivel más alto de la jerarquía de control, encontramos el
-            sistema SCADA (Supervisory Control And Data Acquisition). Este sistema se encarga de supervisar y
-            controlar todo el proceso, recopilando información del PLC maestro. Para facilitar esta comunicación,
-            se utiliza el protocolo OPC (OLE for Process Control).
+En el nivel superior de la jerarquía, el PLC se comunica con el sistema SCADA (Control Supervisor y Adquisición de Datos) mediante una interfaz multipunto (MPI) que utiliza el protocolo de comunicación TCP/IP. TCP/IP es un conjunto de protocolos de comunicación de alto nivel que permite la transmisión de datos entre dispositivos en una red de área amplia, como Internet. Esta forma de comunicación permite la visualización y el control del proceso en tiempo real desde el sistema SCADA, proporcionando al operador una interfaz de usuario intuitiva y potente.
 
-            OPC es un estándar de comunicación en la industria de la automatización que permite la interacción
-            fluida entre los sistemas SCADA y los PLC. Este protocolo, basado en la tecnología Microsoft OLE/COM,
-            permite que el sistema SCADA reciba datos en tiempo real del PLC maestro, proporcionando una visión
-            integral del proceso para su supervisión y control.
-
-
-\end{itemize}
+\insertimageboxed[\label{fig:comunicacion}]{comunicacion}{scale=0.3}{0}{Procolos de comunicación}

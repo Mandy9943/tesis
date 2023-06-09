@@ -285,6 +285,48 @@ Estos son los detalles específicos de ambos medidores de flujo y transmisores:\
     \end{tabular}
 \end{table}
 
+
+
+\subsection{Sensor de Nivel}
+
+El control del nivel de agua en el proceso de ósmosis inversa es una variable clave, específicamente en el tanque TK50 donde se almacena el agua pretratada. Para esta tarea esencial, se utiliza el sensor de nivel Liquicap FMI51, un dispositivo de medición de nivel por capacitancia desarrollado por Endress+Hauser, tal como se muestra en la Figura \ref{fig:sensor_nivel}. Este instrumento asegura que el proceso de ósmosis inversa se inicie solo cuando el nivel de agua en el tanque alcanza un punto establecido, lo que contribuye a optimizar la eficiencia del proceso.
+
+El Liquicap FMI51 opera bajo el principio de la capacitancia. En el interior de su varilla sensora, este instrumento cuenta con dos electrodos que generan un campo eléctrico. Cuando el nivel del agua en el tanque varía, las propiedades dieléctricas del espacio entre los electrodos cambian, lo cual se traduce en una variación de la capacitancia. Esta variación es interpretada por el sensor y convertida en una señal de nivel que es utilizada para controlar el proceso.
+
+\insertimageboxed[\label{fig:sensor_nivel}]{instrumentacion/sensor_nivel}{scale=0.4}{0}{Sensor de nivel Liquicap FMI51}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Características del Sensor de nivel Liquicap FMI51}
+    \label{table:sensor_nivel}
+    \begin{tabular}{| L{6cm} | L{6cm} |}
+        \hline
+        \textbf{Fabricante}                       & Endress+Hauser                                                                                      \\
+        \hline
+        \textbf{Principio de medición}            & Capacitivo                                                                                          \\
+        \hline
+        \textbf{Rango de temperatura del proceso} & -80°C a +200°C                                                                                      \\
+        \hline
+        \textbf{Presión del proceso}              & Vacío a 100 bar                                                                                     \\
+        \hline
+        \textbf{Precisión}                        & Repetibilidad: 0,1\%, Error de linealidad para líquidos conductivos: <0,25\%                        \\
+        \hline
+        \textbf{Longitud total del sensor}        & 6m                                                                                                  \\
+        \hline
+        \textbf{Distancia máxima de medición}     & 0.1 a 4.0 m                                                                                         \\
+        \hline
+        \textbf{Comunicación}                     & 4...20mA HART, PFM                                                                                  \\
+        \hline
+        \textbf{Certificaciones / Aprobaciones}   & ATEX, FM, CSA, IEC Ex, TIIS, INMETRO, NEPSI, EAC, SIL                                               \\
+        \hline
+        \textbf{Limitaciones de aplicación}       & Espacio insuficiente hacia el techo, medios cambiantes no conductivos con conductividad < 100 μS/cm \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+
 % ------------Sensores de Presión-----------
 \subsection{Sensor-Transmisor de Presión} \label{sec:sensor_presion}
 
