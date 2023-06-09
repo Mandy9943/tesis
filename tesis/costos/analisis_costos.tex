@@ -35,8 +35,7 @@ CT representa el costo total del proyecto. \\
 CD hace referencia al costo directo. \\
 CI denota el costo indirecto.
 
-\textbf{Costo indirecto}
-
+\textbf{Costo indirecto}\\
 El costo indirecto abarca gastos tales como el consumo de electricidad, gastos administrativos, entre otros.
 Este valor se estima multiplicando un coeficiente de gasto, en este caso 0.84, por el salario básico de la
 investigación, tal como se muestra en la ecuación (\ref{eq:cost_indirect}). \\
@@ -46,8 +45,7 @@ investigación, tal como se muestra en la ecuación (\ref{eq:cost_indirect}). \\
     CI = 0.84 * SB
 \end{equation}
 
-\textbf{Costo directo}
-
+\textbf{Costo directo}\\
 El costo directo engloba todos los gastos económicos necesarios para la realización del proyecto. Se
 calcula como la suma del Salario Básico (SB), el Salario Complementario (SC), el Seguro Social (SS), los
 Medios Directos (MD), las Dientas y los Pesajes (DP), y Otros Gastos (OG), como se puede observar con más
@@ -58,8 +56,7 @@ detalle en la ecuación (\ref{eq:cost_direct}). \\
     CD = SB + SC + SS + MD + DP + OG
 \end{equation}
 
-\textbf{Salario básico}
-
+\textbf{Salario básico}\\
 SB (salario básico): Consiste en el salario que se paga por el tiempo trabajado, es decir, no se incluye seguridad social ni vacaciones. Incluye los salarios básicos de todos los participantes del proyecto.
 
 
@@ -68,25 +65,22 @@ SB (salario básico): Consiste en el salario que se paga por el tiempo trabajado
     SB = \sum_{i = 0}^{n} (Ai * Bi)
 \end{equation}
 
-donde:
-
-𝐴𝑖: días dedicados a la investigación del proyecto.
-
-B𝑖: salario diario del participante 𝑖 (salario mensual / 24)
-
-𝑛: número total de participantes del proyecto.
+Donde:\\
+𝐴𝑖: días dedicados a la investigación del proyecto.\\
+B𝑖: salario diario del participante 𝑖 (salario mensual / 24)\\
+𝑛: número total de participantes del proyecto.\\
 
 El salario por hora de los participantes está dado por la relación existente del salario
 básico de cada uno entre la cantidad de días dedicados a actividades laborales,
 multiplicado por la cantidad de horas. Teniendo en cuenta que en un mes existen 24
 días laborables como promedio y que al día la jornada de trabajo es de 8 horas se
-puede plantear que:\\
+puede plantear que:
 
-B1 = 4954 / (24*8) = 25.80 CUP/Hrs
+B1 = 4,900 / (24*8) = 25.53 CUP/Hrs
 
-B2 = 9730.5 / (24*8) = 50.68 CUP/Hrs
+B2 = 9730.5 / (24*8) = 33.85 CUP/Hrs
 
-B3 = 400 / (24*8) = 2.08 CUP/Hrs\\
+B3 = 400 / (24*8) = 2.08 CUP/Hrs
 
 En la Tabla \ref{table:participantes_proyecto} se muestra una relación de las personas que participan en la realización de este proyecto. \\
 
@@ -95,13 +89,18 @@ En la Tabla \ref{table:participantes_proyecto} se muestra una relación de las p
     \caption{Participantes en el proyecto}
     \label{table:participantes_proyecto}
 
-    \begin{tabular}{|c|c|c|c|c|}
+    \begin{tabular}{|c|c|c|c|c|c|}
         \hline
-        \textbf{Nombres y apellidos}  & \textbf{SB (CUP)} & \textbf{𝐴𝑖 (Hrs)} & \textbf{B𝑖 (CUP/Hrs)} & \textbf{Ai*Bi} \\
+        \textbf{Nombres y apellidos}  & \textbf{i} & \textbf{SB (CUP)} & \textbf{𝐴𝑖 (Hrs)} & \textbf{B𝑖 } & \textbf{Ai*Bi} \\
         \hline
-        Ing. Amanda Martí Coll        & 4900              & 120               & 25.80                 & 3096           \\
-        Ing. Rosaine Ayala            & 6500              & 120               & 25.80                 & 3096           \\
-        Armando Cesar Martin Calderón & 4900              & 600               & 25.80                 & 3096           \\
+        Ing. Amanda Martí Coll        & 1          & 4900              & 120               & 25.53        & 3062.5
+        \\
+        \hline
+        Ing. Rosaine Ayala            & 2          & 6500              & 120               & 33.85        & 4062.5
+        \\
+        \hline
+        Armando Cesar Martin Calderón & 3          & 400               & 480               & 2.08         & 1000
+        \\
 
         \hline
     \end{tabular}
@@ -109,17 +108,16 @@ En la Tabla \ref{table:participantes_proyecto} se muestra una relación de las p
 
 
 Se emplearon 5 meses de trabajo comprendidos entre enero y mayo. Considerando que los tutores le dedicaron a la actividad, cada día laborable, 1 hora de trabajo como promedio, entonces se puede afirmar que fueron asignadas a la investigación 120 horas por cada uno de ellos.
-El estudiante le dedicó cada día laborable como 5 horas como promedio, a la investigación, es decir, un total de 600 horas.
+El estudiante le dedicó cada día laborable como 5 horas como promedio, a la investigación, es decir, un total de 480 horas.
 Según la ecuación (\ref{eq:sal_basico}):\\
 
 \begin{equation}
     \label{eq:salary_basico_total}
-    SB = 120 * 25.80 + 120 * 50.68 + 600 * 2.08 = 10425.6 CUP
+    SB = 120 * 25.53 + 120 * 33.85 + 480 * 2.08 = 8125 CUP
 \end{equation}
 
 
-\textbf{Salario complementario}
-
+\textbf{Salario complementario}\\
 El salario complementario (SC) es el 9.09\% del salario básico, destinado para el pago de las
 vacaciones. Se puede calcular con la siguiente ecuación:
 
@@ -129,11 +127,10 @@ vacaciones. Se puede calcular con la siguiente ecuación:
 \end{equation}
 \begin{equation}
     \label{eq:salary_complementary_total}
-    SC=0.0909*10425.60=947.69 CUP
+    SC=0.0909*8125=738.56 CUP
 \end{equation}
 
-\textbf{Seguro Social}
-
+\textbf{Seguro Social}\\
 El seguro social (SS) equivale al 5\% del salario básico más el salario complementario, y se
 calcula de la siguiente forma:
 
@@ -143,29 +140,33 @@ calcula de la siguiente forma:
 \end{equation}
 \begin{equation}
     \label{eq:social_security_total}
-    SS=0.05*(10425.60+947.69)=1137.33 CUP
+    SS=0.05*(8125+738.5625)=443.17 CUP
 \end{equation}
 
-\textbf{Medios Directos}
-
+\textbf{Medios Directos}\\
 Los medios directos (MD) incluyen los costos de todos los equipos, componentes de instalación y
 materiales utilizados directamente en la investigación.
 
 
-Para llevar a cabo el proyecto será necesario hacer algunos gastos imprescindibles. En la Tabla 4.1
+Para llevar a cabo el proyecto será necesario hacer algunos gastos imprescindibles. En la Tabla \ref{table:precios_dispositivos_instrumentos}
 se muestran los precios de los elementos que deben adquirirse:
 
 \begin{table}[h]
-    \caption{Listado de precios de los dispositivos e instrumentos necesarios para la elaboración del proyecto}
+    \caption{Listado de precios de los dispositivos e instrumentos}
+    \label{table:precios_dispositivos_instrumentos}
+
+
     \begin{tabular}{|c|c|c|c|}
         \hline
-        Dispositivo/instrumento/otros      & Cantidad & Precio por unidad & Precio total \\
+        Dispositivo/instrumento      & Cantidad & Precio por unidad & Precio total \\
         \hline
-        Electrodesionizador                & 1        & 10379.4€          & 10379.4€     \\
-        Sensor transmisor de temperatura   & 1        & 175.10€           & 175.10€      \\
-        Sensor transmisor de flujo         & 1        & 1732.00€          & 1732.00€     \\
-        Sensor transmisor de conductividad & 1        & 661.25€           & 661.25€      \\
-        Sensor transmisor de presión       & 2        & 691.85€           & 1393.7€      \\
+        Electrodesionizador          & 1        & \$5,400           & \$5400       \\
+        Sensor transmisor de flujo   & 1        & \$1,230           & \$1,230      \\
+        Sensor conductividad         & 1        & \$1,703.00        & \$1,703.00   \\
+        Transmisor de conductividad  & 1        & \$983             & \$983        \\
+        Sensor transmisor de presión & 1        & \$423             & \$423        \\
+        Manómetro                    & 2        & \$25              & \$50         \\
+        Válvula manual               & 2        & \$22              & \$44         \\
         \hline
     \end{tabular}
 \end{table}
@@ -173,12 +174,12 @@ se muestran los precios de los elementos que deben adquirirse:
 El total de gastos en materiales directos es:
 
 \begin{equation}
-    MD = 15753.15€ + \$217694.5 MN
+    MD = \$9,833
 \end{equation}
 
 \textbf{Dietas y Pasajes}
 
-Las dietas y pasajes (DP) representan los gastos ocasionados por dietas y pasajes.
+Las dietas y pasajes (DP) representan los gastos ocasionados por dietas y pasajes. Estos gastos no incurren en el caso de este proyecto, por lo que se considera que DP = 0.00  CUP.
 
 \textbf{Otros Gastos}
 
@@ -189,7 +190,7 @@ Se incluye el gasto por consumo de energía eléctrica, durante las horas de tie
 en la elaboración del proyecto. Para un total de 450 horas resulta ser:
 
 \begin{equation}
-    OG = 450 \text{ horas } * \$10MN = \$4500.00MN
+    OG = 480 \text{ horas } * 10 CUP= 4800.00 CUP
 \end{equation}
 
 
@@ -199,7 +200,10 @@ en la elaboración del proyecto. Para un total de 450 horas resulta ser:
 \textbf{Cálculo del Costo Directo}
 
 \begin{equation}
-    CD = SB + SC + SS + MD + DP + OG = \$228564.42 MN + 15753.15€
+    CD = SB + SC + SS + MD + DP + OG
+\end{equation}
+\begin{equation}
+    CD = 14,106.73  CUP+ \$9,833
 \end{equation}
 
 \textbf{Costos indirectos}
@@ -210,7 +214,7 @@ salario básico de la investigación. El coeficiente de gastos para un Departame
 UCT (Unidad de Ciencia y Técnica) es 1.4063.
 
 \begin{equation}
-    CI = 0.84 * SB = \$6468 MN
+    CI = 0.84 * SB = 6,825  CUP
 \end{equation}
 
 \textbf{Costo Total}
@@ -218,7 +222,7 @@ UCT (Unidad de Ciencia y Técnica) es 1.4063.
 El costo total del proyecto resulta la suma de los costos directos e indirectos, por tanto:
 
 \begin{equation}
-    CT = CD + CI = \$235032.42MN + 15753.15€
+    CT = CD + CI = 20,931.73 CUP + \$9, 833
 \end{equation}
 
 \textbf{Precio}
@@ -228,55 +232,35 @@ El precio se determina mediante la expresión:
 \begin{equation}
     P = CT + 0.1 * CT
 \end{equation}
+\begin{equation}
+    P = 20,931.73 CUP + \$9, 833 + 0.1 * (20,931.73 CUP + \$9, 833)
+\end{equation}
+\begin{equation}
+    P = 20,931.73 CUP + \$9, 833 +  (2,093.17 CUP + \$983.3) = 23,024.9 CUP + \$10,816.3
+\end{equation}
 
-Donde: $CT$ representa el costo total de todos los elementos de la red y control de conductividad, $0.1*CT$
+Donde:\\
+CT representa el costo total de todos los elementos de la red y control de conductividad, $0.1*CT$
 representa los salarios pagados a especialistas, técnicos, y el resto del personal involucrado en el diseño,
 montaje y puesta en marcha del sistema, el costo de impuestos aduanales, de combustible para el transporte del
 personal, y para el cableado.
 
-El costo total es de $CT = \$235032.42MN + 15753.15€$
-
-\begin{align*}
-    P & = ( \$235032.42MN + 15753.15€) + 0.1*( \$235032.42MN + 15753.15€) \\
-    P & = \$258535.66MN + 17328.46€
-\end{align*}
-
 Luego el costo total del proyecto de tesis es:
 
 \begin{align*}
-    \text{Costo total del proyecto de tesis} & = CT + P                                                    \\
-    \text{Costo total del proyecto de tesis} & = (\$235032.42MN + 15753.15€) + (\$258535.66MN + 17328.46€) \\
-    \text{Costo total del proyecto de tesis} & = \$493568.08MN + 33081.61€
+    \text{Costo total del proyecto de tesis} & = CT + P                                                   \\
+    \text{Costo total del proyecto de tesis} & = (20,931.73 CUP + \$9, 833) + (23,024.9 CUP + \$10,816.3) \\
+    \text{Costo total del proyecto de tesis} & = 43,956.63 CUP+ \$20,649.3
 \end{align*}
 
 
-\section{Viabilidad del proyecto}
+\section{Análisis Económico}
 
-El proyecto es viable teniendo en cuenta los siguientes aspectos:
+El desarrollo de este proyecto de tesis tiene implicaciones económicas significativas. En primer lugar, la implementación del EDI en la segunda etapa de membranas de la ósmosis inversa permitirá controlar eficazmente las fluctuaciones de la conductividad del agua. Esta mejora en el control de calidad reducirá la variabilidad del producto final y garantizará la conformidad con los estándares de la farmacopea internacional requeridos para la producción de medicamentos.
 
-\begin{itemize}
-    \item \textbf{Medio ambiente:} Este proyecto es respetuoso con el medio ambiente. No hay elementos o procesos
-          que generen contaminación o residuos dañinos. Además, se ha hecho un esfuerzo consciente por minimizar el uso
-          de recursos y maximizar la eficiencia en todas las etapas del proyecto. Se espera que este proyecto tenga un
-          impacto ambiental positivo o neutral en su ejecución a corto y largo plazo.
+Además, la incorporación del EDI también aumentará la eficiencia en el uso del agua. En lugar de desperdiciar el agua que no cumple con los estándares de conductividad, ahora se puede purificar y reutilizar. Este ahorro de recursos no solo tiene beneficios económicos directos, al reducir la cantidad de agua necesaria para el proceso, sino también indirectos, al minimizar el impacto ambiental de la operación y potencialmente mejorar la reputación de la empresa en términos de sostenibilidad.
 
-    \item \textbf{Jurídico:} El proyecto se desarrolla completamente dentro del marco legal existente y cumple con
-          todas las normas y leyes pertinentes. En particular, se han tomado medidas para garantizar que todas las
-          actividades estén en línea con las regulaciones y directrices de la industria farmacéutica. El proyecto también
-          mantiene un compromiso de adherirse a cualquier cambio o actualización futura en la legislación relevante.
-
-    \item \textbf{Económico y financiero:} Desde una perspectiva económica, el proyecto es viable. El centro tiene
-          los recursos financieros necesarios para financiar completamente el proyecto. Además, se espera que el proyecto
-          sea rentable y genere un retorno de la inversión a largo plazo. El apoyo intelectual de la institución docente
-          también contribuye a la viabilidad económica del proyecto, ya que proporciona acceso a expertos y recursos
-          académicos.
-
-    \item \textbf{Técnico:} La entidad dispone de los recursos técnicos necesarios para llevar a cabo el proyecto.
-          Esto incluye la disponibilidad de equipos, tecnología y personal cualificado. El personal tiene las habilidades
-          y la experiencia necesarias para implementar y gestionar el proyecto eficazmente. Además, se disponen de las
-          instalaciones y el equipamiento necesarios para desarrollar todas las etapas del proyecto sin problemas.
-\end{itemize}
-
+Finalmente, al aumentar la producción de agua purificada y agilizar la fabricación de inyectables, este proyecto puede aumentar la capacidad de producción general de la empresa. Además, al evitar un mayor desgaste en el sistema de ósmosis inversa, puede prevenir costosos, paros de producción y reparaciones futuras. Por lo tanto, aunque la implementación del EDI conlleve una inversión inicial, es probable que esta inversión se recupere a través de los ahorros y beneficios económicos a largo plazo.
 
 
 

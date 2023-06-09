@@ -38,7 +38,7 @@ Ingeniero en Automática
 		\vspace{0.5cm} \\
 		\textbf{Tutores} \\
 		Ing. Amanda Martí Coll \\
-		Ing. Rosaine Ayala Gispert22 \\
+		Ing. Rosaine Ayala Gispert \\
 		\vspace{0.5cm} \\
 		
 		\vspace{0.5cm} \\
@@ -73,17 +73,17 @@ Ingeniero en Automática
 \newpage
 \section*{Resumen}
 \abstracttext{
-    Esta tesis se enfoca en la implementación de un sistema de Electrodesionización (EDI)
-    en una planta de tratamiento de agua perteneciente a la industria farmacéutica de
-    Laboratorios AICA (específicamente en su planta de bulbos), con el propósito de optimizar la calidad del agua purificada (PW)
-    y del agua para inyección (WFI). El estudio abarca áreas de la ingeniería automática como
-    la instrumentación, propuesta de un SCADA y la programación
-    del Controlador Lógico Programable (PLC) con el objetivo de alcanzar un control
-    eficiente del proceso de tratamiento de agua.\\
+	Esta tesis se enfoca en la implementación de un sistema de Electrodesionización (EDI)
+	en una planta de tratamiento de agua perteneciente a la industria farmacéutica de
+	Laboratorios AICA (específicamente en su planta de bulbos), con el propósito de optimizar la calidad del agua purificada (PW)
+	y del agua para inyección (WFI). El estudio abarca áreas de la ingeniería automática como
+	la instrumentación, propuesta de un SCADA y la programación
+	del Controlador Lógico Programable (PLC) con el objetivo de alcanzar un control
+	eficiente del proceso de tratamiento de agua.\\
 
-    El trabajo presenta un esquema propuesto que considera los requisitos específicos de la tecnología EDI y examina los desafíos
-    particulares relacionados con la conductividad del agua. Además, se discuten las ventajas y desventajas del uso del EDI en
-    comparación con otras tecnologías de purificación de agua.\\}
+	El trabajo presenta un esquema propuesto que considera los requisitos específicos de la tecnología EDI y examina los desafíos
+	particulares relacionados con la conductividad del agua. Además, se discuten las ventajas y desventajas del uso del EDI en
+	comparación con otras tecnologías de purificación de agua.\\}
 
 \section*{Palabras claves}
 \keywords{Electrodesionización (EDI), Planta de tratamiento de agua, Industria farmacéutica, AICA, Agua purificada (PW), Agua para inyección (WFI), Conductividad del agua, Ósmosis inversa  }
@@ -92,9 +92,9 @@ Ingeniero en Automática
 \newpage
 \section*{Abstract}
 \abstracttext{
-    This thesis focuses on the implementation of an Electrodesionization (EDI) system in a water treatment plant belonging to the pharmaceutical industry of Laboratorios AICA (specifically in its bulb plant), with the purpose of optimizing the quality of purified water (PW) and water for injection (WFI). The study covers areas of automation engineering such as instrumentation, proposing a SCADA system, and programming the Programmable Logic Controller (PLC) with the aim of achieving efficient control of the water treatment process.\\
+	This thesis focuses on the implementation of an Electrodesionization (EDI) system in a water treatment plant belonging to the pharmaceutical industry of Laboratorios AICA (specifically in its bulb plant), with the purpose of optimizing the quality of purified water (PW) and water for injection (WFI). The study covers areas of automation engineering such as instrumentation, proposing a SCADA system, and programming the Programmable Logic Controller (PLC) with the aim of achieving efficient control of the water treatment process.\\
 
-    The work presents a proposed scheme that takes into account the specific requirements of EDI technology and examines the particular challenges related to water conductivity. Additionally, the advantages and disadvantages of using EDI compared to other water purification technologies are discussed.\\
+	The work presents a proposed scheme that takes into account the specific requirements of EDI technology and examines the particular challenges related to water conductivity. Additionally, the advantages and disadvantages of using EDI compared to other water purification technologies are discussed.\\
 
 }
 
@@ -106,23 +106,23 @@ Ingeniero en Automática
 
 % DEDICATORIA
 \begin{dedicatory}
-    Dedicado a todos los, \\
-    que nunca perdieron la fe en mí. \\
-    ~ \\
-    \textbf{Saludos}
+	Dedicado a todos los, \\
+	que nunca perdieron la fe en mí. \\
+	~ \\
+	\textbf{Saludos}
 \end{dedicatory}
 
 % AGRADECIMIENTOS
 \begin{acknowledgments}
-    Primero y ante todo, quiero expresar mi más profundo agradecimiento a mi familia, quienes siempre han sido mi faro en la vida. A mis padres, por su incondicional amor, apoyo y enseñanzas, que me han guiado hasta este punto en mi vida. A mi hermana mayor, que ha sido un pilar de apoyo, sabiduría y amor incondicional. Su presencia ha sido esencial en mi camino y me ha inspirado a ser una mejor persona cada día.\\
+	Primero y ante todo, quiero expresar mi más profundo agradecimiento a mi familia, quienes siempre han sido mi faro en la vida. A mis padres, por su incondicional amor, apoyo y enseñanzas, que me han guiado hasta este punto en mi vida. A mi hermana mayor, que ha sido un pilar de apoyo, sabiduría y amor incondicional. Su presencia ha sido esencial en mi camino y me ha inspirado a ser una mejor persona cada día.\\
 
-    A mis amigos, que se convirtieron en hermanos, gracias por compartir conmigo momentos de risas y lágrimas, por estar a mi lado en los momentos de tensión y alivio, y por ser mi red de apoyo durante este arduo camino. No tengo palabras para expresar cuánto valoro cada uno de ustedes. A mis compañeros de la Escuela Lenin, con quienes compartí tres años de crecimiento y aprendizaje, y a los amigos de mi aula, agradezco su amistad y apoyo en esta etapa tan importante de mi vida.\\
+	A mis amigos, que se convirtieron en hermanos, gracias por compartir conmigo momentos de risas y lágrimas, por estar a mi lado en los momentos de tensión y alivio, y por ser mi red de apoyo durante este arduo camino. No tengo palabras para expresar cuánto valoro cada uno de ustedes. A mis compañeros de la Escuela Lenin, con quienes compartí tres años de crecimiento y aprendizaje, y a los amigos de mi aula, agradezco su amistad y apoyo en esta etapa tan importante de mi vida.\\
 
-    Quiero expresar mi más sincero agradecimiento a mis dos tutoras, Ing. Amanda Martí Coll e Ing. Rosaine Ayala Gispert, quienes han sido mis mentores y guías en este viaje académico. La dedicación y apoyo de la Ing. Rosaine Ayala Gispert durante el proceso en el centro de trabajo han sido invaluables, y la ayuda de la Ing. Amanda Martí Coll en la metodología ha sido crucial para el desarrollo y conclusión de esta investigación. Les estaré eternamente agradecido por su apoyo y confianza en mis habilidades.\\
+	Quiero expresar mi más sincero agradecimiento a mis dos tutoras, Ing. Amanda Martí Coll e Ing. Rosaine Ayala Gispert, quienes han sido mis mentores y guías en este viaje académico. La dedicación y apoyo de la Ing. Rosaine Ayala Gispert durante el proceso en el centro de trabajo han sido invaluables, y la ayuda de la Ing. Amanda Martí Coll en la metodología ha sido crucial para el desarrollo y conclusión de esta investigación. Les estaré eternamente agradecido por su apoyo y confianza en mis habilidades.\\
 
-    Por último, pero no menos importante, deseo agradecer a todas las personas e instituciones que de alguna manera contribuyeron a la realización de esta investigación, aportando recursos, conocimientos o simplemente un espacio donde reflexionar y crecer.\\
+	Por último, pero no menos importante, deseo agradecer a todas las personas e instituciones que de alguna manera contribuyeron a la realización de esta investigación, aportando recursos, conocimientos o simplemente un espacio donde reflexionar y crecer.\\
 
-    Este logro no es solo mío, sino de todos los que me han acompañado en este viaje. Con profundo amor y gratitud, dedico esta tesis a cada uno de ustedes.
+	Este logro no es solo mío, sino de todos los que me han acompañado en este viaje. Con profundo amor y gratitud, dedico esta tesis a cada uno de ustedes.
 \end{acknowledgments}
 
 % TABLA DE CONTENIDOS - ÍNDICE

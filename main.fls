@@ -2396,9 +2396,6 @@ INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
-INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti8.tfm
-INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
-INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
 INPUT .\tesis\conclusiones\conclusiones.tex
 INPUT tesis\conclusiones\conclusiones.tex
 INPUT .\tesis\conclusiones\conclusiones.tex
@@ -2410,8 +2407,6 @@ INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\se-utf8.
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\se-utf8.def
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\se-utf8.def
 INPUT main.aux
-INPUT C:\Users\User\AppData\Local\MiKTeX\fonts\pk\ljfour\public\wasy\dpi720\wasy10.pk
-INPUT C:\Users\User\AppData\Local\MiKTeX\fonts\pk\ljfour\public\wasy\dpi720\wasy10.pk
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
