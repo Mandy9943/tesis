@@ -2050,6 +2050,10 @@ INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\public\wasy\wasy5.tf
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8c.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8c.tfm
 INPUT C:\Users\User\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8c.tfm
+INPUT .\tesis\introduccion\extructura.tex
+INPUT tesis\introduccion\extructura.tex
+INPUT .\tesis\introduccion\extructura.tex
+INPUT tesis\introduccion\extructura.tex
 INPUT .\tesis\estado_del_arte\1estado_del_arte.tex
 INPUT tesis\estado_del_arte\1estado_del_arte.tex
 INPUT .\tesis\estado_del_arte\1estado_del_arte.tex
