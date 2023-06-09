@@ -34,7 +34,7 @@ tener en cuenta que el plc existente no se puede comunicar con plc (asi que una 
 <!-- Falata -->
 <!-- Agregar PLC y sus modulos -->
 <!-- Agregar sensor de nivel a la instrumentación -->
-Analisis de costos
+<!-- Analisis de costos -->
 Agregar las nuevas vistas del SCADA
 <!-- Cambiar el protocolo de comunicacion -->
 Agregar una esctruturacion del contenido con una breve explicacion de sus parte en la introduccion
