@@ -1,0 +1,118 @@
+\subsection{Autómata programable} \label{sec:plc}
+
+En la planta de tratamiento de agua, el control de las variables, los medios técnicos y los instrumentos es fundamental para el correcto funcionamiento de la ósmosis inversa. Para garantizar un funcionamiento eficaz y fiable, se utiliza un autómata programable de la serie S7-300 de Siemens, específicamente el modelo CPU 315-2DP, cuyas características se presentan en la Tabla \ref{table:plc}. Este PLC, ilustrado en la Figura \ref{fig:plc}, es de procedencia alemana y es conocido por su robustez, durabilidad y optimización en las tareas de control.
+\insertimageboxed[\label{fig:plc}]{instrumentacion/plc}{scale=0.5}{0}{Autómata Programable S7-300 CPU 315-2DP}
+
+\begin{table}[H]
+    \centering
+    \caption{Características del Autómata Programable S7-300 CPU 315-2DP.}
+    \label{table:plc}
+    \begin{tabular}{| L{6cm} | L{6cm} |}
+        \hline
+        \textbf{Fabricante}                  & Siemens               \\
+        \hline
+        \textbf{Modelo}                      & CPU 315-2DP           \\
+        \hline
+        \textbf{Serie}                       & 6ES7V- 315-2AH14-0AB0 \\
+        \hline
+        \textbf{Unidad}                      & Modular               \\
+        \hline
+        \textbf{Alimentación}                & 24V DC                \\
+        \hline
+        \textbf{Memoria central}             & 256 kb                \\
+        \hline
+        \textbf{Puerto de comunicación}      & 1, RS485              \\
+        \hline
+        \textbf{Rango de voltaje permisible} & 19.2 - 28.8 V         \\
+        \hline
+        \textbf{Corriente de entrada}        & 850 mA                \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+Además, gracias a su diseño modular, el autómata programable permite la expansión del sistema tanto de manera centralizada como descentralizada, en función de las necesidades del proceso. Para recibir todas las señales correspondientes a la ósmosis, se utilizan módulos externos, como el módulo de periferia descentralizada ET200S y el módulo CPX de Festo. Ambos módulos funcionan como esclavos en la red de comunicación Profibus, y proporcionan una interfaz entre el PLC y los dispositivos de campo.
+
+\subsection{Módulo de Periferia Descentralizada ET 200s} \label{sec:moduloEt200}
+
+La implementación de la periferia descentralizada o distribuida se hace a través de la señal de E/S (Entradas/Salidas) próxima a los sensores, instrumentos y actuadores del sistema de control. Este enfoque reduce el cableado y, por ende, la masificación de canalizaciones. Una pieza fundamental de este sistema es el módulo de periferia descentralizada ET 200s, con interfaz IM 151-1 BASIC, fabricado por Siemens, que se ilustra en la Figura \ref{fig:modulo_et_200}.
+
+\insertimageboxed[\label{fig:modulo_et_200}]{instrumentacion/modulo_et_200}{scale=0.8}{0}{Módulo de Periferia Descentralizada ET 200s, Interfaz IM 151-1 BASIC}
+
+Este módulo, diseñado para montaje en caja de distribución, cuenta con bornes de inserción rápida que garantizan un cableado cómodo y que puede soltarse fácilmente gracias a la nueva disposición de mecanismos de apertura por resortes. Permite desenchufar y sustituir varios módulos simultáneamente, lo que facilita su mantenimiento y actualización.
+
+Las características principales de este módulo se muestran en la Tabla \ref{table:modulo_et_200}.
+
+\begin{table}[H]
+    \centering
+    \caption{Características del Módulo de Periferia Descentralizada ET 200s, Interfaz IM 151-1 BASIC.}
+    \label{table:modulo_et_200}
+    \begin{tabular}{| L{6cm} | L{6cm} |}
+        \hline
+        \textbf{Fabricante}                    & Siemens                           \\
+        \hline
+        \textbf{Serie}                         & 6ES7151-1CA00-0AB0                \\
+        \hline
+        \textbf{Conexión}                      & RS485                             \\
+        \hline
+        \textbf{Número de módulos utilizables} & Máximo 12                         \\
+        \hline
+        \textbf{Número de módulos empleados}   & 3 de 4 entradas digitales, 1 de 4
+        salidas digitales, 2 de entradas
+        analógicas (4-20 mA)                                                       \\
+        \hline
+        \textbf{Longitud máxima del bus}       & 2 m                               \\
+        \hline
+        \textbf{Peso}                          & 150 g                             \\
+        \hline
+        \textbf{Máxima corriente de salida}    & 80 mA                             \\
+        \hline
+        \textbf{Tensión nominal}               & 24 V DC                           \\
+        \hline
+        \textbf{Potencia disipada}             & 1,5 W                             \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Terminal Modular CPX} \label{sec:cpx}
+
+El terminal eléctrico CPX, fabricado por Festo, es un sistema periférico modular especialmente diseñado para terminales de válvulas. La Figura \ref{fig:cpx} ilustra este dispositivo.
+
+\insertimageboxed[\label{fig:cpx}]{instrumentacion/cpx}{scale=0.3}{0}{Terminal Eléctrico CPX}
+
+Este terminal modular se caracteriza por su adaptabilidad para diversas aplicaciones, gracias a su estructura modular que permite la configuración individual del número de válvulas, entradas y salidas adicionales en función de cada aplicación.
+
+Las principales características del terminal eléctrico CPX se encuentran en la Tabla \ref{table:cpx}.
+
+\begin{table}[H]
+    \centering
+    \caption{Características del Terminal Eléctrico CPX.}
+    \label{table:cpx}
+    \begin{tabular}{| L{6cm} | L{6cm} |}
+        \hline
+        \textbf{Fabricante}                               & Festo                                                             \\
+        \hline
+        \textbf{Tipo}                                     & Terminal Modular eléctrico                                        \\
+        \hline
+        \textbf{Tensión nominal de funcionamiento}        & 24V DC                                                            \\
+        \hline
+        \textbf{Margen de tensión de funcionamiento}      & 18 a 30V DC (±25\% Vn)                                            \\
+        \hline
+        \textbf{Alimentación eléctrica}                   & Electrónica + sensores/Técnica de los actuadores + válvulas       \\
+        \hline
+        \textbf{Alimentación adicional para las válvulas} & 16 (10 con alimentación de 7/8" 4 pines)                          \\
+        \hline
+        \textbf{Salidas}                                  & Analógicas y digitales                                            \\
+        \hline
+        \textbf{Protección}                               & IP65 e IP67                                                       \\
+        \hline
+        \textbf{Montaje}                                  & Mural, perfil DIN o en unidades móviles                           \\
+        \hline
+        \textbf{Buses de campo}                           & Profibus-DP, Profinet, Interbus, DeviceNet, CanOpen, CC-Link      \\
+        \hline
+        \textbf{Protocolos compatibles}                   & EtherNet/IP,Modbus/TCP, Profinet, Powerlink, EtherCAT, Sercos III \\
+        \hline
+    \end{tabular}
+\end{table}
+
+En resumen, el terminal eléctrico CPX es una solución modular y adaptable que se adapta a un amplio rango de aplicaciones, permitiendo una configuración flexible y eficiente del sistema de control.
