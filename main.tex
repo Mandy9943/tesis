@@ -5,12 +5,12 @@
 ]{book}
 
 % INFORMACIÓN DEL DOCUMENTO
-\def\documenttitle {Optimización de purificación de agua en industria farmacéutica AICA usando EDI}
+\def\documenttitle { Optimización en el sistema de tratamiento de agua de la planta de bulbos en Laboratorios AICA+ mediante electrodesionización}
 \def\documentsubtitle {}
 \def\degreetitle {
 	Trabajo de Diploma para optar por el título académico de
 Ingeniero en Automática
-	
+	 
 }
 
 \def\universityname {Universidad Tecnológica de La Habana}
@@ -23,33 +23,39 @@ Ingeniero en Automática
 % INTEGRANTES, PROFESORES Y FECHAS
 \def\documentauthor {Armando Cesar Martin Calderón}
 \def\documentdate {\the\year}
-
 \def\portrait {
+
 	\begin{center}
-	\vspace{1.5cm} ~ \\
-	\MakeUppercase{\textbf{\documenttitle}} ~ \\
-	\vspace{1.5cm}
-	\MakeUppercase{\degreetitle} ~ \\
-	\vfill
-	\begin{tabular}{c}
-		\textbf{Autor} \\
+		\insertimageboxed[]{departamentos/cujae}{scale=0.5}{0}{}
+		\vspace{-2cm} ~ \\
+		\textbf{Universidad Tecnológica de La Habana}\\
+		\vspace{-1cm} ~ \\
+\textbf{José Antonio Echeverría}\\
+		\vspace{-1cm} ~ \\
+		\textcolor{colorCujae}{\large\textbf{cujae}}\\
+		\Large{ \textbf{Facultad de Ingeniería } }\\
+		\vspace{-1.5cm} ~ \\
+		\Large{ \textbf{Automática y Biomédica}} \\
+		\vspace{0.7cm} 
+		\Large{ \textbf{\degreetitle}} ~ 
+	\LARGE{	\textbf{\documenttitle}}  \\
+	\vspace{0.7cm} 
+	\Large	{\textbf{Autor}} \\
 		\documentauthor \\
-		
-		\vspace{0.5cm} \\
+		\vspace{0.7cm} 
+
 		\textbf{Tutores} \\
-		Ing. Amanda Martí Coll \\
+	Ing. Amanda Martí Coll \\
 		Ing. Rosaine Ayala Gispert \\
-		\vspace{0.5cm} \\
-		
-		\vspace{0.5cm} \\
-		\MakeUppercase{\universitylocation} \\
-		\MakeUppercase{\documentdate}
-	\end{tabular}
+		\vspace{0.7cm} 
+
+		\universitylocation \\
+		Junio, 2023
+	
 	\end{center}
 }
 \def\abstracttable {
 	\begin{tabular}{l}
-		
 		
 	\end{tabular}
 }
@@ -69,21 +75,43 @@ Ingeniero en Automática
 \newcommand{\keywords}[1]{\par\noindent #1}
 \newcommand{\abstracttext}[1]{\par #1}
 
+% Declaración de autoría
+\newpage
+\section*{Declaración de autoría}
+Por este medio doy a conocer que soy el único autor de este trabajo y
+autorizo a la Facultad de Ingeniería Automática y Biomédica, a la Universidad
+Tecnológica de La Habana (CUJAE) y a los Laboratorios Farmacéuticos AICA a
+que hagan uso del mismo para futuras inversiones en nuestro país.\\
+Como constancia firmo la presente a los 9 días del mes de junio del año
+2023.\\
+
+\vspace{2cm}
+\begin{center}
+	\rule{6cm}{0.4pt}\\
+	\vspace{0.5cm}
+	Armando Cesar Martin Calderón \\
+	\vspace*{3cm}
+	\rule{6cm}{0.4pt}
+	\hspace*{2cm}
+	\rule{6cm}{0.4pt} \\
+	\vspace{0.5cm}
+	Tutora:	Ing. Amanda Martí Coll
+	\hspace*{2cm}
+	Tutora: Ing. Rosaine Ayala Gispert
+\end{center}
+
+
 % Resumen en español
 \newpage
 \section*{Resumen}
 \abstracttext{
-	Esta tesis se enfoca en la implementación de un sistema de Electrodesionización (EDI)
-	en una planta de tratamiento de agua perteneciente a la industria farmacéutica de
-	Laboratorios AICA (específicamente en su planta de bulbos), con el propósito de optimizar la calidad del agua purificada (PW)
-	y del agua para inyección (WFI). El estudio abarca áreas de la ingeniería automática como
-	la instrumentación, propuesta de un SCADA y la programación
-	del Controlador Lógico Programable (PLC) con el objetivo de alcanzar un control
-	eficiente del proceso de tratamiento de agua.\\
+	Este trabajo de diploma se centra en la optimización del sistema de tratamiento de agua de la planta de bulbos en Laboratorios AICA+, mediante la introducción de la tecnología de electrodesionización (EDI). Actualmente, el tratamiento de agua es crucial en la industria farmacéutica, sin embargo, los métodos convencionales presentan desafíos en cuanto a la eficiencia y la calidad del agua. La implementación de la EDI promete superar estos desafíos proporcionando agua de alta pureza de manera constante.
 
-	El trabajo presenta un esquema propuesto que considera los requisitos específicos de la tecnología EDI y examina los desafíos
-	particulares relacionados con la conductividad del agua. Además, se discuten las ventajas y desventajas del uso del EDI en
-	comparación con otras tecnologías de purificación de agua.\\}
+	El objetivo principal de este estudio es proponer una solución de optimización del sistema existente a través de la implementación de EDI, la cual implica un análisis detallado de la instrumentación necesaria, desde los sensores hasta los sistemas de control y supervisión de datos (SCADA). Además, se propone un esquema general de configuración de EDI.
+
+	Los resultados obtenidos sugieren que la implementación de la EDI no solo mejorará la eficiencia del proceso de tratamiento de agua, sino que también reducirá los costos operativos y de mantenimiento, mientras cumple con los requisitos y regulaciones estrictas aplicables al agua en la industria farmacéutica. En conclusión, este estudio sienta las bases para la implementación de la EDI en la planta de bulbos, promoviendo una mejora significativa en el tratamiento de agua en la industria farmacéutica.
+
+}
 
 \section*{Palabras claves}
 \keywords{Electrodesionización (EDI), Planta de tratamiento de agua, Industria farmacéutica, AICA, Agua purificada (PW), Agua para inyección (WFI), Conductividad del agua, Ósmosis inversa  }
@@ -92,35 +120,47 @@ Ingeniero en Automática
 \newpage
 \section*{Abstract}
 \abstracttext{
-	This thesis focuses on the implementation of an Electrodesionization (EDI) system in a water treatment plant belonging to the pharmaceutical industry of Laboratorios AICA (specifically in its bulb plant), with the purpose of optimizing the quality of purified water (PW) and water for injection (WFI). The study covers areas of automation engineering such as instrumentation, proposing a SCADA system, and programming the Programmable Logic Controller (PLC) with the aim of achieving efficient control of the water treatment process.\\
+	Esta tesis se centra en optimizar el sistema de tratamiento de agua de la planta de bulbos en AICA+ Laboratories, mediante la introducción de la tecnología de electrodeionización (EDI). Actualmente, el tratamiento de agua es crucial en la industria farmacéutica; sin embargo, los métodos convencionales presentan desafíos en términos de eficiencia y calidad del agua. La implementación de EDI promete superar estos desafíos al proporcionar agua de alta pureza de manera consistente.
 
-	The work presents a proposed scheme that takes into account the specific requirements of EDI technology and examines the particular challenges related to water conductivity. Additionally, the advantages and disadvantages of using EDI compared to other water purification technologies are discussed.\\
+	El objetivo principal de este estudio es proponer una solución de optimización para el sistema existente mediante la implementación de EDI, lo cual implica un análisis detallado de la instrumentación necesaria, desde sensores hasta sistemas de control y adquisición de datos (SCADA). Además, se propone un esquema general para la configuración de EDI.
 
+	Los resultados obtenidos sugieren que la implementación de EDI no solo mejorará la eficiencia del proceso de tratamiento de agua, sino que también reducirá los costos operativos y de mantenimiento, al tiempo que cumplirá con los estrictos requisitos y regulaciones aplicables al agua en la industria farmacéutica. En conclusión, este estudio sienta las bases para la implementación de EDI en la planta de bulbos, promoviendo una mejora significativa en el tratamiento de agua en la industria farmacéutica.
 }
 
 \section*{keywords}
-\keywords{Electrodesionization (EDI), Water treatment plant, Pharmaceutical industry, AICA, Purified water (PW), Water for injection (WFI), Water conductivity, Reverse osmosis}
+\keywords{
+	Electrodesionization (EDI), Water treatment plant,
+	Pharmaceutical industry, AICA, Purified water (PW),
+	Water for injection (WFI), Water conductivity, Reverse osmosis
+}
 
 
 
 
 % DEDICATORIA
 \begin{dedicatory}
-	Dedicado a todos los, \\
-	que nunca perdieron la fe en mí. \\
-	~ \\
-	\textbf{Saludos}
+	A mi querido despertador, por ser el compañero de batalla en las madrugadas de estudio. Tus estridentes alarmas y tus intentos incansables de sacarme de la cama han sido fundamentales para que aproveche al máximo cada minuto y adelante en mi tesis.
+
+	A mi fiel cafetera, por ser la fuente inagotable de energía en mis largas noches de investigación. Tus deliciosas dosis de cafeína han sido el combustible que me ha mantenido despierto y concentrado, incluso cuando la conexión a internet era un obstáculo.
+
+	A mi lista de reproducción "Modo Nocturno", por llenar mis horas de estudio con melodías motivadoras y canciones pegajosas. Tú has sido mi fiel acompañante, amenizando el ambiente y dándome ese impulso extra para seguir adelante.
+
+	A la luz tenue de mi lámpara, por ser mi aliada en las horas nocturnas de lectura y escritura. Tu suave brillo ha creado un ambiente acogedor y tranquilo, permitiéndome sumergirme en el mundo de la investigación y la escritura.
+
+	Y a la noche misma, por brindarme la tranquilidad y la calma necesarias para concentrarme en mi tesis. Aprovechando la conexión más estable en esas horas, pude avanzar significativamente en mi trabajo y superar los desafíos que la conexión diurna presentaba.
+
+	Esta dedicatoria es un homenaje a esos elementos que me han acompañado en las noches de estudio y han sido fundamentales para avanzar en mi tesis. Sin ustedes, mi experiencia de investigación y escritura no habría sido tan memorable ni efectiva.
 \end{dedicatory}
 
 % AGRADECIMIENTOS
 \begin{acknowledgments}
-	Primero y ante todo, quiero expresar mi más profundo agradecimiento a mi familia, quienes siempre han sido mi faro en la vida. A mis padres, por su incondicional amor, apoyo y enseñanzas, que me han guiado hasta este punto en mi vida. A mi hermana mayor, que ha sido un pilar de apoyo, sabiduría y amor incondicional. Su presencia ha sido esencial en mi camino y me ha inspirado a ser una mejor persona cada día.\\
+	Primero y ante todo, quiero expresar mi más profundo agradecimiento a mi familia, quienes siempre han sido mi faro en la vida. A mis padres, por su incondicional amor, apoyo y enseñanzas, que me han guiado hasta este punto en mi vida. A mis hermanas en especial a mi hermana mayor, que ha sido un pilar de apoyo, sabiduría y amor incondicional. Su presencia ha sido esencial en mi camino y me ha inspirado a ser una mejor persona cada día.
 
-	A mis amigos, que se convirtieron en hermanos, gracias por compartir conmigo momentos de risas y lágrimas, por estar a mi lado en los momentos de tensión y alivio, y por ser mi red de apoyo durante este arduo camino. No tengo palabras para expresar cuánto valoro cada uno de ustedes. A mis compañeros de la Escuela Lenin, con quienes compartí tres años de crecimiento y aprendizaje, y a los amigos de mi aula, agradezco su amistad y apoyo en esta etapa tan importante de mi vida.\\
+	A mis amigos, que se convirtieron en hermanos, gracias por compartir conmigo momentos de risas y lágrimas, por estar a mi lado en los momentos de tensión y alivio, y por ser mi red de apoyo durante este arduo camino. No tengo palabras para expresar cuánto valoro cada uno de ustedes. Mención especial para los tanques de ``Cuestionarios los viernes`` y a los de siempre, a mis hermanos de la Lenin.
 
-	Quiero expresar mi más sincero agradecimiento a mis dos tutoras, Ing. Amanda Martí Coll e Ing. Rosaine Ayala Gispert, quienes han sido mis mentores y guías en este viaje académico. La dedicación y apoyo de la Ing. Rosaine Ayala Gispert durante el proceso en el centro de trabajo han sido invaluables, y la ayuda de la Ing. Amanda Martí Coll en la metodología ha sido crucial para el desarrollo y conclusión de esta investigación. Les estaré eternamente agradecido por su apoyo y confianza en mis habilidades.\\
+	Quiero expresar mi más sincero agradecimiento a mis dos tutoras, Ing. Amanda Martí Coll e Ing. Rosaine Ayala Gispert, quienes han sido mis mentores y guías en este viaje académico. La dedicación y apoyo de la Ing. Rosaine Ayala Gispert durante el proceso en el centro de trabajo han sido invaluables, y la ayuda de la Ing. Amanda Martí Coll en la metodología ha sido crucial para el desarrollo y conclusión de esta investigación. Les estaré eternamente agradecido por su apoyo y confianza en mis habilidades.
 
-	Por último, pero no menos importante, deseo agradecer a todas las personas e instituciones que de alguna manera contribuyeron a la realización de esta investigación, aportando recursos, conocimientos o simplemente un espacio donde reflexionar y crecer.\\
+	Por último, pero no menos importante, deseo agradecer a todas las personas e instituciones que de alguna manera contribuyeron a la realización de esta investigación, aportando recursos, conocimientos o simplemente un espacio donde reflexionar y crecer.
 
 	Este logro no es solo mío, sino de todos los que me han acompañado en este viaje. Con profundo amor y gratitud, dedico esta tesis a cada uno de ustedes.
 \end{acknowledgments}
@@ -165,7 +205,7 @@ Ingeniero en Automática
 % \cite{bluegoldSistemaElectrodesionizacionEDI2021}
 
 % \bibliography{zot_bibli.bib}
-\chapter{Anexos}
+% \chapter{Anexos}
 
 
 % \input{example} % Ejemplo, se puede borrar
