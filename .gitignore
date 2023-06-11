@@ -51,3 +51,5 @@ dist/
 # Otros
 .vscode
 main.synctex(busy)
+main.fdb_latexmk
+main.fls
