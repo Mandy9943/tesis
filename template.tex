@@ -4259,6 +4259,8 @@
 	\end{appendixd}%
 }
 
+
+
 % Inicia código fuente con parámetros
 %	#1	Label (opcional)
 %	#2	Estilo de código
@@ -6051,7 +6053,7 @@
 % -----------------------------------------------------------------------------
 \ifthenelse{\equal{\stylecitereferences}{natbib}}{
 	\def\twocolumnreferencesmargin{-0.35cm}
-	\bibliographystyle{\natbibrefstyle}
+	\bibliographystyle{vancouver}
 	\setlength{\bibsep}{\natbibrefsep pt}
 	\newcommand{\shortcite}[1]{\citep{#1}}
 	\newcommand{\fullcite}[1]{\citet{#1}}
@@ -6078,14 +6080,14 @@
 }{
 \ifthenelse{\equal{\stylecitereferences}{apacite}}{
 	\def\twocolumnreferencesmargin{-0.39cm}
-	\bibliographystyle{\apacitestyle}
+	\bibliographystyle{vancouver}
 	\setlength{\bibitemsep}{\apaciterefsep pt}
 	\newcommand{\citep}[1]{\fullcite{#1}}
 	\newcommand{\citet}[1]{\shortcite{#1}}
 }{
 \ifthenelse{\equal{\stylecitereferences}{bibtex}}{
 	\def\twocolumnreferencesmargin{-0.35cm}
-	\bibliographystyle{\bibtexstyle}
+	\bibliographystyle{vancouver}
 	\newlength{\bibitemsep}
 	\setlength{\bibitemsep}{.2\baselineskip plus .05\baselineskip minus .05\baselineskip}
 	\newlength{\bibparskip}\setlength{\bibparskip}{0pt}

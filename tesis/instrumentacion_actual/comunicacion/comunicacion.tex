@@ -2,16 +2,13 @@
 
 La red de comunicación en la planta de ósmosis inversa está estratificada en tres niveles de automatización, con un sistema de interconexión que garantiza una rápida y eficiente transmisión de datos entre los distintos elementos de la red. En cada nivel de la jerarquía de automatización, se utiliza un protocolo de comunicación específico que se adapta mejor a las necesidades de ese nivel, tal como se detalla en la Figura \ref{fig:comunicacion}. A continuación, se analizan los protocolos de comunicación empleados en cada nivel.
 
-\subsection*{Nivel de Campo}
-
+\textbf{Nivel de Campo}\\
 En el nivel de campo, se encuentran los diversos sensores que recogen datos directamente del proceso. Los sensores generan señales de tipo intensidad (4-20 mA) o tensión (0-10, 24V DC), que son transmitidas a los módulos CPX de Festo y ET 200s de Siemens, a través de un bus de campo. El bus de campo es un sistema de comunicación digital diseñado para la transmisión de datos entre dispositivos de campo y sistemas de control en tiempo real. Esta forma de comunicación permite un intercambio eficiente y robusto de datos entre los dispositivos de campo y los módulos de control.
 
-\subsection*{Nivel de Control}
-
+\textbf{Nivel de Control}\\
 En el nivel de control, los módulos CPX de Festo y ET 200s de Siemens reciben las señales de los sensores y las transmiten al autómata programable (PLC) maestro a través del protocolo Profibus DP. Profibus DP es un estándar de comunicación industrial de alta velocidad y bajo retardo, especialmente diseñado para aplicaciones de control de procesos. Gracias a Profibus, el PLC maestro puede comunicarse de manera eficiente con los módulos de periferia descentralizada, permitiendo un control preciso y en tiempo real del proceso.
 
-\subsection*{Nivel de Supervisión}
-
+\textbf{Nivel de Supervisión}\\
 En el nivel superior de la jerarquía, el PLC se comunica con el sistema SCADA (Control Supervisor y Adquisición de Datos) mediante una interfaz multipunto (MPI) que utiliza el protocolo de comunicación TCP/IP. TCP/IP es un conjunto de protocolos de comunicación de alto nivel que permite la transmisión de datos entre dispositivos en una red de área amplia, como Internet. Esta forma de comunicación permite la visualización y el control del proceso en tiempo real desde el sistema SCADA, proporcionando al operador una interfaz de usuario intuitiva y potente.
 
 \insertimageboxed[\label{fig:comunicacion}]{comunicacion}{scale=0.3}{0}{Procolos de comunicación}

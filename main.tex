@@ -63,6 +63,25 @@ Ingeniero en Automática
 % IMPORTACIÓN DEL TEMPLATE
 \input{template}
 
+\DeclareCaptionType{mytableWrapper}[Tabla][Índice de tablas]
+
+
+% Nuevo entorno de tabla personalizado
+\newenvironment{mytable}[3]{% Aceptar dos argumentos: caption y label
+\setstretch{1} 
+	% \label{#3}\\% Usar el argumento #3 como label
+    \renewcommand{\arraystretch}{2} % Ajustar padding en eje y
+    \setlength{\tabcolsep}{0.45cm} % Ajustar padding en eje x
+	\rowcolors{1}{}{gray!10} % Colores intercalados, ajusta "gray!10" según tu preferencia de color
+    \begin{longtable} {|>{\raggedright\arraybackslash}m{#1} |>{\raggedright\arraybackslash}m{#1}|}
+    \caption{#2}\label{#3} \\% Usar el argumento #2 como caption
+}{% 
+
+\end{longtable}
+\setstretch{\documentinterline} 
+
+}
+
 % INICIO DE LAS PÁGINAS
 \begin{document}
 
