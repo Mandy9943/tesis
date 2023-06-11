@@ -81,6 +81,21 @@ Ingeniero en Automática
 \setstretch{\documentinterline} 
 
 }
+% Nuevo entorno de tabla personalizado
+\newenvironment{mytableCols}[3]{% Aceptar dos argumentos: caption y label
+\setstretch{1} 
+	% \label{#3}\\% Usar el argumento #3 como label
+    \renewcommand{\arraystretch}{2} % Ajustar padding en eje y
+    \setlength{\tabcolsep}{0.45cm} % Ajustar padding en eje x
+	\rowcolors{1}{}{gray!10} % Colores intercalados, ajusta "gray!10" según tu preferencia de color
+    \begin{longtable} {#1}
+    \caption{#2}\label{#3} \\% Usar el argumento #2 como caption
+}{% 
+
+\end{longtable}
+\setstretch{\documentinterline} 
+
+}
 
 % INICIO DE LAS PÁGINAS
 \begin{document}
@@ -221,9 +236,53 @@ Como constancia firmo la presente a los 9 días del mes de junio del año
 % Capitulo 6
 \input{tesis/conclusiones/conclusiones.tex}
 
-% \cite{bluegoldSistemaElectrodesionizacionEDI2021}
 
-% \bibliography{zot_bibli.bib}
+
+% \begin{appendixs}
+	
+% 	\section{Cálculos realizados}
+
+% 	\subsection{Metodología}
+% 	\lipsum[1-2]
+
+% 	% Imagen, se numerará automáticamente con la letra del anexo según
+% 	% la configuración \appendixindepobjnum
+% 	\insertimage[\label{img:anexo-2}]{ejemplos/test-image.png}{scale=0.25}{Imagen en anexo.}
+
+% 	\subsection{Resultados}
+% 	\lipsum[10]
+
+% 	% Tablas
+% 	\enabletablerowcolor[2] % Activa el color de celda
+% 	\begin{table}[H]
+% 		\begin{threeparttable}
+% 		\centering
+% 		\caption{Tabla de cálculo.}
+% 		\begin{tabular}{cccC{4cm}}
+% 			\hline
+% 			\textbf{Elemento} & $\epsilon_i$ & \textbf{Valor} & \textbf{Descripción} \bigstrut \\
+% 			\hline
+% 			A     & 10    & 3,14$\pi$ & Valor muy interesante\tnote{a} \\
+% 			B     & 20    & 6 & Segundo elemento \\
+% 			C     & 30    & 7 & Tercer elemento\tnote{1} \\
+% 			D     & 150    & 10 & Sin descripción \\
+% 			E     & 0    & 0 & Cero \\
+% 			\hline
+% 			\end{tabular}
+% 		\begin{tablenotes}
+% 			\item[a] Este elemento tiene una descripción debajo de la tabla
+% 			\item[1] Más comentarios
+% 		\end{tablenotes}
+% 		\end{threeparttable}
+% 		\label{tab:anexo-1}
+% 	\end{table}
+% 	\disabletablerowcolor % Desactiva el color de celda
+
+% \end{appendixs}
+
+
+\cite{perez2020efecto}
+\bibliography{zot_bibli.bib} 
 % \chapter{Anexos}
 
 
