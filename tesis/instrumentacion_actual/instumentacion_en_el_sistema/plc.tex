@@ -3,11 +3,7 @@
 En la planta de tratamiento de agua, el control de las variables, los medios técnicos y los instrumentos es fundamental para el correcto funcionamiento de la ósmosis inversa. Para garantizar un funcionamiento eficaz y fiable, se utiliza un autómata programable de la serie S7-300 de Siemens, específicamente el modelo CPU 315-2DP, cuyas características se presentan en la Tabla \ref{table:plc}. Este PLC, ilustrado en la Figura \ref{fig:plc}, es de procedencia alemana y es conocido por su robustez, durabilidad y optimización en las tareas de control.
 \insertimageboxed[\label{fig:plc}]{instrumentacion/plc}{scale=0.5}{0}{Autómata Programable S7-300 CPU 315-2DP}
 
-\begin{table}[H]
-    \centering
-    \caption{Características del Autómata Programable S7-300 CPU 315-2DP.}
-    \label{table:plc}
-    \begin{tabular}{| L{6cm} | L{6cm} |}
+\begin{mytable}{6cm}{Características del Autómata Programable S7-300 CPU 315-2DP.}{table:plc}
         \hline
         \textbf{Fabricante}                  & Siemens               \\
         \hline
@@ -27,8 +23,8 @@ En la planta de tratamiento de agua, el control de las variables, los medios té
         \hline
         \textbf{Corriente de entrada}        & 850 mA                \\
         \hline
-    \end{tabular}
-\end{table}
+  
+\end{mytable}
 
 
 Además, gracias a su diseño modular, el autómata programable permite la expansión del sistema tanto de manera centralizada como descentralizada, en función de las necesidades del proceso. Para recibir todas las señales correspondientes a la ósmosis, se utilizan módulos externos, como el módulo de periferia descentralizada ET200S y el módulo CPX de Festo. Ambos módulos funcionan como esclavos en la red de comunicación Profibus, y proporcionan una interfaz entre el PLC y los dispositivos de campo.
