@@ -35,29 +35,29 @@ cuales pueden no adaptarse a las necesidades y condiciones específicas de nuest
 Las siguientes son algunas de las tecnologías que se han evaluado:
 
 \begin{itemize}
-    \item \textbf{Reforzamiento de la Ósmosis Inversa (RO):}  Nuestra planta ya cuenta con
-          un sistema de ósmosis inversa de dos etapas que cumple con las necesidades
-          básicas de la planta. Sin embargo, incluso con un sistema RO de dos etapas,
-          todavía existen limitaciones, especialmente en términos de la eliminación de
-          ciertos iones y pequeñas moléculas. Los sistemas RO también son susceptibles a
-          la acumulación de sarro y biofilm, lo que puede afectar el rendimiento y
-          la vida útil de la membrana.
+      \item \textbf{Reforzamiento de la Ósmosis Inversa (RO):}  Nuestra planta ya cuenta con
+            un sistema de ósmosis inversa de dos etapas que cumple con las necesidades
+            básicas de la planta. Sin embargo, incluso con un sistema RO de dos etapas,
+            todavía existen limitaciones, especialmente en términos de la eliminación de
+            ciertos iones y pequeñas moléculas. Los sistemas RO también son susceptibles a
+            la acumulación de sarro y biofilm, lo que puede afectar el rendimiento y
+            la vida útil de la membrana.
 
-    \item \textbf{Destilación:}  Aunque la destilación puede ofrecer altos niveles de
-          purificación, la energía requerida para este proceso es considerable,
-          lo que resulta en costos operativos más altos. Además, la destilación
-          no elimina eficientemente algunos contaminantes volátiles que pueden ser arrastrados con el vapor.
+      \item \textbf{Destilación:}  Aunque la destilación puede ofrecer altos niveles de
+            purificación, la energía requerida para este proceso es considerable,
+            lo que resulta en costos operativos más altos. Además, la destilación
+            no elimina eficientemente algunos contaminantes volátiles que pueden ser arrastrados con el vapor.
 
-    \item \textbf{Desionización (DI): } Los sistemas de DI pueden ser eficientes para
-          la eliminación de iones de agua, pero su capacidad para eliminar
-          partículas no iónicas, gases disueltos y microorganismos es limitada.
-          Además, los cartuchos de DI requieren un reemplazo frecuente, lo que
-          implica costos adicionales de operación y mantenimiento.
+      \item \textbf{Desionización (DI): } Los sistemas de DI pueden ser eficientes para
+            la eliminación de iones de agua, pero su capacidad para eliminar
+            partículas no iónicas, gases disueltos y microorganismos es limitada.
+            Además, los cartuchos de DI requieren un reemplazo frecuente, lo que
+            implica costos adicionales de operación y mantenimiento.
 
-    \item \textbf{Filtración de Carbón Activado:}  Esta tecnología es efectiva para la
-          eliminación de cloro y ciertos otros contaminantes, pero su eficacia es
-          limitada cuando se trata de la eliminación de sales disueltas y
-          algunos contaminantes orgánicos.
+      \item \textbf{Filtración de Carbón Activado:}  Esta tecnología es efectiva para la
+            eliminación de cloro y ciertos otros contaminantes, pero su eficacia es
+            limitada cuando se trata de la eliminación de sales disueltas y
+            algunos contaminantes orgánicos.
 
 \end{itemize}
 
@@ -97,71 +97,81 @@ El electrodesionizador seleccionado para la implementación en la planta de trat
 
 \insertimageboxed[\label{fig:edi_model}]{instrumentacion/edi}{scale=0.8}{0}{Modelo LMX30-X-3 de Ionpure.}
 
-La fuente de alimentación del Electrodesionizador, vital para su funcionamiento correcto, es el modelo PTM06 de STIL MAS. Esta fuente de alimentación proporciona la energía eléctrica necesaria para el funcionamiento del Electrodesionizador, permitiendo la ionización de las moléculas y facilitando su eliminación. La figura de la Fuente de alimentación seleccionada se muestra a continuación (Figura \ref{fig:edi_power}). Sus especificaciones se muestran en la Tabla \ref{table:power_supply_specs}.
+\begin{mytable}{6cm}{Especificaciones técnicas del Electrodesionizador LMX30-X-3 de Ionpure.}{table:edi_specs}
+      \hline
+      \textbf{Fabricante}                                        & IONPURE                            \\
+      \hline
+      \textbf{Modelo}                                            & LMX30-X-3                          \\
+      \hline
+      \textbf{Tensión nominal}                                   & 0-600V DC                          \\
+      \hline
+      \textbf{Corriente nominal}                                 & 0-6 A                              \\
+      \hline
+      \textbf{Fuente de agua de alimentación}                    & Agua pretratada en ósmosis inversa \\
+      \hline
+      \textbf{Flujo de producto}                                 & 3300 l/h                           \\
+      \hline
+      \textbf{Flujo de concentrado}                              & 180 l/h                            \\
+      \hline
+      \textbf{Conexión de los flujos de alimentación y producto} & 1”                                 \\
+      \hline
+      \textbf{Conexión de los flujos rechazo y concentrado}      & ½”                                 \\
+      \hline
+      \textbf{Temperatura ambiente de operación}                 & ≤ 45°C                             \\
+      \hline
+\end{mytable}
+
+La fuente de alimentación del Electrodesionizador, vital para su funcionamiento correcto, es el modelo PTM06 de STIL MAS.
+Esta fuente de alimentación proporciona la energía eléctrica necesaria para el funcionamiento del Electrodesionizador,
+permitiendo la ionización de las moléculas y facilitando su eliminación. La figura de la Fuente de alimentación que viene junto al electrodesionizador
+se muestra a continuación (Figura \ref{fig:edi_power}). Sus especificaciones se muestran en la Tabla \ref{table:power_supply_specs}.
 
 \insertimageboxed[\label{fig:edi_power}]{instrumentacion/edi_power}{scale=0.8}{0}{Modelo PTM06 de STIL MAS.}
 
-\begin{mytable}{6cm}{Especificaciones técnicas del Electrodesionizador LMX30-X-3 de Ionpure.}{table:edi_specs}
-        \hline
-        \textbf{Fabricante}                                        & IONPURE                            \\
-        \hline
-        \textbf{Modelo}                                            & LMX30-X-3                          \\
-        \hline
-        \textbf{Tensión nominal}                                   & 0-600V DC                          \\
-        \hline
-        \textbf{Corriente nominal}                                 & 0-6 A                              \\
-        \hline
-        \textbf{Fuente de agua de alimentación}                    & Agua pretratada en ósmosis inversa \\
-        \hline
-        \textbf{Flujo de producto}                                 & 3300 l/h                           \\
-        \hline
-        \textbf{Flujo de concentrado}                              & 180 l/h                            \\
-        \hline
-        \textbf{Conexión de los flujos de alimentación y producto} & 1”                                 \\
-        \hline
-        \textbf{Conexión de los flujos rechazo y concentrado}      & ½”                                 \\
-        \hline
-        \textbf{Temperatura ambiente de operación}                 & ≤ 45°C                             \\
-        \hline
-\end{mytable}
-
 \begin{mytable}{6cm}{Especificaciones técnicas de la fuente de alimentación PTM06 de STIL MAS.}{table:power_supply_specs}
-        \hline
-        \textbf{Fabricante}           & STIL MAS                                                     \\
-        \hline
-        \textbf{Modelo}               & PTM06                                                        \\
-        \hline
-        \textbf{Voltaje de entrada}   & 200-480 VAC (±5\%) - 50/60Hz                                 \\
-        \hline
-        \textbf{Corriente de entrada} & 1-20 A                                                       \\
-        \hline
-        \textbf{Voltaje de salida}    & 30-400 VDC                                                   \\
-        \hline
-        \textbf{Entradas de control}  & 2 x 4-20 mA + contactos de inicio/parada                     \\
-        \hline
-        \textbf{Salidas de control}   & 2 x 4-20 mA + contacto para establecer condiciones iniciales \\
-        \hline
-        \textbf{Potencia}             & 6KVA                                                         \\
-        \hline
+      \hline
+      \textbf{Fabricante}           & STIL MAS                                                     \\
+      \hline
+      \textbf{Modelo}               & PTM06                                                        \\
+      \hline
+      \textbf{Voltaje de entrada}   & 200-480 VAC (±5\%) - 50/60Hz                                 \\
+      \hline
+      \textbf{Corriente de entrada} & 1-20 A                                                       \\
+      \hline
+      \textbf{Voltaje de salida}    & 30-400 VDC                                                   \\
+      \hline
+      \textbf{Entradas de control}  & 2 x 4-20 mA + contactos de inicio/parada                     \\
+      \hline
+      \textbf{Salidas de control}   & 2 x 4-20 mA + contacto para establecer condiciones iniciales \\
+      \hline
+      \textbf{Potencia}             & 6KVA                                                         \\
+      \hline
 \end{mytable}
 
 
-\subsection{Válvulas y Sensores para el EDI}
-La implementación del electrodesionizador (EDI) en la planta farmacéutica de AICA requiere una serie de válvulas y sensores para garantizar un control riguroso del proceso. Tras un detallado análisis de la instrumentación existente en la planta de tratamiento de agua, se decidió que los sensores y válvulas actuales cumplen a cabalidad con los requerimientos del sistema de EDI. Estos dispositivos han demostrado su eficacia en las operaciones de la planta y el personal tiene experiencia en su uso y mantenimiento. Por ello, no se consideró necesario incorporar nuevos modelos de sensores o válvulas en la implementación del EDI.
+\subsection{Otros equipos}
+La implementación del (EDI) en la planta farmacéutica de AICA UEB requiere una serie de válvulas y
+sensores para garantizar un control riguroso del proceso. Tras un detallado análisis de la instrumentación existente
+en la planta de tratamiento de agua, se decidió que los sensores y válvulas actuales cumplen a cabalidad con
+los requerimientos del nuevo sistema. Estos dispositivos han demostrado su eficacia en las operaciones de
+la planta y el personal tiene experiencia en su uso y mantenimiento. Por ello, no se consideró necesario
+incorporar nuevos modelos de sensores o válvulas en la implementación del EDI.
 
 A continuación, se resumen los principales elementos de instrumentación que serán utilizados en el sistema de EDI, la explicación detallada de cada uno de estos se encuentra en capítulos anteriores:
 \begin{itemize}
-    \item \textbf{Sensores de Conductividad:} Como el sensor de conductividad presentado en la sección \ref{sec:sesor_conductividad}, estos dispositivos permiten monitorizar la calidad del agua de salida del EDI en tiempo real.
+      \item \textbf{Sensores de Conductividad:} Como el sensor de conductividad presentado en la sección \ref{sec:sesor_conductividad}, estos dispositivos permiten monitorizar la calidad del agua de salida del EDI en tiempo real.
 
-    \item \textbf{Sensores de Temperatura:} Los sensores de temperatura son necesarios para asegurar que el proceso se lleva a cabo en las condiciones de temperatura óptimas, ver sección \ref{sec:sensor_temp}.
+      \item \textbf{Sensores de Temperatura:} Los sensores de temperatura son necesarios para asegurar que el proceso se lleva a cabo en las condiciones de temperatura óptimas, ver sección \ref{sec:sensor_temp}.
 
-    \item \textbf{Transmisores de Flujo y Presión:} Los transmisores de flujo y presión, como se describen en las secciones \ref{sec:sensor_flujo} y \ref{sec:sensor_presion}, permiten monitorizar y controlar el flujo de agua y las condiciones de presión dentro del sistema de EDI.
+      \item \textbf{Transmisores de Flujo y Presión:} Los transmisores de flujo y presión, como se describen en las secciones \ref{sec:sensor_flujo} y \ref{sec:sensor_presion}, permiten monitorizar y controlar el flujo de agua y las condiciones de presión dentro del sistema de EDI.
 
-    \item \textbf{Indicadores de Flujo y Manómetros:} Los indicadores de flujo y los manómetros proporcionan una visualización inmediata de las condiciones del sistema, lo que facilita su operación y mantenimiento, ver secciones \ref{sec:indicador_flujo} y \ref{sec:indicador_manometro}.
+      \item \textbf{Indicadores de Flujo y Manómetros:} Los indicadores de flujo y los manómetros proporcionan una visualización inmediata de las condiciones del sistema, lo que facilita su operación y mantenimiento, ver secciones \ref{sec:indicador_flujo} y \ref{sec:indicador_manometro}.
 
-    \item \textbf{Válvulas de Retención y Válvulas de operación:} Estas válvulas, referenciadas en las secciones \ref{sec:valvula_OnOff} y \ref{sec:valvula_retencion}, son fundamentales para controlar el flujo de agua dentro del sistema de EDI.
+      \item \textbf{Válvulas de Retención y de control:} Estas válvulas, referenciadas en las secciones  \ref{sec:valvula_retencion}, \ref{sec:valvula_OnOff}, son fundamentales para controlar el flujo de agua dentro del sistema de EDI.
 \end{itemize}
-En la siguiente sección, se presentará un esquema general de la configuración del EDI, en el que se identificarán las ubicaciones de las válvulas y sensores en el sistema.
+Es importante destacar que para la correcta implementación del EDI en nuestro sistema es necesario garantizar su comunicación con el sistema de control
+para ello se plante la necesidad de incorporar un \textbf{módulo  de periferia descentralizada ET200s} como el de la sección \ref{sec:moduloEt200}, así de esta manera
+los nuevos equipos ya planteados puedan incorporase al funcionamiento del sistema de control de la planta.
 
 \subsection{Esquema General de la Configuración del EDI}
 

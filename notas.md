@@ -9,12 +9,12 @@ Hacer los ajustes necesarios en la instrumentación
 Agregar sensor de nivel a la instrumentación
 Agregar el PLC y los módulos que se utilicen en la instrumentación (usar plc 315)
 <!-- Agregar las unidades de ósmosis a la instrumentación (en la pagina 745 esta toda la información de la osmosis) -->
-<!-- Cambiar el tipo de valvulas de retencion
-Cambia el tipo de valvulas de control (poner las seat angle valves de la pagina 1628) -->
+<!-- Cambiar el tipo de válvulas de retención
+Cambia el tipo de válvulas de control (poner las seat angle valves de la pagina 1628) -->
 
 
 <!-- ----Comunicación-----
-Arrglar el protocolo de cominicacion -->
+Arreglar el protocolo de comunicación -->
 <!-- Modificar el abstract (no hay hmi) -->
 
 <!-- No entiendo como es posible que se espere un tiempo cuando se realiza la 
@@ -27,14 +27,14 @@ demora requerida para este proceso desde el SCADA.) -->
 <!-- Preguntar por salario -->
 
 Agregar bibliografías
-Agregar fuente de eDI en analiss de costos
+Agregar fuente de eDI en análisis de costos
 
 
-<!-- Falata -->
-<!-- Agregar PLC y sus modulos -->
+<!-- Falta -->
+<!-- Agregar PLC y sus módulos -->
 <!-- Agregar sensor de nivel a la instrumentación -->
-<!-- Analisis de costos -->
+<!-- Análisis de costos -->
 <!-- Agregar las nuevas vistas del SCADA -->
-<!-- Cambiar el protocolo de comunicacion -->
-<!-- Agregar una esctruturacion del contenido con una breve explicacion de sus parte en la introduccion -->
-<!-- Agregar espacio a los parrafos -->
+<!-- Cambiar el protocolo de comunicación -->
+<!-- Agregar una estructuración del contenido con una breve explicación de sus parte en la introducción -->
+<!-- Agregar espacio a los párrafos -->
