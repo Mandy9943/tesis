@@ -14,10 +14,6 @@ de juicio de carácter económico y otorgando una visión más amplia de las tar
 implementación de esta tecnología, minimizando de esta manera el desperdicio de recursos en instrumentación
 o materia prima innecesaria para la realización del proyecto.
 
-El objetivo de este análisis económico es proveer una visión detallada y objetiva de los costes asociados con
-la implementación de un sistema de EDI en la industria farmacéutica AICA, permitiendo de este modo una
-planificación y gestión eficiente de los recursos disponibles.
-
 
 \section{Costo del proyecto}
 
@@ -34,7 +30,7 @@ CT representa el costo total del proyecto. \\
 CD hace referencia al costo directo. \\
 CI denota el costo indirecto.
 
-\textbf{Costo indirecto}\\
+\textbf{Costo indirecto :}\\
 El costo indirecto abarca gastos tales como el consumo de electricidad, gastos administrativos, entre otros.
 Este valor se estima multiplicando un coeficiente de gasto, en este caso 0.84, por el salario básico de la
 investigación, tal como se muestra en la ecuación (\ref{eq:cost_indirect}). \\
@@ -44,7 +40,7 @@ investigación, tal como se muestra en la ecuación (\ref{eq:cost_indirect}). \\
     CI = 0.84 * SB
 \end{equation}
 
-\textbf{Costo directo}\\
+\textbf{Costo directo :}\\
 El costo directo engloba todos los gastos económicos necesarios para la realización del proyecto. Se
 calcula como la suma del Salario Básico (SB), el Salario Complementario (SC), el Seguro Social (SS), los
 Medios Directos (MD), las Dientas y los Pesajes (DP), y Otros Gastos (OG), como se puede observar con más
@@ -55,7 +51,7 @@ detalle en la ecuación (\ref{eq:cost_direct}). \\
     CD = SB + SC + SS + MD + DP + OG
 \end{equation}
 
-\textbf{Salario básico}\\
+\textbf{Salario básico :}\\
 SB (salario básico): Consiste en el salario que se paga por el tiempo trabajado, es decir, no se incluye seguridad social ni vacaciones. Incluye los salarios básicos de todos los participantes del proyecto.
 
 
@@ -87,50 +83,47 @@ En la Tabla \ref{table:participantes_proyecto} se muestra una relación de las p
 
 \begin{mytableCols}{|c|c|c|c|c|c|}{Participantes en el proyecto}{table:participantes_proyecto}
 
-        \hline
-        \textbf{Nombres y apellidos}  & \textbf{i} & \textbf{SB (CUP)} & \textbf{𝐴𝑖 (Hrs)} & \textbf{B𝑖 } & \textbf{Ai*Bi} \\
-        \hline
-        Ing. Amanda Martí Coll        & 1          & 4900              & 120               & 25.53        & 3062.5
-        \\
-        \hline
-        Ing. Rosaine Ayala            & 2          & 6500              & 120               & 33.85        & 4062.5
-        \\
-        \hline
-        Armando Cesar Martin Calderón & 3          & 400               & 480               & 2.08         & 1000
-        \\
-        \hline
+    \hline
+    \textbf{Nombres y apellidos}  & \textbf{i} & \textbf{SB (CUP)} & \textbf{𝐴𝑖 (Hrs)} & \textbf{B𝑖 } & \textbf{Ai*Bi} \\
+    \hline
+    Ing. Amanda Martí Coll        & 1          & 4900              & 120               & 25.53        & 3062.5
+    \\
+    \hline
+    Ing. Rosaine Ayala            & 2          & 6500              & 120               & 33.85        & 4062.5
+    \\
+    \hline
+    Armando Cesar Martin Calderón & 3          & 400               & 480               & 2.08         & 1000
+    \\
+    \hline
 \end{mytableCols}
 Se emplearon 5 meses de trabajo comprendidos entre enero y mayo. Considerando que los tutores le dedicaron a la actividad, cada día laborable, 1 hora de trabajo como promedio, entonces se puede afirmar que fueron asignadas a la investigación 120 horas por cada uno de ellos.
 El estudiante le dedicó cada día laborable como 5 horas como promedio, a la investigación, es decir, un total de 480 horas.
 
 Según la ecuación (\ref{eq:sal_basico}):
-\begin{equation}
-    \label{eq:salary_basico_total}
-    SB = 120 * 25.53 + 120 * 33.85 + 480 * 2.08 = 8125 CUP
-\end{equation}
-\textbf{Salario complementario}\\
+\textbf{SB =} 120 * 25.53 + 120 * 33.85 + 480 * 2.08
+\textbf{SB =} = 8125 CUP
+
+\textbf{Salario complementario :}\\
 El salario complementario (SC) es el 9.09\% del salario básico, destinado para el pago de las
 vacaciones. Se puede calcular con la siguiente ecuación:
 \begin{equation}
     \label{eq:salary_complementary}
     SC = SB * 0.0909
 \end{equation}
-\begin{equation}
-    \label{eq:salary_complementary_total}
-    SC=0.0909*8125=738.56 CUP
-\end{equation}
-\textbf{Seguro Social}\\
+\textbf{SC =} 0.0909*8125 CUP
+\textbf{SC =} 738.56 CUP
+
+\textbf{Seguro Social :}\\
 El seguro social (SS) equivale al 5\% del salario básico más el salario complementario, y se
 calcula de la siguiente forma:
 \begin{equation}
     \label{eq:social_security}
     SS = 0.05 * (SB + SC)
 \end{equation}
-\begin{equation}
-    \label{eq:social_security_total}
-    SS=0.05*(8125+738.5625)=443.17 CUP
-\end{equation}
-\textbf{Medios Directos}\\
+\textbf{SS=} 0.05*(8125+738.5625)
+\textbf{SS =} 443.17 CUP
+
+\textbf{Medios Directos :}\\
 Los medios directos (MD) incluyen los costos de todos los equipos, componentes de instalación y
 materiales utilizados directamente en la investigación.
 
@@ -138,67 +131,71 @@ Para llevar a cabo el proyecto será necesario hacer algunos gastos imprescindib
 se muestran los precios de los elementos que deben adquirirse:
 
 \begin{mytableCols}{|c|c|c|c|}{Listado de precios de los dispositivos e instrumentos}{table:precios_dispositivos_instrumentos}
-   
-        \hline
-       Dispositivo/instrumento      & Cantidad & Precio por unidad  & Precio total \\
-        \hline
-        Electrodesionizador          & 1        & \$5,400           & \$5400       \\
-        Sensor transmisor de flujo   & 1        & \$1,230           & \$1,230      \\
-        Sensor conductividad         & 1        & \$1,703.00        & \$1,703.00   \\
-        Transmisor de conductividad  & 1        & \$983             & \$983        \\
-        Sensor transmisor de presión & 1        & \$423             & \$423        \\
-        Manómetro                    & 2        & \$25              & \$50         \\
-        Válvula manual               & 2        & \$22              & \$44         \\
-        \hline
+
+    \hline
+    Dispositivo/instrumento      & Cantidad & Precio por unidad  & Precio total \\
+    \hline
+    Electrodesionizador          & 1        & \$7,775.00           & \$7,775.00       \\
+    Módulo de periferia ET200s          & 1        & \$144.00           & \$144.00       \\
+    Sensor transmisor de flujo   & 1        & \$1,230.00           & \$1,230.00     \\
+    Sensor conductividad         & 1        & \$1,103.00        & \$1,103.00     \\
+    Transmisor de conductividad  & 1        & \$983.00             & \$983.00        \\
+    Sensor transmisor de presión & 1        & \$423.00             & \$423.00        \\
+    Manómetro                    & 2        & \$25.00              & \$50.00         \\
+    Válvula de Retención               & 2        & \$13.00              & \$26.00         \\
+    Válvula de Control               & 1       & \$250.00              & \$250.00         \\
+    \hline
 \end{mytableCols}
 
 El total de gastos en materiales directos es:
-\begin{equation}
-    MD = \$9,833
-\end{equation}
-\textbf{Dietas y Pasajes}\\
+\textbf{MD =} \$11,984.00
+
+\textbf{Dietas y Pasajes :}\\
 Las dietas y pasajes (DP) representan los gastos ocasionados por dietas y pasajes. Estos gastos no incurren en el caso de este proyecto, por lo que se considera que DP = 0.00  CUP.
 
-\textbf{Otros Gastos}\\
+\textbf{Otros Gastos :}\\
 Los otros gastos (OG) incluyen el costo de utilización de equipamiento. Se considera el gasto por
 concepto de tiempo de máquina, que tiene un valor de \$10.00 la hora.
 
 Se incluye el gasto por consumo de energía eléctrica, durante las horas de tiempo de máquina empleadas
 en la elaboración del proyecto. Para un total de 450 horas resulta ser:
 \begin{equation}
-    OG = 480 \text{ horas } * 10 CUP= 4800.00 CUP
+    OG = 480 \text{ horas } * 10 CUP
 \end{equation}
-\textbf{Cálculo del Costo Directo}\\
+\textbf{OG =} 4800.00 CUP
+
+\textbf{Cálculo del Costo Directo :}\\
 \begin{equation}
     CD = SB + SC + SS + MD + DP + OG
 \end{equation}
-\begin{equation}
-    CD = 14,106.73  CUP+ \$9,833
-\end{equation}
-\textbf{Costos indirectos}\\
+\textbf{CD =} 14,106.73  CUP + \$11,984.00
+
+\textbf{Costos indirectos :}\\
 El término Costos Indirectos (CI) se refiere a los gastos de electricidad consumida, gastos de administración,
 instalaciones, etc., en el proceso de investigación. Este se estima aplicando un coeficiente de gastos al
 salario básico de la investigación. El coeficiente de gastos para un Departamento Docente es 0.84 y para una
 UCT (Unidad de Ciencia y Técnica) es 1.4063.
 \begin{equation}
-    CI = 0.84 * SB = 6,825  CUP
+    CI = 0.84 * SB
 \end{equation}
-\textbf{Costo Total}\\
+\textbf{CI =} 6,825 CUP
+
+\textbf{Costo Total :}\\
 El costo total del proyecto resulta la suma de los costos directos e indirectos, por tanto:
 \begin{equation}
-    CT = CD + CI = 20,931.73 CUP + \$9, 833
-\end{equation}
-\textbf{Precio}\\
+    CT = CD + CI
+\end{equation}\\
+\textbf{CT} = 20,931.73 CUP + \$11,984.00
+
+\textbf{Precio :}\\
 El precio se determina mediante la expresión:
 \begin{equation}
     P = CT + 0.1 * CT
 \end{equation}
-\begin{equation}
-    P = 20,931.73 CUP + \$9, 833 + 0.1 * (20,931.73 CUP + \$9, 833)
-\end{equation}
-\begin{equation}
-    P = 20,931.73 CUP + \$9, 833 +  (2,093.17 CUP + \$983.3) = 23,024.9 CUP + \$10,816.3
-\end{equation}
+\textbf{P =} 20,931.73 CUP + \$11,984.00 + 0.1 * (20,931.73 CUP + \$11,984.00)\\
+\textbf{P =} 20,931.73 CUP + \$11,984.00 +  (2,093.17 CUP + \$1,198.40)\\
+\textbf{p =} 23,024.9 CUP + \$13182.40
+
 Donde:\\
 CT representa el costo total de todos los elementos de la red y control de conductividad, $0.1*CT$
 representa los salarios pagados a especialistas, técnicos, y el resto del personal involucrado en el diseño,
@@ -207,8 +204,8 @@ personal, y para el cableado.
 
 Luego el costo total del proyecto de tesis es:\\
 Costo total del proyecto de tesis = CT + P                                                   \\
-Costo total del proyecto de tesis = (20,931.73 CUP + \$9, 833) + (23,024.9 CUP + \$10,816.3) \\
-Costo total del proyecto de tesis = 43,956.63 CUP+ \$20,649.3
+Costo total del proyecto de tesis = (20,931.73 CUP + \$11,984.00) + (23,024.9 CUP + \$13182.40) \\
+Costo total del proyecto de tesis = 43,956.63 CUP+ \$25166.40
 
 \section{Análisis Económico}
 El desarrollo de este proyecto de tesis tiene implicaciones económicas significativas. En primer lugar, la implementación del EDI en la segunda etapa de membranas de la ósmosis inversa permitirá controlar eficazmente las fluctuaciones de la conductividad del agua. Esta mejora en el control de calidad reducirá la variabilidad del producto final y garantizará la conformidad con los estándares de la farmacopea internacional requeridos para la producción de medicamentos.
