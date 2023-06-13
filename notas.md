@@ -27,9 +27,8 @@ demora requerida para este proceso desde el SCADA.) -->
 <!-- Preguntar por salario -->
 
 Agregar bibliografías
+Agregar fuente de eDI en analiss de costos
 
-------
-tener en cuenta que el plc existente no se puede comunicar con plc (asi que una idea seria proponer uno que lo tenga)
 
 <!-- Falata -->
 <!-- Agregar PLC y sus modulos -->
