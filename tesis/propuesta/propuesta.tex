@@ -18,58 +18,34 @@ ayudará a supervisar y controlar el proceso de tratamiento del agua.
 Finalmente, se describirá el proceso de implementación y puesta en marcha del
 EDI, abarcando desde la instalación física del dispositivo hasta las pruebas
 iniciales para verificar su funcionamiento correcto.
+
+\input{tesis/propuesta/propuesta/propuesta.tex}
+
+
 % ------------- Sección ----------------
-\section{Sistema de control}
+\section{Programación del PLC}
 \label{sec:sistema_control}
-En cualquier sistema industrial, el control es un componente crucial. La eficiencia, seguridad y eficacia de un sistema dependen en gran medida de su capacidad para responder a las variables del entorno y ajustar su funcionamiento en consecuencia. El sistema de control es el cerebro de la operación, coordinando y supervisando todos los aspectos del proceso. En el caso de un sistema de Electrodesionización, el control es aún más crítico debido a la complejidad del proceso y la alta calidad del producto final requerido.
+En esta sección, se describirá la programación específica del Controlador
+Lógico Programable (PLC) para la secuencia principal de funcionamiento del
+sistema con la Electrodesionización. Cabe destacar que esta programación
+se enfocará exclusivamente en el electrodesionizador y su integración dentro
+del sistema de ósmosis de doble etapa durante la operación normal de la planta.
 
-La programación del Controlador Lógico Programable (PLC, por sus siglas en inglés) es un elemento esencial de este sistema de control. El PLC se encarga de interpretar las señales de entrada de los distintos sensores y actuadores y ejecutar la lógica de control para ajustar las operaciones del sistema de acuerdo a las necesidades. En esta sección, se presentará la programación del PLC en forma de diagrama de flujo para la secuencia principal de funcionamiento del sistema de Electrodesionización.
-\subsection{Puesta en marcha}
-Un diagrama de flujo ofrece una visión clara y concisa de la lógica de control,
-facilitando la comprensión y el seguimiento de la secuencia de operaciones.
-Esto es especialmente útil para el personal de mantenimiento y operación,
-así como para cualquier persona que necesite entender el funcionamiento del sistema.
+El objetivo de la programación del PLC es interpretar las señales de entrada
+provenientes de los distintos sensores y actuadores del sistema, y ejecutar
+la lógica de control correspondiente para ajustar las operaciones del
+electrodesionizador de acuerdo con las necesidades del proceso.
+A continuación, en la figura \ref{fig:flujo_3} se presenta un diagrama de flujo que ilustra la
+secuencia principal de funcionamiento del PLC para el electrodesionizador.
 
-La secuencia operacional del sistema de Electrodesionización se inicia con la activación de la planta de
-ósmosis inversa a través de una interfaz de usuario. Este evento de inicio es seguido de un
-período de espera hasta que el sensor de nivel determine que el tanque de agua pretratada (TK50A)
-ha alcanzado su nivel operativo óptimo (\ref{fig:flujo_1}).
+\insertimageboxed[\label{fig:flujo_3}]{/flujo_OI3}{scale=0.5}{0}{Diagrama de flujo para el EDI del proceso de producción de PW.}
 
-Durante este tiempo inicial, las etapas de ósmosis inversa (RO1 y RO2) se encuentran en un estado
-latente. RO1 aguarda la señal de nivel correcta del tanque TK50A, mientras que RO2 permanece en un
-estado de inactividad.
-
-Una vez que el sensor de nivel indica que TK50A ha alcanzado su nivel adecuado, se implementa
-un período de confirmación del nivel, que sirve para mitigar el impacto de posibles fluctuaciones
-en el nivel del tanque. Esta duración de tiempo se ha establecido típicamente en 60 segundos.
-
-A continuación, se inicia el flujo de agua hacia la primera etapa de ósmosis inversa (RO1). Esta
-etapa implica una descarga inicial de agua, necesaria debido a las posibles condiciones iniciales
-subóptimas del agua que entra en el sistema. Este período de descarga varía dependiendo de la condición
-de la membrana de ósmosis, pero suele ser de aproximadamente 120 segundos.
-
-Después de este período de descarga, el agua de RO1 es examinada para determinar si cumple con los
-parámetros de conductividad requeridos. Si la conductividad no cumple con las especificaciones, RO1
-entra en un estado de descarga por alta conductividad y se mantiene en este estado hasta que las
-mediciones de conductividad y un período de confirmación de 60 segundos indiquen que se cumplen
-los parámetros de conductividad.
-\insertimageboxed[\label{fig:flujo_1}]{/flujo_OI1}{scale=0.45}{0}{Diagrama de flujo para la RO1 del proceso de producción de PW.}
-En cuanto las condiciones de conductividad sean satisfactorias, RO1 cambia a un estado de producción
-y, simultáneamente, se inicia la segunda etapa de ósmosis inversa (RO2). Esta segunda etapa, al
-igual que RO1, comienza con una descarga inicial (ver Figura \ref{fig:flujo_2}). No obstante, a diferencia de RO1, el agua
-descargada por RO2 se devuelve al tanque de agua pretratada (TK50A), combinándose con el agua
-de permeado y concentrado. Este período de descarga también está sujeto a las condiciones de
-las membranas de ósmosis y dura aproximadamente 120 segundos.
-
-Posteriormente, se evalúan los parámetros de conductividad y temperatura en el permeado de RO2.
-Si alguno de estos parámetros no cumple con las especificaciones, RO2 entra en un estado de descarga
-por parámetros deficientes y se mantiene en este estado hasta que los parámetros medidos y un período
-de confirmación de 60 segundos indiquen condiciones aceptables.
-\insertimageboxed[\label{fig:flujo_2}]{/flujo_OI2}{scale=0.6}{0}{Diagrama de flujo para la RO2 del proceso de producción de PW.}
-Una vez que se alcanzan estos criterios, RO2 cambia a un estado de producción. Con ambas etapas de
-ósmosis inversa (RO1 y RO2) en producción, el módulo de Electrodesionización (EDI) puede comenzar su
-operación con una descarga inicial hacia el tanque de pretratamiento. Esta descarga inicial tiene
-una duración de aproximadamente 60 segundos.
+Una vez que ambas etapas de la ósmosis alcanzan el estado de producción y se encuentran trabajando
+se encuentra bajo circunstancias normales de trabajo (2), el módulo de Electrodesionización (EDI) puede comenzar su
+operación con una descarga inicial con una duración de aproximadamente 60 segundos. Las descargas
+producidas por el módulo de EDI se producen hacia el tanque de pretratamiento, esto significa que el agua
+que sale del módulo tanto por flujo de producto como el flujo de concentrado son recirculados hacia
+el tanque de almacenamiento que le da inicio al proceso de ósmosis (TK50A).
 
 Posteriormente, se comprueban los parámetros como la conductividad y la presión en el producto del EDI.
 Si alguno de estos parámetros no cumple con las especificaciones, el EDI entra en un estado de descarga
@@ -80,28 +56,98 @@ Finalmente, una vez que los parámetros de conductividad y presión son óptimos
 de confirmación, el EDI cambia a un estado de producción, indicando la finalización exitosa de la
 secuencia operacional del sistema de Electrodesionización.
 
-Con el sistema completo en estado de producción (ver Figura \ref{fig:flujo_3}), el estado
-posterior depende del nivel del tanque final. Si el tanque final está
-completamente lleno, la ósmosis comienza una circulación conjunta, que dura un
-tiempo de alrededor de 10 minutos. Superado este tiempo, se realiza una pausa de tiempo de 60 minutos antes de
-comenzar otro ciclo. La ósmosis continúa recirculando y no vuelve a producir
-hasta que el tanque de almacenamiento de agua purificada, que distribuye a los
-puntos de uso, señale un nivel del 75\% de capacidad.
+% \subsection{Puesta en marcha}
+% Un diagrama de flujo ofrece una visión clara y concisa de la lógica de control,
+% facilitando la comprensión y el seguimiento de la secuencia de operaciones.
+% Esto es especialmente útil para el personal de mantenimiento y operación,
+% así como para cualquier persona que necesite entender el funcionamiento del sistema.
 
-Cada vez que concluye un ciclo de producción y debe comenzar otro, se comprueba
-el estado del sensor de nivel bajo del tanque de agua pretratada. Si este
-sensor permanece activo (ver Figura \ref{fig:flujo_3}), se lleva a cabo directamente la
-descarga inicial de la OI1. De lo contrario, será necesario esperar hasta que
-el tanque TK 50A alcance el nivel mínimo necesario para poner el sistema a purificar.
-\insertimageboxed[\label{fig:flujo_3}]{/flujo_OI3}{scale=0.4}{0}{Diagrama de flujo para el EDI del proceso de producción de PW.}
+% La secuencia operacional del sistema de Electrodesionización se inicia con la activación de la planta de
+% ósmosis inversa a través de una interfaz de usuario. Este evento de inicio es seguido de un
+% período de espera hasta que el sensor de nivel determine que el tanque de agua pretratada (TK50A)
+% ha alcanzado su nivel operativo óptimo (\ref{fig:flujo_1}).
+
+% Durante este tiempo inicial, las etapas de ósmosis inversa (RO1 y RO2) se encuentran en un estado
+% latente. RO1 aguarda la señal de nivel correcta del tanque TK50A, mientras que RO2 permanece en un
+% estado de inactividad.
+
+% Una vez que el sensor de nivel indica que TK50A ha alcanzado su nivel adecuado, se implementa
+% un período de confirmación del nivel, que sirve para mitigar el impacto de posibles fluctuaciones
+% en el nivel del tanque. Esta duración de tiempo se ha establecido típicamente en 60 segundos.
+
+% A continuación, se inicia el flujo de agua hacia la primera etapa de ósmosis inversa (RO1). Esta
+% etapa implica una descarga inicial de agua, necesaria debido a las posibles condiciones iniciales
+% subóptimas del agua que entra en el sistema. Este período de descarga varía dependiendo de la condición
+% de la membrana de ósmosis, pero suele ser de aproximadamente 120 segundos.
+
+% Después de este período de descarga, el agua de RO1 es examinada para determinar si cumple con los
+% parámetros de conductividad requeridos. Si la conductividad no cumple con las especificaciones, RO1
+% entra en un estado de descarga por alta conductividad y se mantiene en este estado hasta que las
+% mediciones de conductividad y un período de confirmación de 60 segundos indiquen que se cumplen
+% los parámetros de conductividad.
+% \insertimageboxed[\label{fig:flujo_1}]{/flujo_OI1}{scale=0.45}{0}{Diagrama de flujo para la RO1 del proceso de producción de PW.}
+% En cuanto las condiciones de conductividad sean satisfactorias, RO1 cambia a un estado de producción
+% y, simultáneamente, se inicia la segunda etapa de ósmosis inversa (RO2). Esta segunda etapa, al
+% igual que RO1, comienza con una descarga inicial (ver Figura \ref{fig:flujo_2}). No obstante, a diferencia de RO1, el agua
+% descargada por RO2 se devuelve al tanque de agua pretratada (TK50A), combinándose con el agua
+% de permeado y concentrado. Este período de descarga también está sujeto a las condiciones de
+% las membranas de ósmosis y dura aproximadamente 120 segundos.
+
+% Posteriormente, se evalúan los parámetros de conductividad y temperatura en el permeado de RO2.
+% Si alguno de estos parámetros no cumple con las especificaciones, RO2 entra en un estado de descarga
+% por parámetros deficientes y se mantiene en este estado hasta que los parámetros medidos y un período
+% de confirmación de 60 segundos indiquen condiciones aceptables.
+% \insertimageboxed[\label{fig:flujo_2}]{/flujo_OI2}{scale=0.6}{0}{Diagrama de flujo para la RO2 del proceso de producción de PW.}
+% Una vez que se alcanzan estos criterios, RO2 cambia a un estado de producción. Con ambas etapas de
+% ósmosis inversa (RO1 y RO2) en producción, el módulo de Electrodesionización (EDI) puede comenzar su
+% operación con una descarga inicial hacia el tanque de pretratamiento. Esta descarga inicial tiene
+% una duración de aproximadamente 60 segundos.
+
+% Posteriormente, se comprueban los parámetros como la conductividad y la presión en el producto del EDI.
+% Si alguno de estos parámetros no cumple con las especificaciones, el EDI entra en un estado de descarga
+% por parámetros deficientes y se mantiene en este estado hasta que los parámetros medidos y un período
+% de confirmación de 60 segundos indiquen condiciones aceptables.
+
+% Finalmente, una vez que los parámetros de conductividad y presión son óptimos y han pasado 60 segundos
+% de confirmación, el EDI cambia a un estado de producción, indicando la finalización exitosa de la
+% secuencia operacional del sistema de Electrodesionización.
+
+% Con el sistema completo en estado de producción (ver Figura \ref{fig:flujo_3}), el estado
+% posterior depende del nivel del tanque final. Si el tanque final está
+% completamente lleno, la ósmosis comienza una circulación conjunta, que dura un
+% tiempo de alrededor de 10 minutos. Superado este tiempo, se realiza una pausa de tiempo de 60 minutos antes de
+% comenzar otro ciclo. La ósmosis continúa recirculando y no vuelve a producir
+% hasta que el tanque de almacenamiento de agua purificada, que distribuye a los
+% puntos de uso, señale un nivel del 75\% de capacidad.
+
+% Cada vez que concluye un ciclo de producción y debe comenzar otro, se comprueba
+% el estado del sensor de nivel bajo del tanque de agua pretratada. Si este
+% sensor permanece activo (ver Figura \ref{fig:flujo_3}), se lleva a cabo directamente la
+% descarga inicial de la OI1. De lo contrario, será necesario esperar hasta que
+% el tanque TK 50A alcance el nivel mínimo necesario para poner el sistema a purificar.
+% \insertimageboxed[\label{fig:flujo_3}]{/flujo_OI3}{scale=0.4}{0}{Diagrama de flujo para el EDI del proceso de producción de PW.}
+
+
 % ------------- Sección ----------------
 \section{Propuesta de SCADA}
 \label{sec:scada_proposal}
-Los Sistemas de Control y Adquisición de Datos (SCADA) se han convertido en una herramienta fundamental en el ámbito de la automatización industrial, permitiendo la supervisión y control de procesos a gran escala de una manera eficiente y centralizada. Este sistema ofrece ventajas significativas, como la optimización de operaciones, el aumento de la eficiencia, la mejora de la calidad del producto y la prevención de condiciones peligrosas.
+Los sistemas de Supervisión, Control y Adquisición de Datos (SCADA) se han convertido en
+una herramienta fundamental en el ámbito de la automatización industrial, permitiendo
+la supervisión y control de procesos a gran escala de una manera eficiente y centralizada.
+Este sistema ofrece ventajas significativas, como la optimización de operaciones, el
+aumento de la eficiencia, la mejora de la calidad del producto y la prevención de
+condiciones peligrosas.
 
-En el contexto del sistema de purificación de agua de la planta, la implementación de un SCADA proporcionaría una visibilidad en tiempo real del proceso y facilitaría la gestión de alarmas y el control de los componentes clave del sistema, como las membranas de la ósmosis inversa y el dispositivo EDI. Además, un sistema SCADA permitiría el registro de datos, esencial para el análisis de tendencias y la toma de decisiones basada en datos.
+En el contexto del sistema de purificación de agua en la planta de bulbos, la implementación de
+un SCADA proporciona una visibilidad en tiempo real del proceso y facilita la
+gestión de alarmas y el control de los componentes clave del sistema, como las membranas
+de la ósmosis inversa y el dispositivo EDI. Además, un sistema SCADA permite el
+registro de datos, esencial para el análisis de tendencias y la toma de decisiones
+basada en datos.
 
-El SCADA propuesto para la optimización de la purificación de agua en la industria farmacéutica AICA se ha desarrollado en el entorno de TIA Portal. Este sistema está diseñado para proporcionar un monitoreo en tiempo real del proceso de ósmosis inversa, además de ofrecer una interfaz de usuario intuitiva e interactiva para los operadores.
+El SCADA realizado para acompañar la propuesta de implementación de un EDI para la optimización de la purificación de agua en la
+industria farmacéutica AICA UEB se ha desarrollado en el entorno de TIA Portal.
+Este sistema está diseñado para proporcionar un monitoreo en tiempo real del proceso de ósmosis inversa, además de ofrecer una interfaz de usuario intuitiva e interactiva para los operadores.
 \insertimageboxed[\label{fig:vistaGeneral}]{vistaGeneral}{scale=0.25}{0}{Vista general del sistema SCADA.}
 El SCADA se estructura en varias secciones dedicadas a diferentes aspectos del proceso de purificación de agua. A continuación, se describen detalladamente cada una de estas secciones.
 

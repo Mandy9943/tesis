@@ -1,0 +1,140 @@
+\section{Propuesta de instrumentación}
+
+La ingeniería de procesos, y especialmente el tratamiento de agua mediante ósmosis inversa, requiere una cuidadosa selección de equipos y dispositivos de control, también conocidos como instrumentación. En esta sección, daremos un paso hacia adelante desde el análisis de la instrumentación actual, para abordar nuestra propuesta de mejoramiento: la implementación de un electrodesionizador (EDI) y la instrumentación requerida para su correcta operación.
+
+La instrumentación adecuada es crucial para el buen funcionamiento de cualquier proceso industrial, ya que nos permite monitorizar y controlar de forma precisa las variables críticas de operación. En el caso de la ósmosis inversa y, más concretamente, del EDI, esta importancia se acentúa, dado que el rendimiento y la eficiencia del sistema dependen en gran medida de la capacidad de regular las condiciones de trabajo.
+
+\subsection{El Electrodesionizador}
+
+El electrodesionizador seleccionado para la implementación en la planta de tratamiento
+de agua es el modelo LMX30-X-3 fabricado por Ionpure como el que se muestra en la
+figura \ref{fig:edi_model}. Esta elección fue basada en sus principales características
+reflejadas en la tabla \ref{table:edi_specs} que
+demuestran su idoneidad para satisfacer las necesidades de la planta existente y
+garantizar la producción de agua purificada de alta calidad.
+
+\insertimageboxed[\label{fig:edi_model}]{instrumentacion/edi}{scale=0.8}{0}{Modelo LMX30-X-3 de Ionpure.}
+
+Ionpure es una marca ampliamente reconocida en la industria de la purificación del agua,
+y sus productos son conocidos por su excelencia y rendimiento confiable.
+El modelo LMX30-X-3 desempeña un papel crucial en el proceso de purificación
+del agua al utilizar la electrodesionización para eliminar eficientemente iones y
+moléculas no deseadas.
+
+Una de las consideraciones que se tuvo en cuenta para la selección de este modelo
+se basa en su capacidad para cumplir con los
+requisitos específicos de la planta de tratamiento de agua. El LMX30-X-3 ha
+sido diseñado para trabajar con agua pretratada en ósmosis inversa, lo que lo
+hace compatible con el sistema de tratamiento existente en la planta. Además,
+ofrece un flujo de producto máximo de 3300 l/h mientras que la
+planta de ósmosis inversa ofrece un 3000 l/h, lo que garantiza un suministro
+adecuado de agua purificada.
+Sus conexiones de 1" \ para los flujos de alimentación y producto, así como las
+conexiones de 1/2" \ para los flujos de rechazo y concentrado, facilitan la
+integración del sistema en la infraestructura existente.
+
+Un aspecto relevante para tener en cuenta es que el LMX30-X-3 está diseñado
+para operar en temperaturas ambiente de hasta 45°C. Esto es especialmente
+importante en nuestro contexto, ya que en Cuba, durante el verano, las temperaturas
+pueden ser elevadas. La capacidad del electrodesionizador para funcionar eficientemente
+incluso en condiciones ambientales cálidas garantiza su rendimiento óptimo durante
+todo el año.
+
+
+\begin{mytable}{6cm}{Características del Electrodesionizador LMX30-X-3 de Ionpure.}{table:edi_specs}
+      \hline
+      \textbf{Modelo}                                            & LMX30-X-3                          \\
+      \hline
+      \textbf{Tensión nominal}                                   & 0-600V DC                          \\
+      \hline
+      \textbf{Corriente nominal}                                 & 0-6 A                              \\
+      \hline
+      \textbf{Fuente de agua de alimentación}                    & Agua pretratada en ósmosis inversa \\
+      \hline
+      \textbf{Flujo de producto}                                 & 3300 l/h                           \\
+      \hline
+      \textbf{Flujo de concentrado}                              & 180 l/h                            \\
+      \hline
+      \textbf{Conexión de los flujos de alimentación y producto} & 1”                                 \\
+      \hline
+      \textbf{Conexión de los flujos rechazo y concentrado}      & ½”                                 \\
+      \hline
+      \textbf{Temperatura ambiente de operación}                 & ≤ 45°C                             \\
+      \hline
+      \textbf{Fabricante}                                        & IONPURE                            \\
+      \hline
+
+\end{mytable}
+
+La fuente de alimentación del Electrodesionizador, vital para su funcionamiento correcto, es el modelo PTM06 de STIL MAS.
+Esta fuente de alimentación proporciona la energía eléctrica necesaria para el funcionamiento del Electrodesionizador,
+permitiendo la ionización de las moléculas y facilitando su eliminación. La figura de la Fuente de alimentación que viene junto al electrodesionizador
+se muestra a continuación (Figura \ref{fig:edi_power}). Sus especificaciones se muestran en la Tabla \ref{table:power_supply_specs}.
+
+\insertimageboxed[\label{fig:edi_power}]{instrumentacion/edi_power}{scale=0.8}{0}{Modelo PTM06 de STIL MAS.}
+
+\begin{mytable}{6cm}{Características de la fuente de alimentación PTM06 de STIL MAS.}{table:power_supply_specs}
+      \hline
+      \textbf{Fabricante}           & STIL MAS                                                     \\
+      \hline
+      \textbf{Modelo}               & PTM06                                                        \\
+      \hline
+      \textbf{Voltaje de entrada}   & 200-480 VAC (±5\%) - 50/60Hz                                 \\
+      \hline
+      \textbf{Corriente de entrada} & 1-20 A                                                       \\
+      \hline
+      \textbf{Voltaje de salida}    & 30-400 VDC                                                   \\
+      \hline
+      \textbf{Entradas de control}  & 2 x 4-20 mA + contactos de inicio/parada                     \\
+      \hline
+      \textbf{Salidas de control}   & 2 x 4-20 mA + contacto para establecer condiciones iniciales \\
+      \hline
+      \textbf{Potencia}             & 6KVA                                                         \\
+      \hline
+\end{mytable}
+
+
+\subsection{Otros equipos}
+La implementación del (EDI) en la planta farmacéutica de AICA UEB requiere una serie de válvulas y
+sensores para garantizar un control riguroso del proceso. Tras un detallado análisis de la instrumentación existente
+en la planta de tratamiento de agua, se decidió que los sensores y válvulas actuales cumplen a cabalidad con
+los requerimientos del nuevo sistema. Estos dispositivos han demostrado su eficacia en las operaciones de
+la planta y el personal tiene experiencia en su uso y mantenimiento. Por ello, no se consideró necesario
+incorporar nuevos modelos de sensores o válvulas en la implementación del EDI.
+
+A continuación, se resumen los principales elementos de instrumentación que serán utilizados en el sistema de EDI, la explicación detallada de cada uno de estos se encuentra en capítulos anteriores:
+\begin{itemize}
+      \item \textbf{Sensores de Conductividad:} Como el sensor de conductividad presentado en la sección \ref{sec:sesor_conductividad}, estos dispositivos permiten monitorizar la calidad del agua de salida del EDI en tiempo real.
+
+      \item \textbf{Sensores de Temperatura:} Los sensores de temperatura son necesarios para asegurar que el proceso se lleva a cabo en las condiciones de temperatura óptimas, ver sección \ref{sec:sensor_temp}.
+
+      \item \textbf{Transmisores de Flujo y Presión:} Los transmisores de flujo y presión, como se describen en las secciones \ref{sec:sensor_flujo} y \ref{sec:sensor_presion}, permiten monitorizar y controlar el flujo de agua y las condiciones de presión dentro del sistema de EDI.
+
+      \item \textbf{Indicadores de Flujo y Manómetros:} Los indicadores de flujo y los manómetros proporcionan una visualización inmediata de las condiciones del sistema, lo que facilita su operación y mantenimiento, ver secciones \ref{sec:indicador_flujo} y \ref{sec:indicador_manometro}.
+
+      \item \textbf{Válvulas de Retención y de control:} Estas válvulas, referenciadas en las secciones  \ref{sec:valvula_retencion}, \ref{sec:valvula_OnOff}, son fundamentales para controlar el flujo de agua dentro del sistema de EDI.
+\end{itemize}
+Es importante destacar que para la correcta implementación del EDI en nuestro sistema es necesario garantizar su comunicación con el sistema de control
+para ello se plante la necesidad de incorporar un \textbf{módulo  de periferia descentralizada ET200s} como el de la sección \ref{sec:moduloEt200}, así de esta manera
+los nuevos equipos ya planteados puedan incorporase al funcionamiento del sistema de control de la planta.
+
+\subsection{Esquema General de la Configuración del EDI}
+
+El sistema de Electrodesionización (EDI) implementado de la figura \ref{fig:EDI_pid} se compone de un único módulo de EDI.
+Esta configuración se basa en la capacidad ya mencionada de la segunda etapa de la ósmosis inversa, que
+produce 3000 litros por hora comparado con los 3300 litros por hora que puede entregar el EDI.
+En un escenario donde el flujo requerido exceda la
+capacidad del módulo de EDI, se implementarían múltiples unidades en paralelo.
+
+El agua proveniente de la segunda etapa de ósmosis inversa se divide en dos flujos en el módulo de
+EDI. Un flujo minoritario de agua se dirige hacia las celdas de agua a desechar, mientras que el flujo principal entra en las celdas para el agua purificada.
+
+\insertimageboxed[\label{fig:EDI_pid}]{EDI_P&ID}{scale=0.9}{0}{Esquema P\&ID propuesto para la electrodesionización.}
+
+En la línea principal de entrada al EDI, se instala una válvula manual y un indicador de presión. La válvula manual permite un control preciso sobre el flujo de agua al EDI, mientras que el indicador de presión proporciona una monitorización continua de la presión del agua en esta etapa.
+
+El agua purificada que sale del módulo de EDI pasa a través de una serie de sensores e instrumentos. Se encuentra un sensor de conductividad con su correspondiente transmisor, un sensor de presión y un sensor de flujo. Estos dispositivos proporcionan información en tiempo real sobre la calidad del agua (conductividad), la presión a la salida del módulo de EDI y el flujo de agua, respectivamente. Además, se coloca una válvula de retención en la salida del EDI para evitar el flujo inverso del agua, manteniendo así la integridad del proceso de purificación.
+
+En la línea de desecho del EDI, se colocan un indicador de presión y una válvula de retención. Este flujo de agua desechada es devuelto al tanque de pretratamiento, lo cual promueve la eficiencia del sistema y la conservación de agua. El indicador de presión permite el monitoreo de la presión en esta línea de desecho, asegurando que el funcionamiento del sistema sea óptimo.
+
+Además, es crucial destacar la incorporación de la fuente de alimentación para el EDI, que se conecta directamente al módulo. Esta fuente de alimentación permite ajustar la corriente suministrada a los electrodos del EDI, garantizando así un control exacto sobre el proceso de Electrodesionización.
