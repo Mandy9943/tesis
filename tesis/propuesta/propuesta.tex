@@ -41,17 +41,38 @@ secuencia principal de funcionamiento del PLC para el electrodesionizador.
 
 \insertimageboxed[\label{fig:flujo_3}]{/flujo_OI3}{scale=0.5}{0}{Diagrama de flujo para el EDI del proceso de producción de PW.}
 
-Una vez que ambas etapas de la ósmosis alcanzan el estado de producción y se encuentran trabajando
-se encuentra bajo circunstancias normales de trabajo (2), el módulo de Electrodesionización (EDI) puede comenzar su
-operación con una descarga inicial con una duración de aproximadamente 60 segundos. Las descargas
-producidas por el módulo de EDI se producen hacia el tanque de pretratamiento, esto significa que el agua
-que sale del módulo tanto por flujo de producto como el flujo de concentrado son recirculados hacia
-el tanque de almacenamiento que le da inicio al proceso de ósmosis (TK50A).
+Para una mayor comprensión del proceso realizado por el electrodesionizador se destacarán a continuación
+los estados en los que se puede encontrar el módulo de EDI.
+\begin{itemize}
+    \item \textbf{Producción: }En el estado de producción, el módulo de Electrodesionización (EDI) se encuentra en
+          pleno funcionamiento, purificando el agua y enviándola al tanque de almacenamiento de agua purificada.
+          Aquí, la válvula de salida hacia el sistema de almacenamiento de agua purificada se encuentra
+          abierta, permitiendo que el agua purificada fluya de manera continua y sea dirigida hacia el tanque
+          correspondiente. Al mismo tiempo, la válvula que recircula el agua hacia el tanque de agua suavizada se
+          mantiene cerrada, asegurando que el agua purificada siga el camino correcto sin recircular.
+    \item \textbf{Descarga: }Durante el estado de descarga, el módulo de Electrodesionización (EDI) se encuentra en
+          un modo de recirculación, en el cual toda el agua, tanto el flujo de producto como el flujo de concentrado, es
+          redirigido hacia el tanque de almacenamiento de agua suavizada que marca el inicio del proceso de ósmosis (TK50A).
+          En este estado, se produce una inversión en el funcionamiento de las válvulas en comparación con el estado de producción.
+          Es decir, la válvula que dirige el flujo hacia el tanque de agua suavizada se abre, mientras que la válvula que conecta al
+          sistema de almacenamiento de agua purificada se cierra.
+    \item \textbf{Espera: }Como su nombre indica este estado será el que tendrá el modulo cuando todavía no ha recibido ningún flujo de agua
+          y se encuentre esperando el agua desde la segunda etapa de la ósmosis.
+\end{itemize}
+Una vez que las etapas de ósmosis han alcanzado el estado de producción y están funcionando normalmente, y
+se ha alcanzado el punto "2"\ de acuerdo a la figura \ref{fig:flujo_3}, lo cual implica que la válvula que permite el paso a
+la electrodesionización está abierta y el flujo de agua de salida de la segunda etapa de la ósmosis es el
+adecuado, se procede a iniciar la operación del módulo de Electrodesionización (EDI) mediante una descarga
+inicial de aproximadamente 60 segundos antes de avanzar a la siguiente fase del proceso.
 
-Posteriormente, se comprueban los parámetros como la conductividad y la presión en el producto del EDI.
-Si alguno de estos parámetros no cumple con las especificaciones, el EDI entra en un estado de descarga
-por parámetros deficientes y se mantiene en este estado hasta que los parámetros medidos y un período
-de confirmación de 60 segundos indiquen condiciones aceptables.
+Después de la descarga inicial, se lleva a cabo una la medición de la conductividad y presión del producto
+del EDI, seguido de una comprobación de si los valores medidos cumplen con las especificaciones establecidas.
+En caso de que alguno de los parámetros no cumpla con las especificaciones, el EDI entra en un estado de
+descarga nuevamente pero por una causa distinta (debido a parámetros deficientes), donde se toman las acciones necesarias, como detener la producción
+y mantener el módulo en estado de descarga. Durante un período de confirmación de 60 segundos, se continúa
+monitoreando los parámetros medidos para determinar si las condiciones se vuelven aceptables. Si, al
+final del período de confirmación, los parámetros cumplen con las especificaciones, el EDI puede volver
+al estado de producción y continuar su operación normal. De lo contrario se quedará en una descarga continua.
 
 Finalmente, una vez que los parámetros de conductividad y presión son óptimos y han pasado 60 segundos
 de confirmación, el EDI cambia a un estado de producción, indicando la finalización exitosa de la
