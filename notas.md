@@ -2,12 +2,15 @@
 
 <!-- Averiguar bien el protocolo de comunicación -->
 
-Agregar Imágenes de la instrumentación 
-Hacer los ajustes necesarios en la instrumentación
+<!-- Agregar Imágenes de la instrumentación  -->
+<!-- Hacer los ajustes necesarios en la instrumentación -->
+Agregar conclusiones a todos los cap
+Modificar sistema de control y Scada.
+Modificaciones en la redacción en descarga.
 
 ----Instrumentación-----
-Agregar sensor de nivel a la instrumentación
-Agregar el PLC y los módulos que se utilicen en la instrumentación (usar plc 315)
+<!-- Agregar sensor de nivel a la instrumentación -->
+<!-- Agregar el PLC y los módulos que se utilicen en la instrumentación (usar plc 315) -->
 <!-- Agregar las unidades de ósmosis a la instrumentación (en la pagina 745 esta toda la información de la osmosis) -->
 <!-- Cambiar el tipo de válvulas de retención
 Cambia el tipo de válvulas de control (poner las seat angle valves de la pagina 1628) -->

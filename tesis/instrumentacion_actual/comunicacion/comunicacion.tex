@@ -11,16 +11,19 @@ A continuación, se analizan los protocolos de comunicación empleados
 en cada nivel.
 
 \textbf{Nivel de Campo}\\
-En el nivel de campo, se encuentran los diversos dispositivos de campo,
-como válvulas, bombas y sensores, donde se envían datos al proceso o se recogen del
-mismo. Estos dispositivos de campo se conectan a los módulos de
-entrada/salida, como los módulos CPX de Festo (especialmente diseñado para válvulas neumáticas) y ET 200s de Siemens,
-a través de un bus de campo utilizando el protocolo Profibus DP.
-El Profibus DP es un estándar de comunicación industrial de alta
-velocidad y bajo retardo, especialmente diseñado para aplicaciones
-de control de procesos. Permite un intercambio eficiente y robusto
-de datos entre los dispositivos de campo y los módulos de control,
-garantizando así un control preciso y en tiempo real del proceso.
+En este nivel, se encuentran
+diversos dispositivos esenciales para el proceso. Los sensores se conectan a
+los módulos ET 200s de Siemens mediante el protocolo de comunicación 4-20 mA
+(4-20 miliamperios), que permite la transmisión de señales analógicas de corriente.
+Esta conexión permite recopilar datos precisos del proceso. Por otro lado,
+las válvulas se comunican con el módulo de comunicación CPX de Festo a través
+del protocolo Profibus DP. El CPX de Festo es un dispositivo eléctrico multifuncional
+que actúa como interfaz entre las válvulas y el sistema de control.
+El protocolo Profibus DP es un estándar de comunicación industrial de alta
+velocidad y baja latencia, diseñado específicamente para aplicaciones de control
+de procesos. Facilita un intercambio eficiente y robusto de datos entre los
+dispositivos de campo y los módulos de control, asegurando un control preciso
+y en tiempo real del proceso.
 
 \textbf{Nivel de Control}\\
 En el nivel de control, los módulos CPX de Festo y ET 200s de
