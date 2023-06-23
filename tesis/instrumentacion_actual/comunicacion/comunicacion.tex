@@ -21,21 +21,24 @@ del protocolo Profibus DP. El CPX de Festo es un dispositivo eléctrico multifun
 que actúa como interfaz entre las válvulas y el sistema de control.
 El protocolo Profibus DP es un estándar de comunicación industrial de alta
 velocidad y baja latencia, diseñado específicamente para aplicaciones de control
-de procesos. Facilita un intercambio eficiente y robusto de datos entre los
-dispositivos de campo y los módulos de control, asegurando un control preciso
-y en tiempo real del proceso.
+de procesos. 
 
 \textbf{Nivel de Control}\\
 En el nivel de control, los módulos CPX de Festo y ET 200s de
 Siemens reciben las señales de los sensores y las transmiten al
-autómata programable (PLC) maestro a través del protocolo Profibus DP.
-Profibus DP es un estándar de comunicación industrial de alta velocidad
-y bajo retardo, especialmente diseñado para aplicaciones de control de
-procesos. Gracias a Profibus, el PLC maestro puede comunicarse de manera
+autómata programable (PLC) maestro a través del protocolo Profibus DP. Gracias a Profibus, el PLC maestro puede comunicarse de manera
 eficiente con los módulos de periferia descentralizada,
-permitiendo un control preciso y en tiempo real del proceso.
+permitiendo un control preciso y en tiempo real del proceso. 
+
 
 \textbf{Nivel de Supervisión}\\
-En el nivel superior de la jerarquía, el PLC se comunica con el sistema SCADA (Control Supervisor y Adquisición de Datos) mediante una interfaz multipunto (MPI) que utiliza el protocolo de comunicación TCP/IP. TCP/IP es un conjunto de protocolos de comunicación de alto nivel que permite la transmisión de datos entre dispositivos en una red de área amplia, como Internet. Esta forma de comunicación permite la visualización y el control del proceso en tiempo real desde el sistema SCADA, proporcionando al operador una interfaz de usuario intuitiva y potente.
+En el nivel superior de la jerarquía, el PLC se comunica con el sistema SCADA 
+mediante una interfaz multipunto (MPI) que utiliza el protocolo de comunicación TCP/IP.
+ TCP/IP es un conjunto de protocolos de comunicación de alto nivel que permite la 
+ transmisión de datos entre dispositivos en una red de área amplia, como Internet.
+  El protocolo TCP/IP es el protocolo de comunicación más utilizado en Internet y 
+  se basa en el modelo de referencia OSI de siete capas. El protocolo TCP/IP se 
+  utiliza en el nivel de supervisión porque permite la transmisión de datos a 
+  través de redes de área amplia, lo que permite la supervisión remota de la planta.
 
 \insertimageboxed[\label{fig:comunicacion}]{comunicacion}{scale=0.3}{0}{Protocolos de comunicación}

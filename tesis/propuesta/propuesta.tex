@@ -1,5 +1,6 @@
 \chapter{Propuesta de Implementación de EDI}
 \label{cap:propuesta_implementacion}
+\vspace{-2cm} 
 La necesidad de alcanzar niveles más altos de pureza del agua ha impulsado
 la evolución y mejora continua de las tecnologías de tratamiento de agua.
 Una de estas tecnologías es la Electrodesionización (EDI), que combina
@@ -173,7 +174,7 @@ Este sistema está diseñado para proporcionar un monitoreo en tiempo real del p
 \insertimageboxed[\label{fig:vistaGeneral}]{vistaGeneral}{scale=0.25}{0}{Vista general del sistema SCADA.}
 El SCADA se estructura en varias secciones dedicadas a diferentes aspectos del proceso de purificación de agua. A continuación, se describen detalladamente cada una de estas secciones.
 
-% nuevas secciones
+% nuevas secciones 
 
 \subsection{Gestión de Usuarios y Control de Acceso}
 
@@ -189,17 +190,38 @@ La Figura \ref{fig:adminUsuarios} proporciona una representación visual de la i
 \insertimageboxed[\label{fig:adminUsuarios}]{adminUsuarios}{scale=0.25}{0}{Interfaz de la sección de gestión de usuarios del sistema SCADA propuesto.}
 \subsection{Monitoreo del proceso}
 
-El proceso de ósmosis inversa con electrodesionización, se presenta en la interfaz del SCADA como una vista detallada, que refleja la operación del sistema en tiempo real. Esta vista reflejada en la figura \ref{fig:osmosis_inversa} permite al usuario interactuar y obtener información detallada de los componentes del sistema, como modelo, fabricante, entre otras características. Para acceder a estos detalles, el usuario simplemente puede hacer clic en el componente deseado.
+El proceso de ósmosis inversa con electrodesionización se presenta como una vista detallada en la
+interfaz del Sistema de Control y Adquisición de Datos (SCADA), que refleja la operación del sistema en
+tiempo real. En la figura \ref{fig:osmosis_inversa}, se destaca en un recuadro azul el módulo de electrodesionización (EDI),
+el cual es el componente nuevo que queremos incorporar y por tanto sera nuestro centro de atención. Esta vista permite al usuario interactuar
+y obtener información detallada de los elementos clave relacionados con el EDI, como las dos válvulas de control, el
+sensor de presión y los sensores de conductividad.
 \insertimageboxed[\label{fig:osmosis_inversa}]{monitoreoProceso1}{scale=0.25}{0}{Interfaz de la vista del proceso de ósmosis inversa.}
-Cuando un usuario hace clic en un componente, se abre una ventana con las características detalladas del componente seleccionado. La Figura \ref{fig:componente} muestra un ejemplo de esta ventana.
+Al hacer clic en el módulo de electrodesionización en la interfaz, se abre una ventana con las características
+detalladas de este componente, como se muestra en la figura \ref{fig:componente}. Esta ventana proporciona al usuario acceso a
+información relevante sobre el modelo, el fabricante y otras características importantes del EDI.
 \insertimageboxed[\label{fig:componente}]{caracteristicas}{scale=0.25}{0}{Interfaz de las características del componente.}
-Esta funcionalidad de monitoreo en tiempo real proporciona a los usuarios una comprensión clara y actualizada del estado de la planta de tratamiento, permitiéndoles tomar decisiones informadas y rápidas en caso de necesidad. Este nivel de control y transparencia mejora la eficiencia operativa y reduce la probabilidad de errores y problemas no detectados.
+La funcionalidad de monitoreo en tiempo real de la electrodesionización brinda a los usuarios una comprensión
+clara y actualizada del estado del proceso de tratamiento de agua. Permite tomar decisiones informadas y
+rápidas en caso de necesidad. La monitorización en tiempo real del EDI, con especial atención a los parámetros
+críticos como la conductividad y la presión, garantiza un control preciso y confiable del sistema. Esta capacidad
+de supervisión mejora la eficiencia operativa y reduce la probabilidad de errores y problemas no detectados,
+optimizando así el rendimiento global del sistema de ósmosis inversa con electrodesionización.
+
+% El proceso de ósmosis inversa con electrodesionización, se presenta como una vista detallada, que refleja la operación del sistema en tiempo real. Esta vista reflejada en la figura \ref{fig:osmosis_inversa} permite al usuario interactuar y obtener información detallada de los componentes del sistema, como modelo, fabricante, entre otras características. Para acceder a estos detalles, el usuario simplemente puede hacer clic en el componente deseado.
+% \insertimageboxed[\label{fig:osmosis_inversa}]{monitoreoProceso1}{scale=0.25}{0}{Interfaz de la vista del proceso de ósmosis inversa.}
+% Cuando un usuario hace clic en un componente, se abre una ventana con las características detalladas del componente seleccionado. La Figura \ref{fig:componente} muestra un ejemplo de esta ventana.
+% \insertimageboxed[\label{fig:componente}]{caracteristicas}{scale=0.25}{0}{Interfaz de las características del componente.}
+% Esta funcionalidad de monitoreo en tiempo real proporciona a los usuarios una comprensión clara y actualizada del estado de la planta de tratamiento, permitiéndoles tomar decisiones informadas y rápidas en caso de necesidad. Este nivel de control y transparencia mejora la eficiencia operativa y reduce la probabilidad de errores y problemas no detectados.
+
 \subsection{Configuración de Parámetros}
-El sistema SCADA propuesto provee una interfaz dedicada para la configuración de parámetros, brindándole al usuario la capacidad de ajustar y personalizar varios aspectos operativos de la planta de tratamiento de agua. Esta sección es de vital importancia para garantizar el rendimiento óptimo del sistema y adaptarlo a condiciones cambiantes.
+El sistema SCADA propuesto ofrece una interfaz dedicada para la configuración de parámetros, lo cual permite a los usuarios ajustar y personalizar diversos aspectos operativos específicos del electrodesionizador en la planta de tratamiento de agua. Esta sección adquiere una importancia fundamental para garantizar un rendimiento óptimo del sistema y su adaptabilidad a condiciones cambiantes.
 
-A través de esta interfaz, los usuarios pueden modificar parámetros de retardo para cada fase del proceso, así como la cantidad de corriente y voltaje suministrada al electrodesionizador. Además, también se pueden ajustar parámetros asociados a las alarmas del sistema, como los umbrales de activación, para adaptarlos a las necesidades específicas de la planta.
+Mediante esta interfaz, los usuarios tienen la capacidad de modificar parámetros clave relacionados con el proceso de electrodesionización. Estos incluyen los parámetros de retardo para cada fase del proceso, así como la cantidad de corriente y voltaje suministrados al electrodesionizador. Estos nuevos parámetros de configuración permiten una mayor flexibilidad y control sobre el rendimiento del electrodesionizador, lo que contribuye a optimizar la calidad del agua tratada.
 
-La Figura \ref{fig:parametros} muestra la interfaz de la sección de configuración de parámetros.
+Adicionalmente, también se han incorporado parámetros de configuración asociados a las alarmas del sistema. Estos nuevos parámetros permiten ajustar los umbrales de activación de las alarmas de acuerdo a las necesidades específicas de la planta. Esta funcionalidad brinda la posibilidad de establecer niveles de alerta más precisos y adaptados a las condiciones y requisitos particulares de la operación, mejorando así la eficiencia del sistema de monitoreo y respuesta.
+
+La Figura \ref{fig:parametros} muestra la interfaz de la sección de configuración de parámetros del SCADA, donde se presentan los parámetros de configuración actuales relacionados con el electrodesionizador. En la figura, se pueden observar resaltados en azul los nuevos parámetros de configuración del electrodesionizador, así como los nuevos parámetros de configuración de las alarmas. Esta interfaz permite tanto visualizar los parámetros actuales como realizar modificaciones en tiempo real, proporcionando una herramienta versátil y de fácil uso para la gestión eficiente de la planta de tratamiento de agua y su sistema de control y supervisión.
 \insertimageboxed[\label{fig:parametros}]{parametros}{scale=0.25}{0}{Interfaz de la sección de configuración de parámetros.}
 \subsection{Sistema de Alarmas}
 
@@ -213,7 +235,7 @@ Además, el sistema también cuenta con una funcionalidad que permite a los usua
 \insertimageboxed[\label{fig:historial_alarmas}]{adminAlarmas3}{scale=0.25}{0}{Interfaz del historial completo de alarmas.}
 
 
-
+ 
 \subsection{Gráficos Históricos}
 
 La sección de gráficos históricos del sistema SCADA propuesto proporciona una herramienta vital para el análisis de la planta de tratamiento de agua. Los gráficos ilustran el comportamiento de las variables más importantes del proceso a lo largo del tiempo, lo que permite a los operadores y administradores rastrear cambios y detectar tendencias o problemas.
@@ -221,6 +243,7 @@ La sección de gráficos históricos del sistema SCADA propuesto proporciona una
 Las variables se almacenan en un fichero, lo que permite realizar análisis retrospectivos con información de días, semanas o incluso meses atrás. Además, los usuarios pueden generar informes basados en estos datos para un análisis más detallado o para la documentación de procesos.
 
 La Figura \ref{fig:graficos_historicos} muestra la interfaz de la sección de gráficos históricos.
+Además como novedad muestra en recuadros azules las vistas de los históricos relacionados con la electrodesionización.
 \insertimageboxed[\label{fig:graficos_historicos}]{graficosHistoricos1}{scale=0.25}{0}{Interfaz de la sección de gráficos históricos.}
 
 

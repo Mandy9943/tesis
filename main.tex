@@ -26,13 +26,14 @@ Ingeniero en Automática
 \def\portrait {
 
 	\begin{center}
-		\insertimageboxed[]{departamentos/cujae}{scale=0.5}{0}{}
-		\vspace{-2cm} ~ \\
-		\textbf{Universidad Tecnológica de La Habana}\\
-		\vspace{-1cm} ~ \\
-\textbf{José Antonio Echeverría}\\
-		\vspace{-1cm} ~ \\
-		\textcolor{colorCujae}{\large\textbf{cujae}}\\
+		\insertimageboxed[]{departamentos/cujae}{scale=1}{0}{}
+% 		\vspace{-2cm} ~ \\
+% 		\textbf{Universidad Tecnológica de La Habana}\\
+% 		\vspace{-1cm} ~ \\
+% \textbf{José Antonio Echeverría}\\
+% 		\vspace{-1cm} ~ \\
+% 		\textcolor{colorCujae}{\large\textbf{cujae}}\\
+\vspace{-2cm} ~ \\
 		\Large{ \textbf{Facultad de Ingeniería } }\\
 		\vspace{-1.5cm} ~ \\
 		\Large{ \textbf{Automática y Biomédica}} \\
@@ -62,9 +63,6 @@ Ingeniero en Automática
  
 % IMPORTACIÓN DEL TEMPLATE
 \input{template}
-
-\DeclareCaptionType{mytableWrapper}[Tabla][Índice de tablas]
-
 
 % Nuevo entorno de tabla personalizado
 \newenvironment{mytable}[3]{% Aceptar dos argumentos: caption y label
@@ -176,12 +174,11 @@ Como constancia firmo la presente a los 9 días del mes de junio del año
 \newpage
 \section*{Resumen}
 \abstracttext{
-    Este trabajo de diploma se centra en la optimización del sistema de tratamiento de agua de la planta de bulbos en Laboratorios AICA+, mediante la introducción de la tecnología de electrodesionización (EDI). Actualmente, el tratamiento de agua es crucial en la industria farmacéutica, sin embargo, los métodos convencionales presentan desafíos en cuanto a la eficiencia y la calidad del agua. La implementación de la EDI promete superar estos desafíos proporcionando agua de alta pureza de manera constante.
+    Este trabajo de diploma se centra en la optimización del sistema de tratamiento de agua de la planta de bulbos en Laboratorios AICA UEB, mediante la introducción de la tecnología de electrodesionización (EDI). Actualmente, el tratamiento de agua es crucial en la industria farmacéutica, sin embargo, los métodos convencionales presentan desafíos en cuanto a la eficiencia y la calidad del agua. La implementación de la EDI promete superar estos desafíos proporcionando agua de alta pureza de manera constante.
 
-    El objetivo principal de este estudio es proponer una solución de optimización del sistema existente a través de la implementación de EDI, la cual implica un análisis detallado de la instrumentación necesaria, desde los sensores hasta los sistemas de control y supervisión de datos (SCADA). Además, se propone un esquema general de configuración de EDI.
+    El objetivo principal de este estudio es proponer una solución de optimización del sistema existente a través de la implementación de una EDI, la cual implica un análisis detallado de la instrumentación necesaria, desde los sensores hasta los sistemas de control. Además, se propone un esquema general de configuración de EDI.
 
-    Los resultados obtenidos sugieren que la implementación de la EDI no solo mejorará la eficiencia del proceso de tratamiento de agua, sino que también reducirá los costos operativos y de mantenimiento, mientras cumple con los requisitos y regulaciones estrictas aplicables al agua en la industria farmacéutica. En conclusión, este estudio sienta las bases para la implementación de la EDI en la planta de bulbos, promoviendo una mejora significativa en el tratamiento de agua en la industria farmacéutica.
-
+    Los resultados obtenidos sugieren que la implementación de la EDI no solo mejorará la eficiencia del proceso de tratamiento de agua, sino que también reducirá los costos operativos y de mantenimiento, mientras cumple con los requisitos y regulaciones estrictas aplicables al agua en la industria farmacéutica. En conclusión, este estudio sienta las bases para la implementación de la EDI en la planta de bulbos, promoviendo una mejora significativa en el tratamiento de agua.
 }
 
 \section*{Palabras claves}
@@ -191,12 +188,11 @@ Como constancia firmo la presente a los 9 días del mes de junio del año
 \newpage
 \section*{Abstract}
 \abstracttext{
-    Esta tesis se centra en optimizar el sistema de tratamiento de agua de la planta de bulbos en AICA+ Laboratories, mediante la introducción de la tecnología de electrodeionización (EDI). Actualmente, el tratamiento de agua es crucial en la industria farmacéutica; sin embargo, los métodos convencionales presentan desafíos en términos de eficiencia y calidad del agua. La implementación de EDI promete superar estos desafíos al proporcionar agua de alta pureza de manera consistente.
+    This diploma work focuses on the optimization of the water treatment system of the bulb plant at AICA UEB Laboratories by introducing electrodeionization (EDI) technology. Currently, water treatment is crucial in the pharmaceutical industry, however, conventional methods present challenges in terms of efficiency and water quality. The implementation of EDI promises to overcome these challenges by providing consistently high purity water.
 
-    El objetivo principal de este estudio es proponer una solución de optimización para el sistema existente mediante la implementación de EDI, lo cual implica un análisis detallado de la instrumentación necesaria, desde sensores hasta sistemas de control y adquisición de datos (SCADA). Además, se propone un esquema general para la configuración de EDI.
-
-    Los resultados obtenidos sugieren que la implementación de EDI no solo mejorará la eficiencia del proceso de tratamiento de agua, sino que también reducirá los costos operativos y de mantenimiento, al tiempo que cumplirá con los estrictos requisitos y regulaciones aplicables al agua en la industria farmacéutica. En conclusión, este estudio sienta las bases para la implementación de EDI en la planta de bulbos, promoviendo una mejora significativa en el tratamiento de agua en la industria farmacéutica.
-}
+    The main objective of this study is to propose a solution to optimize the existing system through the implementation of EDI, which involves a detailed analysis of the necessary instrumentation, from sensors to control systems. In addition, a general EDI configuration scheme is proposed.
+    
+    The results obtained suggest that the implementation of EDI will not only improve the efficiency of the water treatment process, but also reduce operating and maintenance costs, while complying with the strict requirements and regulations applicable to water in the pharmaceutical industry. In conclusion, this study lays the groundwork for the implementation of EDI in the bulb plant, promoting a significant improvement in water treatment.}
 
 \section*{keywords}
 \keywords{
@@ -253,8 +249,9 @@ Como constancia firmo la presente a los 9 días del mes de junio del año
 
 \phantomsection
 \bibliography{zot_bibli.bib}
-
+\phantomsection
 \input{tesis/glosario/glosario.tex}
+\phantomsection
 \input{tesis/anexos/anexos.tex}
 
 

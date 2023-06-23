@@ -4509,7 +4509,7 @@
 
 
 
-% Crea una sección de dedicatoria
+% Crea una sección de agradecimientos
 \newenvironment{dedicatory}{%
 	\clearpage%
 	\ifthenelse{\equal{\GLOBALtwoside}{true}}{%
@@ -4520,13 +4520,15 @@
 	% \ifthenelse{\equal{\adddedictobookmarks}{true}}{
 	% 	\pdfbookmark{\nameadedic}{contents}}{
 	% }
-	\vspace{\stretch{1}}%
+	\vspace*{\stretch{1}}%
+	\section*{\namedeicatory}%
 	\begin{flushright}%
 		\itshape}{%
-	\end{flushright}%
+	\end{flushright}% 
 	\vspace{\stretch{2}}%
 	\null%
 }
+
 
 % Crea una sección de agradecimientos
 \newenvironment{acknowledgments}{%
